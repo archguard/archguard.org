@@ -1,5 +1,6 @@
-# archguard.org
-官网
+layout: page
+title: "features"
+permalink: /features/
 
 ## 特性列表
 ### 配置项目
