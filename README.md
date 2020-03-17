@@ -1,1 +1,2 @@
-https://github.com/archguard/archguard.org/blob/master/features.md
+
+[特性列表](https://archguard.org/features)
