@@ -1,7 +1,3 @@
-layout: page
-title: "features"
-permalink: /features/
-
 ## 特性列表
 ### 配置项目
 - [x] 配置项目名称
