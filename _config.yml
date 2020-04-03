@@ -1,1 +1,18 @@
-theme: jekyll-theme-cayman
+# Setup
+title:        ArchGuard
+tagline:      官网
+baseurl:      ""
+paginate:     1
+locale:       "zh-CN"
+
+# About/contact
+author:
+  name:       ArchGuard Team
+  url:        https://archguard.org
+
+# Gems
+gems:
+  - jekyll-paginate
+
+#Others
+markdown: kramdown
