@@ -58,16 +58,21 @@
 }
 
 .container-head {
-  text-align: center;
+    text-align: center;
+}
+
+.img {
+    width: 50rem;
 }
 
 .grey {
-  background-color: #eaf5fd;
+    background-color: #eaf5fd;
 }
 
 video {
-  width: 50rem;
+    width: 50rem;
 }
+
 @media (max-width: 1236px) {
     .container {
         margin: 0 2rem;
