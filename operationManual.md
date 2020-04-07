@@ -7,7 +7,8 @@ layout: default
 * [下载链接](https://docs.docker.com/get-docker/)
 
 ## 下载部署工程
-```shell script
+
+```
 git clone https://github.com/archguard/archguard_deploy.git 
 ```
 
