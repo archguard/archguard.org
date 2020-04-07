@@ -1,13 +1,12 @@
 # Setup
 title:        ArchGuard
-tagline:      官网
 baseurl:      ""
 paginate:     1
 locale:       "zh-CN"
 
 # About/contact
 author:
-  name:       ArchGuard Team
+  name:       ThoughtWorks
   url:        https://archguard.org
 
 # Gems
