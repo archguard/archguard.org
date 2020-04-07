@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ site.locale }}">
-  
-  {% include head.html %}
 
-  <body>
-    {% include page-header.html %}
+{% include head.html %}
 
-    <section class="main-content">
-      
+<body>
+  {% include page-header.html %}
+
+  <section class="main-content" style="display: flex; justify-content: center;">
+    <div>
       {{ content }}
 
-    </section>
+    </div>
 
-    {% include page-footer.html %}
+  </section>
 
-  </body>
+  {% include page-footer.html %}
+
+</body>
+
 </html>
