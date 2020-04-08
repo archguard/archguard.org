@@ -49,6 +49,20 @@
     }
 }
 
+.left {
+    width: 20%;
+    height: calc(100vh - 66px);
+    overflow-y: scroll;
+    float: left;
+}
+
+.right {
+    width: 80%;
+    height: calc(100vh - 66px);
+    overflow-y: scroll;
+    float: left;
+}
+
 .task-list-item-checkbox {
     margin-right: 1rem;
 }
