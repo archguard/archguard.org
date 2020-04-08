@@ -51,7 +51,7 @@
 
 .left {
     width: 20%;
-    height: calc(100vh - 66px);
+    height: calc(100vh - 15rem);
     overflow-y: scroll;
     float: left;
 }
@@ -62,7 +62,7 @@
 
 .right {
     width: 80%;
-    height: calc(100vh - 66px);
+    height: calc(100vh - 15rem);
     overflow-y: scroll;
     float: left;
 }
