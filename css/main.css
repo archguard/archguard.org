@@ -54,6 +54,7 @@
     height: calc(100vh - 15rem);
     overflow-y: scroll;
     float: left;
+    font-size: 14px;
 }
 
 .left li {
