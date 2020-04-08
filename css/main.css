@@ -56,6 +56,10 @@
     float: left;
 }
 
+.left li {
+    list-style: none;
+}
+
 .right {
     width: 80%;
     height: calc(100vh - 66px);
