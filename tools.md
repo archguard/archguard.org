@@ -1,3 +1,7 @@
+---
+layout: tool
+---
+
 ## A/B 测试套件工具
 源自：ThoughtWorks
 

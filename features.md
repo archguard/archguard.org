@@ -31,7 +31,7 @@ layout: default
   - [x] PL/SQL扫描
   - [x] 查看PL/SQL间存储过程调用链，分析调用，做解耦
   - [ ] 查看PL/SQL和数据库表之间调用关系，帮助做表拆分
-- [x] PL/SQL 转 Kotlion
+- [x] PL/SQL 转 Kotlin
 - [ ] A/B测试工具
 
 ### 系统守护
