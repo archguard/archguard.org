@@ -84,7 +84,8 @@
 }
 
 .img {
-    width: 50rem;
+    width: 25rem;
+    padding: 0 1rem;
 }
 
 .grey {
