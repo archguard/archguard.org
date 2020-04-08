@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: model
 ---
 
 # 评估模型
