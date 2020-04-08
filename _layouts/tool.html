@@ -9,11 +9,17 @@
 <section class="main-content" style="display: flex; justify-content: center; height: 50rem">
     <div style="width: 80%; padding-top: 6rem">
         <div class="left">
-          <ul>
-            <li><a class="tool" id="menu-分析工具" href="/tools#分析工具" title="分析工具">分析工具</a></li>
-            <li><a class="tool" id="menu-改造工具" href="/tools#改造工具" title="改造工具">改造工具</a></li>
-            <li><a class="tool" id="menu-测试工具" href="/tools#测试工具" title="测试工具">测试工具</a></li>
-          </ul>
+            <ul>
+                <li><a class="tool" id="menu-分析工具" href="/tools#分析工具" title="分析工具">分析工具</a>
+                    <ul>
+                        <li><a class="tool" id="menu-java" href="/tools#Java代码依赖分析工具" title="Java代码依赖分析工具">Java代码依赖分析工具</a></li>
+                        <li><a class="tool" id="menu-sql" href="/tools#PL/SQL依赖分析工具" title="PL/SQL依赖分析工具">PL/SQL依赖分析工具</a></li>
+                        <li><a class="tool" id="menu-tequlia" href="/tools#Tequlia工具" title="Tequlia工具">Tequlia工具</a></li>
+                    </ul>
+                </li>
+                <li><a class="tool" id="menu-改造工具" href="/tools#改造工具" title="改造工具">改造工具</a></li>
+                <li><a class="tool" id="menu-测试工具" href="/tools#测试工具" title="测试工具">测试工具</a></li>
+            </ul>
         </div>
         <div class="right">
             {{ content }}
