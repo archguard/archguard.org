@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+
+{% include head.html %}
+
+<body>
+{% include page-header.html %}
+
+<section class="main-content" style="display: flex; justify-content: center;">
+    <div style="width: 100%">
+        <div class="left">
+          <ul>
+            <li><a class="tool" id="menu-A/B测试工具" href="/tools#测试工具" title="测试工具">A/B测试套件工具</a></li>
+          </ul>
+        </div>
+        <div class="right">
+            {{ content }}
+        </div>
+    </div>
+
+</section>
+
+{% include page-footer.html %}
+
+</body>
+
+</html>
