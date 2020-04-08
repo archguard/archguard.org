@@ -7,7 +7,7 @@ locale:       "zh-CN"
 # About/contact
 author:
   name:       ThoughtWorks
-  url:        https://archguard.org
+  url:        https://www.thoughtworks.com/
 
 # Gems
 gems:
