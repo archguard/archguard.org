@@ -6,7 +6,7 @@ layout: tool
 ## Java代码依赖分析工具
 源自：ThoughtWorks
 
-状态：已集成ArchGuard
+状态： $\color{green}{已集成ArchGuard}$
 
 工具适用场景：
 
