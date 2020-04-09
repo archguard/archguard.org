@@ -28,11 +28,14 @@ layout: tool
 
 工具适用场景：
 
+- 分析PL/SQL的依赖关系，帮助拆分
+
 步骤：
 
-- 先干啥
-- 再干啥
-- 最终干啥
+- 安装ArchGuard: [https://archguard.org/operationManual](https://archguard.org/operationManual)
+- 输入要扫描的项目的仓库地址
+- 点击"PL/SQL依赖工具"，进入工具
+- 点击"扫描代码"按钮，待扫描结束后，进行分析
 
 ## Tequlia工具
 源自：李新（前ThoughtWorks咨询师）
@@ -61,22 +64,30 @@ go build && ./tequila
 ## PL/SQL 转 Kotlin工具
 源自：ThoughtWorks
 
+状态：已集成ArchGuard
+
 工具适用场景：
+- 能解决80%的PL/SQL语法转kotlin
 
 步骤：
 
-- 先干啥
-- 再干啥
-- 最终干啥
+- 安装ArchGuard: [https://archguard.org/operationManual](https://archguard.org/operationManual)
+- 点击"PL/SQL转Kotlin"，进入工具
+- 输入包名，将PL/SQL复制到左边的输入框
+- 点击"转换"，在右边的输入框查看结果
 
 # 测试工具
 ## A/B 测试套件工具
 源自：ThoughtWorks
 
+状态：未集成ArchGuard
+
 工具适用场景：
+
+- 当系统业务黑盒的情况下，可以使用A/B测试套件，对比新旧系统执行结果是否一致来确定业务没有被修改
 
 步骤：
 
-- 先干啥
-- 再干啥
-- 最终干啥
+- 准备数据，并把数据库数据做成docker镜像，作为基准化的测试数据。
+- 将Goreplay部署到旧的系统上，录制操作
+- 部署新旧系统，回放Goreplay路数数据，使用Diffy对比请求结果，以及最终两个数据库中数据是否一致
