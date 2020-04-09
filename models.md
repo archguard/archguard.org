@@ -12,6 +12,7 @@ layout: model
 - 每次新增功能都需要3，5个月才能上线，跟不上竞品更新速度
 
 评估维度：
+
 ![市场响应力评估模型](images/market.png)
 
 ## 质量评估模型
@@ -23,6 +24,7 @@ layout: model
 - 客户经常投诉，页面错乱，业务出错
 
 评估维度：
+
 ![质量评估模型](images/quality.png)
 
 ## 可用性评估模型
@@ -33,6 +35,7 @@ layout: model
 - 经常接到客户投诉，页面打不开了，连接错误
 
 评估维度：
+
 ![可用性评估模型](images/reliability.png)
 
 ## 开放性评估模型
@@ -43,4 +46,5 @@ layout: model
 - 给其他系统提供API，需要花很长时间开发接口
 
 评估维度：
+
 ![开放性评估模型](images/openable.png)
