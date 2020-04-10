@@ -51,6 +51,11 @@ layout: model
 
 # 评估维度
 
+## 测试保护
+
+参考文献：
+- [What Software Quality (Really) Is and the Metrics You Can Use to Measure It](https://www.altexsoft.com/blog/engineering/what-software-quality-really-is-and-the-metrics-you-can-use-to-measure-it/)
+
 ## 分层架构
 
 维度：
