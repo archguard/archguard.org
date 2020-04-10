@@ -54,8 +54,9 @@ layout: model
 ## 测试保护
 
 参考文献：
-- [What Software Quality (Really) Is and the Metrics You Can Use to Measure It](https://www.altexsoft.com/blog/engineering/what-software-quality-really-is-and-the-metrics-you-can-use-to-measure-it/)
-
+- [MEASURING CODE QUALITY](https://www.it-cisq.org/standards/code-quality-standards/)
+- [《What Software Quality (Really) Is and the Metrics You Can Use to Measure It》](https://www.altexsoft.com/blog/engineering/what-software-quality-really-is-and-the-metrics-you-can-use-to-measure-it/)
+- [The ISO/IEC 25000 series of standards](https://iso25000.com/index.php/en/iso-25000-standards)
 ## 分层架构
 
 维度：
@@ -83,8 +84,6 @@ layout: model
 ## 安全
 
 维度：
-
-![安全](images/安全.png)
 
 
 参考文献：
