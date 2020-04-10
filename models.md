@@ -52,6 +52,11 @@ layout: model
 # 评估维度
 
 ## 分层架构
+
+维度：
+
+![分层架构](images/分层架构.png)
+
 参考文献：
 - [《架构整洁之道》](https://book.douban.com/subject/30333919/)
 - [The Clean Code Blog](https://blog.cleancoder.com/)
@@ -59,6 +64,11 @@ layout: model
 - [《The Software Architecture Chronicles》](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
 
 ## 代码规范
+
+维度：
+
+![代码规范](images/代码规范.png)
+
 参考文献：
 - [《重构》](https://book.douban.com/subject/4262627/)
 - [《代码整洁整洁之道》](https://book.douban.com/subject/4199741/)
@@ -66,6 +76,10 @@ layout: model
 - [SonarSource Code Smell](https://rules.sonarsource.com/java/type/Code%20Smell)
 
 ## 安全
+
+评估维度：
+
+
 参考文献：
 - [SonarQube Security-related Rules](https://docs.sonarqube.org/latest/user-guide/security-rules/)
 - [SonarSource Security Hotspot](https://rules.sonarsource.com/java/type/Security%20Hotspot)
