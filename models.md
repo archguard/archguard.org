@@ -50,41 +50,18 @@ layout: model
 ![开放性评估模型](images/openable.png)
 
 # 评估维度
-## 模块耦合
-参考文献：
-
-
-## 变更影响
-参考文献：
-
-## 数据库耦合
-参考文献：
-
-## 敏捷成熟度
-参考文献：
-
-## 基础设施
-参考文献：
-
-## 测试保护
-参考文献：
-
 
 ## 分层架构
 参考文献：
 - [《架构整洁之道》](https://book.douban.com/subject/30333919/)
 - [The Clean Code Blog](https://blog.cleancoder.com/)
-- [软件架构编年史](https://www.jianshu.com/p/b477b2cc6cfa?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
-- [The Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
-
-[^_^]:
-    ## API规范
-    参考文献：
+- [《软件架构编年史》](https://www.jianshu.com/p/b477b2cc6cfa?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
+- [《The Software Architecture Chronicles》](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
 
 ## 代码规范
 参考文献：
 - [《重构》](https://book.douban.com/subject/4262627/)
-- [代码整洁整洁之道](https://book.douban.com/subject/4199741/)
+- [《代码整洁整洁之道》](https://book.douban.com/subject/4199741/)
 - [Alibaba Java Coding Guidelings](https://yq.aliyun.com/attachment/download/?id=5585)（需登陆阿里云下载）
 - [SonarSource Code Smell](https://rules.sonarsource.com/java/type/Code%20Smell)
 
