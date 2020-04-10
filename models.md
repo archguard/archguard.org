@@ -77,8 +77,9 @@ layout: model
 - [软件架构编年史](https://www.jianshu.com/p/b477b2cc6cfa?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
 - [The Software Architecture Chronicles](https://herbertograca.com/2017/07/03/the-software-architecture-chronicles/)
 
-## API规范
-参考文献：
+[^_^]:
+    ## API规范
+    参考文献：
 
 ## 代码规范
 参考文献：
