@@ -23,20 +23,20 @@ toc: true
 > 通过逐步替换方式更新系统，持续改进，以提高系统的质量
 {: .notice--info}
 
-## Rebuild
+## 重建 Rebuild
 > 业务发生重大变化时，新写的成本低于重构的成本，可以使用最新的技术栈，提高开发效率，系统质量
 {: .notice--info}
 
-## Repurchase
+## 重购 Repurchase
 Buy or build is always a question ^_^
 
-## Rehost
+## 主机迁移 Rehost
 
-## Replatform
+## 平台迁移 Replatform
 
-## Rearchitect
+## 架构重整 Rearchitect
 
-## Retire
+## 回收 Retire
 
 
 
