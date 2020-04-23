@@ -24,7 +24,7 @@ permalink: /models/about-archguard/
 
 ## 改造思路
 
-![](/assets/images/strategic1.jpeg)
+![](/assets/images/strategic.jpeg)
 
 
 
