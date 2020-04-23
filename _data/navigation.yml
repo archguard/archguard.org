@@ -9,6 +9,8 @@ main:
     url: /about/
 
 supports:
+  - title: "能力支撑"
+    url: /supports/
   - title: "架构能力"
     url: /supports/architecture/
   - title: "DevOps工程能力"
