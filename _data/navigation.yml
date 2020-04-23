@@ -1,12 +1,24 @@
 main:
   - title: "策略·模式·方法"
     url: /models/about-archguard/
+  - title: "能力支撑"
+    url: /supports/
   - title: "操作手册"
     url: /manuals/env-prepare/
-  - title: "资料库"
-    url: /documents/
   - title: "关于我们"
     url: /about/
+
+supports:
+  - title: "架构能力"
+    url: /supports/architecture/
+  - title: "DevOps工程能力"
+    url: /supports/devops/
+  - title: "Agile敏捷能力"
+    url: /supports/agile/
+  - title: "自动化测试能力"
+    url: /supports/auto-test/
+  - title: "平台能力"
+    url: /supports/platform/
 
 models:
   - title: "关于ArchGuard"
@@ -31,14 +43,9 @@ models:
     children:
       - title: "守护策略"
         url: /models/guard-strategic/
-  - title: "----- 能力支撑 -----"
-    children:
-      - title: "工程能力支撑"
-        url: /models/devops/
-      - title: "敏捷支撑"
-        url: /models/agile/
-      - title: "自动化测试支撑"
-        url: /models/auto-test/
+  - title: "----- 参考文档 -----"
+    url: /models/document/
+
 docs:
   - title: Getting Started
     children:

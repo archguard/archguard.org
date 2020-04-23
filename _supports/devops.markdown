@@ -1,12 +1,12 @@
 ---
 layout: single
-title: 策略·模式·方法 ｜ 工程能力支撑
+title: 能力支撑 ｜ DevOps工程能力
 header:
   overlay_filter: "rgba(99, 183, 175, 0.6)"
   overlay_image: /assets/images/background.jpg
 sidebar:
-  nav: "models"
-permalink: /models/devops/
+  nav: "supports"
+permalink: /supports/devops/
 toc: true
 ---
 

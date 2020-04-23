@@ -45,7 +45,7 @@ plugins:
 include: 
   - _manuals
   - _models
-
+  - _supports
 
 
 # defaults:
