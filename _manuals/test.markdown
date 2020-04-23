@@ -10,8 +10,6 @@ permalink: /manuals/arch-test/
 toc: true
 ---
 
-* [A/B 测试套件](#ab-测试套件工具)
-
 ## A/B 测试套件工具
 > 源自：ThoughtWorks (未集成ArchGuard)
 {: .notice--warning}

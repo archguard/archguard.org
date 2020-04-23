@@ -30,5 +30,5 @@ toc: true
 ### 常见改造手段对比
 
 #### 从发生变化的方向对比
-![从发生变化的方向对比](/archguard.org/assets/images/refactor1.jpeg)
+![从发生变化的方向对比](/assets/images/refactor1.jpeg)
 
