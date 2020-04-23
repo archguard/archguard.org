@@ -52,7 +52,7 @@ toc: true
 
 #### 评估维度
 
-![市场响应力评估模型](/arch-guard/assets/images/market.png)
+![市场响应力评估模型](/archguard.org/assets/images/market.png)
 
 ### 质量评估模型
 > 质量：业务上线后，该业务是否能满足客户期望，有多少严重Bug
@@ -65,7 +65,7 @@ toc: true
 
 #### 评估维度
 
-![质量评估模型](/arch-guard/assets/images/quality.png)
+![质量评估模型](/archguard.org/assets/images/quality.png)
 
 ### 可用性评估模型
 > 可用性：业务不稳定，访问出错
@@ -77,7 +77,7 @@ toc: true
 
 #### 评估维度
 
-![可用性评估模型](/arch-guard/assets/images/reliability.png)
+![可用性评估模型](/archguard.org/assets/images/reliability.png)
 
 ### 开放性评估模型
 > 开放性：当出现出现创新性业务时，原有系统能不能很好的支撑
@@ -89,7 +89,7 @@ toc: true
 
 #### 评估维度
 
-![开放性评估模型](/arch-guard/assets/images/openable.png)
+![开放性评估模型](/archguard.org/assets/images/openable.png)
 
 ## 业界其他评估模型
 ### SAAM

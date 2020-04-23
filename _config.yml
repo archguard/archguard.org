@@ -24,12 +24,12 @@ email: qian.ping@thoughtworks.com
 logo: "/assets/images/logo.png"
 og_image: /assets/images/logo.png
 description: Everything as code, every code could be guard
-baseurl: "/arch-guard" # the subpath of your site, e.g. /blog
+baseurl: "/archguard.org" # the subpath of your site, e.g. /blog
 url: "https://abigail830.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  abigail830
 
-repository: "abigail830/arch-guard"
+repository: "abigail830/archguard.org"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.19.1"
