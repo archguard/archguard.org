@@ -1,5 +1,0 @@
----
-layout: model-tool
----
-
-## Coca
