@@ -31,13 +31,14 @@ models:
     children:
       - title: "守护策略"
         url: /models/guard-strategic/
-  - title: "------ 能力支撑 ------"
+  - title: "----- 能力支撑 -----"
     children:
       - title: "工程能力支撑"
         url: /models/devops/
       - title: "敏捷支撑"
         url: /models/agile/
-
+      - title: "自动化测试支撑"
+        url: /models/auto-test/
 docs:
   - title: Getting Started
     children:
