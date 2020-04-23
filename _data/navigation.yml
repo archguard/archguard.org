@@ -43,8 +43,10 @@ models:
     children:
       - title: "守护策略"
         url: /models/guard-strategic/
-  - title: "----- 参考文档 -----"
-    url: /models/document/
+  - title: "------ 其他 ------"
+    children:
+      - title: "参考文档 "
+        url: /models/document/
 
 docs:
   - title: Getting Started
