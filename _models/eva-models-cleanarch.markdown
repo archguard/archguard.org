@@ -6,7 +6,7 @@ header:
   overlay_image: /assets/images/background.jpg
 sidebar:
   nav: "models"
-permalink: /models/evaluate-models/clean-architecture
+permalink: /models/evaluate-models/clean-architecture/
 toc: true
 ---
 
