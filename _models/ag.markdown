@@ -22,9 +22,7 @@ permalink: /models/about-archguard/
 * 改造
 * 守护
 
-## 改造思路
 
-![](/assets/images/strategic.jpeg)
 
 
 
