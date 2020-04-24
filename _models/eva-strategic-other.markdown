@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 策略·模式·方法 ｜ 业界其他评估模型
+title: 策略·模式·方法 ｜ 业界其他评估方式与模型
 header:
   overlay_filter: "rgba(99, 183, 175, 0.6)"
   overlay_image: /assets/images/background.jpg
@@ -9,6 +9,15 @@ sidebar:
 permalink: /models/evaluate-strategic/other/
 classes: wide
 ---
+
+## 业界常见评估方式
+
+传统软件架构评估方法按评估形式，一般分为三种。
+* **调查问卷**，由对系统架构了解的专家人等，以回答和总结问卷的形式，对系统架构做出主观评估
+* **度量**，将软件系统架构各项指标完全量化，通过客观的数字指标来评估架构的好坏
+* **场景评估**，即挑选出重要的系统使用场景(如系统用户如何使用系统的 )，根据不同场景中各架构的表现分别作评估
+
+## 业界评估其他模型
 
 ### SAAM
 [Software Architecture Analysis Method](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=29288)
