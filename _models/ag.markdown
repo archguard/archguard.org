@@ -7,6 +7,7 @@ header:
 sidebar:
   nav: "models"
 permalink: /models/about-archguard/
+classes: wide
 ---
 
 > 在高度不确定的竞争环境中，保持高响应力、高可用，并开放生态，是企业能够应对挑战并跟上数字化浪潮必须具备的核心能力
