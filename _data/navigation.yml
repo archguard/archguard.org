@@ -9,7 +9,7 @@ main:
     url: /about/
 
 supports:
-  - title: "能力支撑"
+  - title: "能力总览"
     url: /supports/
   - title: "架构能力"
     url: /supports/architecture/
@@ -30,7 +30,13 @@ models:
       - title: "评估策略"
         url: /models/evaluate-strategic/
       - title: "评估模式"
-        url: /models/evaluate-models/
+        children:
+          - title: "整洁代码"
+            url: /models/evaluate-models/clean-code/
+          - title: "整洁架构"
+            url: /models/evaluate-models/clean-architecture/
+          - title: "测试保护"
+            url: /models/evaluate-models/test/
       - title: "评估方法"
         url: /models/evaluate-rules/
   - title: "------ 改造 ------"
