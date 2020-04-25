@@ -19,8 +19,8 @@ supports:
     url: /supports/agile/
   - title: "自动化测试能力"
     url: /supports/auto-test/
-  - title: "平台能力"
-    url: /supports/platform/
+  # - title: "平台能力"
+  #   url: /supports/platform/
 
 models:
   - title: "关于ArchGuard"

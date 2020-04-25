@@ -7,7 +7,7 @@ header:
 sidebar:
   nav: "supports"
 permalink: /supports/
-toc: true
+classes: wide
 ---
 
 

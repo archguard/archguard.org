@@ -7,7 +7,7 @@ header:
 sidebar:
   nav: "supports"
 permalink: /supports/agile/
-toc: true
+classes: wide
 ---
 
 

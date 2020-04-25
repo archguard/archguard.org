@@ -7,7 +7,7 @@ header:
 sidebar:
   nav: "supports"
 permalink: /supports/architecture/
-toc: true
+classes: wide
 ---
 
 

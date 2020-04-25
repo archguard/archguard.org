@@ -7,7 +7,7 @@ header:
 sidebar:
   nav: "supports"
 permalink: /supports/devops/
-toc: true
+classes: wide
 ---
 
 
