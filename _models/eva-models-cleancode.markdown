@@ -1,6 +1,6 @@
 ---
 layout: single
-title: 策略·模式·方法 ｜ 整洁代码
+title: 评估·改造·守护 ｜ 整洁代码
 header:
   overlay_filter: "rgba(99, 183, 175, 0.6)"
   overlay_image: /assets/images/background.jpg
