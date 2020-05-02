@@ -10,8 +10,10 @@ permalink: /models/evaluate-models/clean-code/
 toc: true
 ---
 
+## 面向对象
 
-## 面向对象(From 《Head First》)
+> From 《Head First》
+{: .notice--info}
 
 ### 面向对象基础
 抽象、封装、多态、继承
