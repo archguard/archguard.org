@@ -2,12 +2,24 @@
 
 ---
 
-// #feature_row2 {
-//     background-color: #d8d8d8;
-// }
+
+$right-sidebar-width-narrow: 140px !default;
+$right-sidebar-width: 210px !default;
+$right-sidebar-width-wide: 280px !default;
+
+$type-size-1: 2.063em !default; // ~39.056px
+$type-size-2: 1.563em !default; // ~31.248px
+$type-size-3: 1.25em !default; // ~25.008px
+$type-size-4: 1em !default; // ~20px
+$type-size-5: 0.75em !default; // ~16px
+$type-size-6: 0.6875em!default; // ~12px
+$type-size-7: 0.625em !default; // ~11px
+$type-size-8: 0.585em !default; // ~10px
+
 
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
 
