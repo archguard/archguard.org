@@ -18,14 +18,15 @@ DevOps（英文 Development 和 Operations 的组合）是一组过程、方法�
 ## DevOps能力提升
 很多人觉得DevOps会牵涉到很多工具的使用，当在一个大型组织要规模化的提升DevOps能力的时候，通常需要关注几点：
 
-* 组织规范
-* 平台支撑
-* 实践固化
-* 人才培养
+> 规模化提升的关注点： 组织规范 / 平台支撑 / 实践固化 / 人才培养
+{: .notice--info}
 
 这是在组织级提升DevOps能力时候的一个可以参考的示意图
 
-[](/assets/images/devops.jpg)
+![](/assets/images/devops.jpg)
+
+
+## DevOps 成熟度评估
 
 
 
