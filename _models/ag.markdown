@@ -29,10 +29,8 @@ classes: wide
 >                      --- 《遗留系统重建实战》
 {: .notice--info}
 
-#### 遗留项目的特征
-老旧、庞大、继承而来、文档不完善
+**遗留项目的特征**: 老旧、庞大、继承而来、文档不完善
 
-#### More
 From 
 [《Legacy modernisation》](https://www.thoughtworks.com/live-series-uk/content/legacy-modernisation)
 ｜ [中文](http://wiki.saraqian.cn/Reading/Legacy%20Modernisation.html#what-do-we-mean-by-legacy)
