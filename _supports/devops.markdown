@@ -25,7 +25,7 @@ DevOps（英文 Development 和 Operations 的组合）是一组过程、方法�
 
 其中持续交付部分分了7大项，三级为国内先进水平。目前，国内已参评并通过3级的企业包括腾讯（四级）、去哪儿等互联网企业，也包括招行、中行、中信等国内银行代表，还有广东移动、江苏电信等通信领域的企业
 
-![](/assets/images/devopsmm.jpg)
+![](/assets/images/devops-dimention.png)
 
 持续交付内还细分了49小项，要求企业在组织内全面推行DevOps实践，并贯穿软件全生命周期，获得整体效益提升
 
