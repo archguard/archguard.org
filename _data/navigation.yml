@@ -61,8 +61,6 @@ models:
 docs:
   - title: Getting Started
     children:
-      - title: "环境准备"
-        url: /manuals/env-prepare/
       - title: "安装下载"
         url: /manuals/download/
   - title: 业务导向的架构评估
