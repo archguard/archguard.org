@@ -16,9 +16,9 @@ feature_row:
     url: "/supports/devops/"
     btn_label: "Know More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/clean-code.png
+  - image_path: /assets/images/agile-logo.jpg
     title: "Agile敏捷能力"
-    excerpt: "Agile software development comprises various approaches to software development under which requirements and solutions evolve through the collaborative effort of self-organizing and cross-functional teams and their customer/end user. "
+    excerpt: "敏捷是一种方法，诞生于软件开发领域。敏捷开发是一种以人为核心、迭代、循序渐进的开发方法。敏捷方法论以用于各个领域"
     url: "/supports/agile/"
     btn_label: "Know More"
     btn_class: "btn--primary"
