@@ -8,6 +8,7 @@ sidebar:
   nav: "supports"
 permalink: /supports/agile/
 toc: true
+toc_label: "Agenda"
 
 feature_row1:
   - image_path: /assets/images/vuca.jpg
