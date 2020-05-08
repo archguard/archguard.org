@@ -1,5 +1,5 @@
 ---
-title: "Every code should be guard"
+title: "ArchGuard"
 layout: splash
 header:
   overlay_filter: "rgba(99, 183, 175, 0.7)"
