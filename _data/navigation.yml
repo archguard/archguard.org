@@ -17,8 +17,8 @@ supports:
     url: /supports/agile/
   - title: "自动化测试能力"
     url: /supports/auto-test/
-  - title: "架构能力"
-    url: /supports/architecture/
+  # - title: "架构能力"
+  #   url: /supports/architecture/
   # - title: "平台能力"
   #   url: /supports/platform/
 
