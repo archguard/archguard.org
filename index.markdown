@@ -1,5 +1,5 @@
 ---
-title: "ArchGuard"
+title: "Every code should be guard"
 layout: splash
 header:
   overlay_filter: "rgba(99, 183, 175, 0.7)"
@@ -7,7 +7,7 @@ header:
   actions:
     - label: "Getting Start"
       url: "/manuals/env-prepare/"
-excerpt: "沉淀了我们遗留系统现代化改造经验，向您提供遗留系统现代化全过程中策略定制，改造工具，以及演进架构的帮助"
+excerpt: "沉淀了我们的遗留系统现代化改造经验<br>向您提供遗留系统现代化全过程中策略定制，改造工具，以及演进架构的帮助"
 intro1: 
   - excerpt: "如果施主您遇到以下的苦恼。。。"
 feature_row:
@@ -21,7 +21,7 @@ feature_row:
     # title: "痛点三"
     # excerpt: "如何从总体上客观评估各系统架构并有效减缓腐化？"
 intro2: 
-  - image_path: /assets/images/title.png
+  - image_path: /assets/images/title1.jpg
 feature_row2:
   - image_path: /assets/images/assessment.png
     title: "帮助您精准的做投资决策，提高投资性价比"

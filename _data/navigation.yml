@@ -11,10 +11,10 @@ main:
 supports:
   - title: "能力总览"
     url: /supports/
-  - title: "DevOps工程能力"
-    url: /supports/devops/
   - title: "Agile敏捷能力"
     url: /supports/agile/
+  - title: "DevOps工程能力"
+    url: /supports/devops/
   - title: "自动化测试能力"
     url: /supports/auto-test/
   # - title: "架构能力"
