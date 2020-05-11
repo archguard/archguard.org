@@ -23,6 +23,9 @@ DevOps（英文 Development 和 Operations 的组合）是一组过程、方法�
 > DevOps 里很强调的一点是实现端到端的持续价值交付
 {: .notice--info}
 
+* [What is DevOps?](https://theagileadmin.com/what-is-devops/)
+* [DevOps前世今生](https://www.jianshu.com/p/f40209023006)
+
 ## DevOps 成熟度评估
 
 ### 信通院评估模型
