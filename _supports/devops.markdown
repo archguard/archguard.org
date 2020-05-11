@@ -16,22 +16,28 @@ feature_row:
 
 ---
 
+## DevOps
 
-## 什么是DevOps？
+### What is DevOps
 
 > DevOps（英文 Development 和 Operations 的组合）是一组过程、方法与系统的统称，用于促进开发（应用程序/软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合。
 {: .notice--info}
+
+John Willis 对 DevOps 的定义：
 
 ![](/assets/images/devops-definition.png)
 
 * [What is DevOps?](https://theagileadmin.com/what-is-devops/)
 * [DevOps前世今生](https://www.jianshu.com/p/f40209023006)
 
-## 为什么DevOps？
+DevOps的起源表明，其原则是从Agile与Lean的实践当中提炼而来，因此与Agile和Lean的原则并无二致。
+
+### Why DevOps
 > DevOps目标：通过一系列行之有效的管理实践和技术实践，以消除软件全生命周期的中的浪费，提升软件及其过程的质量、效率和反馈频率。从而使组织能够更好的适应外部的变化。
 {: .notice--info}
 
-## 怎样DevOps？
+
+### How to DevOps
 
 很多人觉得DevOps会牵涉到很多工具的使用，当在一个大型组织要规模化的提升DevOps能力的时候，通常需要关注几点：
 
@@ -42,16 +48,17 @@ feature_row:
 > * （合）实践固化
 {: .notice--info}
 
-### 提升关注点示意图
+**提升关注点示意图**
 这是在组织级提升DevOps能力时候的一个可以参考的示意图
 
 ![](/assets/images/devops.jpg)
 
 
-### 更多DevOps实践与资料
+### DevOps实践与资料
 
 - [LEDGE](https://devops.phodal.com/)
 - [BizDevOps专栏](https://zhuanlan.zhihu.com/bizdevops)
+
 
 ## DevOps 成熟度评估
 
