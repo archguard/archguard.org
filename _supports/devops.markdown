@@ -30,7 +30,8 @@ John Willis 对 DevOps 的定义：
 * [What is DevOps?](https://theagileadmin.com/what-is-devops/)
 * [DevOps前世今生](https://www.jianshu.com/p/f40209023006)
 
-DevOps的起源表明，其原则是从Agile与Lean的实践当中提炼而来，因此与Agile和Lean的原则并无二致。
+> DevOps的起源表明，其原则是从Agile与Lean的实践当中提炼而来，因此与Agile和Lean的原则并无二致。
+{: .notice--warning}
 
 ### Why DevOps
 > DevOps目标：通过一系列行之有效的管理实践和技术实践，以消除软件全生命周期的中的浪费，提升软件及其过程的质量、效率和反馈频率。从而使组织能够更好的适应外部的变化。
@@ -38,6 +39,15 @@ DevOps的起源表明，其原则是从Agile与Lean的实践当中提炼而来�
 
 
 ### How to DevOps
+
+#### DevOps实践与资料
+
+![](/assets/images/devops-tools.jpg)
+
+- [LEDGE](https://devops.phodal.com/)
+- [BizDevOps专栏](https://zhuanlan.zhihu.com/bizdevops)
+
+#### 组织级DevOps提升
 
 很多人觉得DevOps会牵涉到很多工具的使用，当在一个大型组织要规模化的提升DevOps能力的时候，通常需要关注几点：
 
@@ -53,11 +63,6 @@ DevOps的起源表明，其原则是从Agile与Lean的实践当中提炼而来�
 
 ![](/assets/images/devops.jpg)
 
-
-### DevOps实践与资料
-
-- [LEDGE](https://devops.phodal.com/)
-- [BizDevOps专栏](https://zhuanlan.zhihu.com/bizdevops)
 
 
 ## DevOps 成熟度评估
