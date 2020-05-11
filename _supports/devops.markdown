@@ -64,7 +64,6 @@ John Willis 对 DevOps 的定义：
 ![](/assets/images/devops.jpg)
 
 
-
 ## DevOps 成熟度评估
 
 ### 信通院评估模型
