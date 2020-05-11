@@ -31,6 +31,7 @@ DevOps（英文 Development 和 Operations 的组合）是一组过程、方法�
 
 {% include feature_row id="feature_row" type="left" %}
 
+更多相关信息，请参考(信通院评估详细介绍)[http://www.atomicgain.com/devops-maturity-assessment/]
 
 ![](/assets/images/devopsmm.jpg)
 
