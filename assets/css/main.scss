@@ -16,15 +16,14 @@ $type-size-6: 0.6875em!default; // ~12px
 $type-size-7: 0.625em !default; // ~11px
 $type-size-8: 0.585em !default; // ~10px
 
-// .site-logo img {
-//     // max-height: 4rem;
-//     height: 400px;
-// }
-
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
+
+.site-logo img {
+    max-height: 3rem;
+}
 
 
 
