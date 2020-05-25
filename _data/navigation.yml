@@ -63,6 +63,8 @@ docs:
     children:
       - title: "安装下载"
         url: /manuals/download/
+      - title: "操作流程"
+        url: /manuals/operation/
   - title: 业务导向的架构评估
     children:
       - title: "评估操作"
