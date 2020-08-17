@@ -1,0 +1,36 @@
+@startuml C4_Elements
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+Person_Ext(user1, "Architect", "架构师 / 架构办")
+Person_Ext(user2, "Dev", "开发")
+
+System_Boundary(c1, "ArchGuard Core") {
+    Container(codeAnalysisFE, "Code Analysis F/E", "ArchGuard UI")
+    Container(codeAnalysisModule, "Code Analysis Module", "Kotlin", "模块/包/类等分析、门禁、配置")
+    Container(codeScanner, "Code Scanner", "Kotlin", "扫描调用入口")
+    Container(codeScanTools , "Code Scan Jars", "Kotlin", "具体扫描工具Jar包：Java依赖关系、PLSQL调用关系、代码复杂度、Jacoco报告、Git提交记录的扫描")
+    Container(codeAnalysisAddition, "Code Analysis Addition", "Kotlin", "集成的三方扫描：评估报告、PLSQL2Kt")
+}
+
+System_Boundary(c2, "ArchGuard Infrastructure") {
+  Container(jenkins, "Jenkins Image", "Docker","定制Jenkins镜像")
+  Container(dependencyAnalyzerPlugin, "Dependency Analyzer Plugin", "Java", "Jenkins插件")
+  Container(flywayService, "Flyway Service", "支撑数据库自动化变更")
+  Container(documentApp, "Document App", "Swagger server for all B/E API")
+  Container(eurekaServer, "EurekaServer", "Java", "EurekaServer")  
+  Container(archguardDeploy, "Archguard Deploy", "Shell", "Deploy script")  
+}
+
+
+Rel(user1, codeAnalysisFE, "F/E UI", "JSON")
+Rel(user2, codeAnalysisFE, "F/E UI", "JSON")
+Rel(user2, jenkins, "Jenkins UI", "JSON")
+
+Rel(codeAnalysisFE, codeAnalysisModule, "HTTP", "JSON")
+Rel(codeAnalysisFE, codeScanner, "HTTP", "JSON")
+Rel(codeAnalysisFE, codeAnalysisAddition, "HTTP", "JSON")
+Rel(codeScanner, codeScanTools, "Jar", "Invoke")
+Rel(dependencyAnalyzerPlugin, codeScanTools, "Jar", "Invoke")
+Rel(jenkins, dependencyAnalyzerPlugin, "HTTP", "JSON")
+
+@enduml
