@@ -6,10 +6,10 @@ Person_Ext(user2, "Dev", "开发")
 
 System_Boundary(c1, "ArchGuard Core") {
     Container(codeAnalysisFE, "Code Analysis F/E", "ArchGuard UI")
-    Container(codeAnalysisModule, "Code Analysis Module", "Kotlin", "模块/包/类等分析、门禁、配置")
-    Container(codeScanner, "Code Scanner", "Kotlin", "扫描调用入口")
+    Container(codeAnalysisModule, "Code Analysis", "Kotlin", "架构分析功能，如依赖分析、指标分析(只读DB)")
+    Container(codeScanner, "Code Scanner", "Kotlin", "各级扫描调用入口（只写DB，不读）")
     Container(codeScanTools , "Code Scan Jars", "Kotlin", "具体扫描工具Jar包：Java依赖关系、PLSQL调用关系、代码复杂度、Jacoco报告、Git提交记录的扫描")
-    Container(codeAnalysisAddition, "Code Analysis Addition", "Kotlin", "集成的三方扫描：评估报告、PLSQL2Kt")
+    Container(codeAnalysisAddition, "Code Addition", "Kotlin", "杂货铺：评估报告、PLSQL2Kt、多项目管理等（DB读写）")
   Container(jenkins, "Jenkins Image", "Docker","定制Jenkins镜像")
   Container(dependencyAnalyzerPlugin, "Dependency Analyzer Plugin", "Java", "Jenkins插件")
 }
@@ -30,6 +30,7 @@ Rel(codeAnalysisFE, codeAnalysisModule, "HTTP", "JSON")
 Rel(codeAnalysisFE, codeScanner, "HTTP", "JSON")
 Rel(codeAnalysisFE, codeAnalysisAddition, "HTTP", "JSON")
 Rel(codeScanner, codeScanTools, "Jar", "Invoke")
+
 Rel(dependencyAnalyzerPlugin, codeScanTools, "Jar", "Invoke")
 Rel(dependencyAnalyzerPlugin, codeAnalysisModule, "HTTP", "JSON")
 Rel(jenkins, dependencyAnalyzerPlugin, "Plugin", "Invoke")
