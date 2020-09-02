@@ -10,17 +10,13 @@ System_Boundary(c1, "ArchGuard Core") {
     Container(codeScanner, "Code Scanner", "Kotlin", "各级扫描调用入口（只写DB，不读）")
     Container(codeScanTools , "Code Scan Jars", "Kotlin", "具体扫描工具Jar包：Java依赖关系、PLSQL调用关系、代码复杂度、Jacoco报告、Git提交记录的扫描")
     Container(codeAnalysisAddition, "Code Addition", "Kotlin", "杂货铺：评估报告、PLSQL2Kt、多项目管理等（DB读写）")
-  Container(jenkins, "Jenkins Image", "Docker","定制Jenkins镜像")
-  Container(dependencyAnalyzerPlugin, "Dependency Analyzer Plugin", "Java", "Jenkins插件")
+    Container(jenkins, "Jenkins Image", "Docker","定制Jenkins镜像")
+    Container(dependencyAnalyzerPlugin, "Dependency Analyzer Plugin", "Java", "Jenkins插件")
+    Container(flywayService, "Flyway Service", "Support DB Auto upgrade")
+    Container(documentApp, "Document App", "Swagger server for all B/E API")
+    Container(eurekaServer, "EurekaServer", "Java", "EurekaServer")  
+    Container(archguardDeploy, "Archguard Deploy", "Shell", "Deploy script")  
 }
-
-System_Boundary(c2, "ArchGuard Infrastructure") {
-  Container(flywayService, "Flyway Service", "Support DB Auto upgrade")
-  Container(documentApp, "Document App", "Swagger server for all B/E API")
-  Container(eurekaServer, "EurekaServer", "Java", "EurekaServer")  
-  Container(archguardDeploy, "Archguard Deploy", "Shell", "Deploy script")  
-}
-
 
 Rel(user1, codeAnalysisFE, "F/E UI", "JSON")
 Rel(user2, codeAnalysisFE, "F/E UI", "JSON")
