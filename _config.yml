@@ -26,13 +26,12 @@ og_image: /assets/images/Logo-Shield.png
 description: Everything as code, every code could be guard
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://archguard.org/" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: abigail830
-# github_username:  abigail830
+
 author:
   name:       ThoughtWorks
   url:        https://www.thoughtworks.com/
 
-repository: "abigail830/archguard.org"
+repository: "archguard/archguard.org"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.19.1"
