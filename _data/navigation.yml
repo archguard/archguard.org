@@ -83,12 +83,6 @@ docs:
         url: /manuals/arch-guard/
       - title: "预警配置"
         url: /manuals/arch-alert/
-  - title: PLSQL专区
-    children:
-      - title: "PLSQL依赖分析"
-        url: /manuals/plsql-analysis/
-      - title: "PLSQL转Kotlin"
-        url: /manuals/plsql-transform/
   - title: 其他
     children:
       - title: "功能规划"
