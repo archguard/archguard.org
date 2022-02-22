@@ -12,22 +12,16 @@ permalink: /manuals/download/
 > Welcome to ArchGuard
 {: .notice--info}
 
-### Step1. 安装docker
-
-* [下载链接](https://docs.docker.com/get-docker/)
-
-### Step2. 下载部署工程
-
 ```
-git clone https://github.com/archguard/archguard_deploy.git 
+docker pull archguard/archguard-backend:latest
+docker pull archguard/archguard-backend:vx.x.x
+docker-compose up
 ```
 
-### Step3. 执行命令
-- Start all containers
-`./deploy.sh up`
-- Stop all containers
-`./deploy.sh stop`
-- Remove all containers
-`./deploy.sh rm`
+source code:
 
+- [x] [ArchGuard backend](https://github.com/archguard/archguard-backend)
+- [x] [ArchGuard scanner](https://github.com/archguard/scanner/)
+- [x] [ArchGuard frontend](https://github.com/archguard/archguard-frontend)
+- [x] [ArchGuard frontend cli](https://github.com/archguard/archguard-cli)
 
