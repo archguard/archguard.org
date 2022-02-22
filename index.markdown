@@ -6,7 +6,7 @@ header:
   overlay_image: /assets/images/background.jpg
   actions:
     - label: "Getting Start"
-      url: "/manuals/env-prepare/"
+      url: "/manuals/download/"
 excerpt: "沉淀了我们的遗留系统现代化改造经验<br>向您提供遗留系统现代化全过程中策略定制，改造工具，以及演进架构的帮助"
 intro1: 
   - excerpt: "如果施主您遇到以下的苦恼。。。"
