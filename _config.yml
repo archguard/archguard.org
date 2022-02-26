@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -28,8 +28,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://archguard.org/" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
-  name:       ThoughtWorks
-  url:        https://www.thoughtworks.com/
+  name: ThoughtWorks
+  url: https://www.thoughtworks.com/
 
 repository: "archguard/archguard.org"
 
@@ -41,25 +41,38 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-include: 
+include:
   - _manuals
   - _models
   - _supports
+  - _posts
 
 
-# defaults:
-#   _models
-#   - scope:
-#       path: "/models"
-#     values:
-#       layout: single
-#       read_time: true
-#       related: true
-#       header:
-#         overlay_filter: "rgba(99, 183, 175, 0.7)"
-#         overlay_image: /assets/images/background.jpg
-#       sidebar:
-#         nav: "models"
+permalink: /:categories/:title/
+
+collections:
+  _posts:
+    output: true
+    permalink: /:collection/:path/
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
 
 
 # Exclude from processing.
