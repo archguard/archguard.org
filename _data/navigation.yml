@@ -1,26 +1,24 @@
 main:
+  - title: Blog
+    url: /posts/
   - title: "评估·改造·守护"
     url: /models/about-archguard/
-  - title: "能力支撑"
-    url: /supports/
   - title: "操作手册"
     url: /manuals/download/
   - title: "关于我们"
     url: /about/
+#  - title: "能力支撑"
+#    url: /supports/
 
-supports:
-  - title: "能力总览"
-    url: /supports/
-  - title: "Agile敏捷能力"
-    url: /supports/agile/
-  - title: "DevOps工程能力"
-    url: /supports/devops/
-  - title: "自动化测试能力"
-    url: /supports/auto-test/
-  # - title: "架构能力"
-  #   url: /supports/architecture/
-  # - title: "平台能力"
-  #   url: /supports/platform/
+#supports:
+#  - title: "能力总览"
+#    url: /supports/
+#  - title: "Agile敏捷能力"
+#    url: /supports/agile/
+#  - title: "DevOps工程能力"
+#    url: /supports/devops/
+#  - title: "自动化测试能力"
+#    url: /supports/auto-test/
 
 models:
   - title: "关于ArchGuard"
