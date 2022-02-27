@@ -13,7 +13,7 @@ toc: true
 
 ## Java代码依赖分析工具
 
-> 源自：ThoughtWorks, (已集成在ArchGuard)
+> 源自：Thoughtworks, (已集成在ArchGuard)
 {: .notice--info}
 
 
@@ -30,7 +30,7 @@ toc: true
 
 
 ## Tequlia工具
-> 源自：李新（前ThoughtWorks咨询师）
+> 源自：李新（前Thoughtworks咨询师）
 {: .notice--info}
 
 > 状态：未集成ArchGuard， GitHub：[https://github.com/newlee/tequila](https://github.com/newlee/tequila)

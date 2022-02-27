@@ -11,7 +11,7 @@ toc: true
 ---
 
 ## A/B 测试套件工具
-> 源自：ThoughtWorks (未集成ArchGuard)
+> 源自：Thoughtworks (未集成ArchGuard)
 {: .notice--warning}
 
 ### 工具适用场景

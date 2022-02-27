@@ -12,11 +12,11 @@ permalink: /about/
 You can find the source code for ArchGuard at GitHub:
 [Github](https://github.com/archguard)
 
-Start from ThoughtWorks:
+Start from Thoughtworks:
 
-[ThoughtWorks](https://www.thoughtworks.com/) /
-[ThoughtWorks洞见](https://insights.thoughtworks.cn/) /
-[ThoughtWorks DDD 知乎专栏](https://zhuanlan.zhihu.com/c_137428247)
+[Thoughtworks](https://www.thoughtworks.com/) /
+[Thoughtworks洞见](https://insights.thoughtworks.cn/) /
+[Thoughtworks DDD 知乎专栏](https://zhuanlan.zhihu.com/c_137428247)
 
 
 

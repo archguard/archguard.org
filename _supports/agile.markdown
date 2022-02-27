@@ -31,7 +31,7 @@ feature_row5:
 
 ---
 
-> Content contribute by **FJ** (Senior consultant from ThoughtWorks)
+> Content contribute by **FJ** (Senior consultant from Thoughtworks)
 {: .notice--success}
 
 ## 为什么敏捷
@@ -125,7 +125,7 @@ feature_row5:
 
 ### 敏捷成熟度评估模型
 
-> **AMM（Agile Maturity Model）** 是ThoughtWorks公司首创并实施的的一整套针对即将进行、或一定程度上实现敏捷转型的交付团队进行敏捷成熟度评估的模型。定期对团队进行敏捷成熟度评估，基于观察、了解和检查对团队当前情况作出客观评价。目的是衡量敏捷团队当前状态，发现不足，推动持续改进。
+> **AMM（Agile Maturity Model）** 是Thoughtworks公司首创并实施的的一整套针对即将进行、或一定程度上实现敏捷转型的交付团队进行敏捷成熟度评估的模型。定期对团队进行敏捷成熟度评估，基于观察、了解和检查对团队当前情况作出客观评价。目的是衡量敏捷团队当前状态，发现不足，推动持续改进。
 {: .notice--info}
 
 这个模型所包含的评估项覆盖了软件生命周期从创意、分析、设计、管理、基础设施、编码、测试、发布、运营等多个维度。在一定时间内，对每个维度进行针对性的分析，并根据各项指标进行评估，并提供改善建议和短、中、长期方案等。根据企业实际情况，顾问对各评估维度进行裁剪和自定义调整，使其更加贴合企业需要。
