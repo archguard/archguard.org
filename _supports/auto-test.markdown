@@ -12,7 +12,7 @@ classes: wide
 
 ## 敏捷测试原则
 
-> 出自《[ThoughtWorks 的敏捷测试](https://insights.thoughtworks.cn/agile-testing-thoughtworks/)》
+> 出自《[Thoughtworks 的敏捷测试](https://insights.thoughtworks.cn/agile-testing-thoughtworks/)》
 {: .notice--info}
 
 * 我们的目标在于和团队一起尽快地交付高质量软件。

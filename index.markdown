@@ -32,7 +32,7 @@ feature_row2:
 feature_row3:
   - image_path: /assets/images/tools.png
     title: "帮助您高效的改造系统，降低改造门槛"
-    excerpt: '通过多年ThoughtWorks改造经验总结，ArchGuard基于您系统的问题，向您推荐最适合的改造工具（自研/三方），自动，高效，安全的进行改造'
+    excerpt: '通过多年Thoughtworks改造经验总结，ArchGuard基于您系统的问题，向您推荐最适合的改造工具（自研/三方），自动，高效，安全的进行改造'
     url: "/models/transform-strategic/"
     btn_label: "架构改造"
     btn_class: "btn--primary"
