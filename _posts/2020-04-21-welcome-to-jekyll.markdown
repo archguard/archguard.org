@@ -1,29 +1,27 @@
 ---
 layout: single
-title:  "Welcome to Jekyll!"
+title:  "Welcome to ArchGuard!"
 categories:
   - Blog
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
 
-`YEAR-MONTH-DAY-title.MARKUP`
+## Evolution your architecture in programming way.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+您是否遇到：
 
-Jekyll also offers powerful support for code snippets:
+- 系统庞大，业务复杂，如何快速响应市场需求？
+- 架构腐化，代码混乱，如何有效降低改造门槛？
+- 如何从总体上客观评估各系统架构并有效减缓腐化？
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+ArchGuard 它可以：
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+- 架构评估。帮助您精准的做投资决策，提高投资性价比。ArchGuard以业务价值为导向，对系统的项目的各个方面进行扫描评估，助力用户找到系统存在的薄弱环节。
+- 架构改造。帮助您高效的改造系统，降低改造门槛。通过多年Thoughtworks改造经验总结，ArchGuard基于您系统的问题，向您推荐最适合的改造工具（自研/三方），自动，高效，安全的进行改造。
+- 架构守护。帮助您持续的守护系统，减缓系统腐化。ArchGuard支持个性化配置标准，在系统全生命周期及时预警，及时纠偏，以减缓系统腐化。
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+系统组成：
+
+- [x] [ArchGuard backend](https://github.com/archguard/archguard-backend) - connect scanner and show data.
+- [x] [ArchGuard scanner](https://github.com/archguard/scanner/)  - scan source code, binary date and othes, and feed to database.
+- [x] [ArchGuard frontend](https://github.com/archguard/archguard-frontend) - visualization results & dashboard
