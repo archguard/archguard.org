@@ -9,7 +9,7 @@ header:
       url: "/manuals/download/"
 excerpt: "沉淀了我们的遗留系统现代化改造经验<br>向您提供遗留系统现代化全过程中策略定制，改造工具，以及演进架构的帮助"
 intro1: 
-  - excerpt: "如果施主您遇到以下的苦恼。。。"
+  - excerpt: "如果您遇到以下的苦恼。。。"
 feature_row:
   - image_path: /assets/images/unsplash-gallery-image-1-th.jpg
     # title: "痛点一"
