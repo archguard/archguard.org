@@ -32,6 +32,14 @@ docker-compose pull
 
 再执行 `docker-compose up`
 
+### 使用 ArchGuard 项目作为示例：
+
+新建 Backend：https://github.com/archguard/archguard
+
+新建 Frontend：https://github.com/archguard/archguard
+
+需要在系统配置中添加**源码路径**：archguard
+g
 ### 已知问题
 
 已知问题，Scanner 在扫描时，会花费比较多的内存，使用 Docker Desktop/Colima 默认的配置时，可能会造成 OOM，需要配置更大的内存。
@@ -41,5 +49,4 @@ docker-compose pull
 ```
 colima start --cpu 4 --memory 8
 ```
-
 
