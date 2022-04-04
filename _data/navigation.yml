@@ -45,30 +45,10 @@ models:
     url: /models/document/
 
 docs:
-  - title: Getting Started
+  - title: 安装下载
     children:
-      - title: "安装下载"
+      - title: "Docker 快速部署"
         url: /manuals/download/
-      - title: "操作流程"
-        url: /manuals/operation/
-  - title: 业务导向的架构评估
-    children:
-      - title: "评估操作"
-        url: /manuals/arch-evaluate/
-  - title: 智能辅助的改造工具
-    children:
-      - title: 分析工具
-        url: /manuals/arch-analysis/
-      - title: 改造工具
-        url: /manuals/arch-refactor/
-      - title: 测试工具
-        url: /manuals/arch-test/
-  - title: 全时多维的架构守护
-    children:
-      - title: "守护配置"
-        url: /manuals/arch-guard/
-      - title: "预警配置"
-        url: /manuals/arch-alert/
   - title: 其他
     children:
       - title: "功能规划"

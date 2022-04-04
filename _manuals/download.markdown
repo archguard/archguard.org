@@ -9,19 +9,14 @@ sidebar:
 permalink: /manuals/download/
 ---
 
-> Welcome to ArchGuard
-{: .notice--info}
+## 环境准备
+- Docker 
+- Docker Compose 3.8+
 
-```
-docker pull archguard/archguard-backend:latest
-docker pull archguard/archguard-backend:vx.x.x
-docker-compose up
-```
+## docker-compose 文件
+[所在仓库](https://github.com/archguard/archguard)
 
-source code:
+[文件地址](https://github.com/archguard/archguard/blob/master/docker-compose.yml)
 
-- [x] [ArchGuard backend](https://github.com/archguard/archguard-backend)
-- [x] [ArchGuard scanner](https://github.com/archguard/scanner/)
-- [x] [ArchGuard frontend](https://github.com/archguard/archguard-frontend)
-- [x] [ArchGuard frontend cli](https://github.com/archguard/archguard-cli)
-
+## 更多参见
+[ArchGuard Docker 部署](https://archguard.org/blog/archguard/archguard-docker-deploy/)
