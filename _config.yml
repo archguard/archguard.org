@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: ""
-subtitle: Everything as code, every code could be guard
+subtitle: 守护架构，放权代码
 email:
 logo: "/assets/images/Logo-Shield.png"
 og_image: /assets/images/Logo-Shield.png
-description: Everything as code, every code could be guard
+description: 守护架构，放权代码
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://archguard.org/" # the base hostname & protocol for your site, e.g. http://example.com
 
