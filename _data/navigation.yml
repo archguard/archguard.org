@@ -1,24 +1,12 @@
 main:
-  - title: Blog
-    url: /posts/
-  - title: "评估·改造·守护"
+  - title: "总览"
     url: /models/about-archguard/
-  - title: "操作手册"
+  - title: "博客"
+    url: /posts/
+  - title: "开始使用"
     url: /manuals/download/
   - title: "关于我们"
     url: /about/
-#  - title: "能力支撑"
-#    url: /supports/
-
-#supports:
-#  - title: "能力总览"
-#    url: /supports/
-#  - title: "Agile敏捷能力"
-#    url: /supports/agile/
-#  - title: "DevOps工程能力"
-#    url: /supports/devops/
-#  - title: "自动化测试能力"
-#    url: /supports/auto-test/
 
 models:
   - title: "关于ArchGuard"
