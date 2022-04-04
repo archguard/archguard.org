@@ -5,9 +5,9 @@ header:
   overlay_filter: "rgba(99, 183, 175, 0.7)"
   overlay_image: /assets/images/background.jpg
   actions:
-    - label: "Getting Start"
-      url: "/manuals/download/"
-excerpt: "沉淀了我们的遗留系统现代化改造经验<br>向您提供遗留系统现代化全过程中策略定制，改造工具，以及演进架构的帮助"
+    - label: "了解更多"
+      url: "https://github.com/archguard"
+excerpt: "国内首个开源架构治理平台工具，专治分布式场景下各种不服"
 intro1: 
   - excerpt: "如果您遇到以下的苦恼。。。"
 feature_row:
