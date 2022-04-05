@@ -2,9 +2,9 @@
 layout: single
 title:  "Welcome to ArchGuard!"
 categories:
-  - Blog
+- Blog
+- ArchGuard
 ---
-
 
 ## Evolution your architecture in programming way.
 

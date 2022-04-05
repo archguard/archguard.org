@@ -1,8 +1,9 @@
 ---
 layout: single
-title:  "ArchGuard current Diagram (Old, 2020.10)"
+title:  "rchGuard current Diagram (Old, 2020.10)"
 categories:
 - Blog
+- ArchGuard
 ---
 
 ## Current Diagram
