@@ -1,13 +1,9 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜  测试保护
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/evaluate-models/test/
-toc: true
+title:  "评估·改造·守护 ｜  测试保护"
+categories:
+- Blog
+- ArchGuard
 ---
 
 ## 测试分层

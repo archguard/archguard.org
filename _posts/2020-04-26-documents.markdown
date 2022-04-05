@@ -1,13 +1,9 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜ 参考文档
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/document/
-
+title:  "评估·改造·守护 ｜ 参考文档"
+categories:
+- Blog
+- ArchGuard
 ---
 
 - [《7 Options to modernize legacy systems》](https://www.gartner.com/smarterwithgartner/7-options-to-modernize-legacy-systems/)

@@ -1,13 +1,9 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜ 评估策略模型
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/evaluate-strategic/model/
-toc: true
+title:  "评估·改造·守护 ｜ 评估策略模型"
+categories:
+- Blog
+- ArchGuard
 ---
 
 ### 市场响应力评估模型

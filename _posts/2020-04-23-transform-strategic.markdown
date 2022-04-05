@@ -1,13 +1,9 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜ 改造策略
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/transform-strategic/
-toc: true
+title:  "评估·改造·守护 ｜ 改造策略"
+categories:
+- Blog
+- ArchGuard
 ---
 
 ## 工具辅助小步改造

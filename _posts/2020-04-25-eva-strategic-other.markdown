@@ -1,13 +1,9 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜ 业界其他评估方式与模型
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/evaluate-strategic/other/
-classes: wide
+title:  "评估·改造·守护 ｜ 业界其他评估方式与模型"
+categories:
+- Blog
+- ArchGuard
 ---
 
 ## 业界常见评估方式

@@ -1,15 +1,10 @@
 ---
 layout: single
-title: 评估·改造·守护 ｜ 改造模式
-header:
-  overlay_filter: "rgba(99, 183, 175, 0.6)"
-  overlay_image: /assets/images/background.jpg
-sidebar:
-  nav: "models"
-permalink: /models/transform-models/
-toc: true
+title:  "评估·改造·守护 ｜ 改造模式"
+categories:
+- Blog
+- ArchGuard
 ---
-
 
 ## 封装 Encapsulation
 > 业务较为固定时，可将原有系统视作黑盒，在其外层进行封装。通过封装层访问原有系统，以提高系统的可扩展性
