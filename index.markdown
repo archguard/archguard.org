@@ -9,17 +9,18 @@ header:
       url: "https://github.com/archguard"
 excerpt: "国内首个开源架构治理平台工具，专治分布式场景下各种不服"
 intro1: 
-  - excerpt: "如果您遇到以下的苦恼。。。"
-feature_row:
-  - image_path: /assets/images/unsplash-gallery-image-1-th.jpg
-    # title: "痛点一"
-    # excerpt: "系统庞大，业务复杂，如何快速响应市场需求？"
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    # title: "痛点二"
-    # excerpt: "架构腐化，代码混乱，如何有效降低改造门槛？"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    # title: "痛点三"
-    # excerpt: "如何从总体上客观评估各系统架构并有效减缓腐化？"
+  - excerpt: "我们所面临的挑战"
+feature_row1:
+  - title: "设计与实现不匹配"
+    excerpt: "设计的软件架构与真正实施后的架构，存在着巨大的差异。<br>而这个差异，往往需要编码上线、乃至一段时间之后才能发现"
+  - title: "没有规范 or 不遵守规范"
+    excerpt: "作为一个资深的开发人员，我们制定了一系列的规范，但是没有多少团队人员愿意遵守"
+  - title: "代码量巨大，难以识别问题"
+    excerpt: "一个由十几个或者几十个微服务创建的系统，往往难以快速发现它们之间错综复杂的关系"
+  - title: "架构模型的每个层级都可能出错"
+    excerpt: "如服务间 API 耦合、代码间耦合、数据库耦合等等"
+  - title: "架构师、开发人员自身缺乏丰富的经验"
+    excerpt: "知道有问题，但是说不出来哪有问题，也不知道如何改进"
 intro2: 
   - image_path: /assets/images/title1.jpg
 feature_row2:
@@ -47,7 +48,7 @@ feature_row4:
 
 {% include feature_row id="intro1" type="center" %}
 
-{% include feature_row %}
+{% include feature_row id="feature_row1" type="center" %}
 
 {% include feature_row id="intro2" type="center" %}
 
