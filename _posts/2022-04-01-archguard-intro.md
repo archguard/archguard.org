@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "ArchGuard 1.4.0 发布"
+title:  "ArchGuard 介绍"
 categories:
 - Blog
 - ArchGuard
