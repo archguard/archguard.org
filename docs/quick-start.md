@@ -9,6 +9,9 @@ permalink: /
 # Quick Start
 
 
+## Why ArchGuard
+
+
 ### vs APM
 
 APM is awesome for developer. APM is build in runtime, ArchGuard is focus on development and rules. In archguard, not follow rule will not show data, better for governance.
