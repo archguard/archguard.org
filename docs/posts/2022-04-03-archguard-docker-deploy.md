@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "ArchGuard Docker 部署"
 categories:
 - Blog

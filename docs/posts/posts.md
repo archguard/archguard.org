@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 博客
+title: Posts
 nav_order: 8
 has_children: true
 permalink: /posts

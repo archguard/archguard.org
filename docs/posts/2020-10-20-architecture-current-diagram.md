@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "rchGuard current Diagram (Old, 2020.10)"
 categories:
 - Blog

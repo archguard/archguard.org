@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "ArchGuard API 分析"
 categories:
 - Blog

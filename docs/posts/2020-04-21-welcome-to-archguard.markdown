@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "Welcome to ArchGuard!"
 categories:
 - Blog

@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "评估·改造·守护 ｜ 业界其他评估方式与模型"
 categories:
 - Blog

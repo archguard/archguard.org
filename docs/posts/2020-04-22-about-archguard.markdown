@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "评估·改造·守护 ｜ 关于ArchGuard"
 categories:
 - Blog

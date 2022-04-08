@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "评估·改造·守护 ｜ 评估策略模型"
 categories:
 - Blog

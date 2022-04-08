@@ -1,5 +1,6 @@
 ---
 layout: default
+parent: Posts
 title:  "ArchGuard 介绍"
 categories:
 - Blog
