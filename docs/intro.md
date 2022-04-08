@@ -1,10 +1,7 @@
 ---
 layout: default
-parent: Posts
-title:  "Welcome to ArchGuard!"
-categories:
-- Blog
-- ArchGuard
+title: ArchGuard Introduction
+nav_order: 2
 ---
 
 ## Evolution your architecture in programming way.

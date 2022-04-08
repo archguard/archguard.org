@@ -6,11 +6,24 @@ description: "ArchGuard 是一个针对于微服务（分布式场景）下的�
 permalink: /
 ---
 
+Online Demo: coming soon
+
 # Quick Start
 
+## Docker Compose
+
+```
+curl -s https://raw.githubusercontent.com/archguard/archguard/master/install.sh | bash -s master 
+```
+
+or
+
+```
+git clone https://github.com/archguard/archguard
+docker-compose up
+```
 
 ## Why ArchGuard
-
 
 ### vs APM
 
