@@ -8,6 +8,8 @@ permalink: /
 
 Online Demo: coming soon
 
+![Logo](/assets/images/logo.png)
+
 # Quick Start
 
 ## Docker Compose
