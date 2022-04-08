@@ -1,4 +1,4 @@
-remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 
 title: ArchGuard - 守护架构，放权代码
 description: 国内首个开源架构治理平台工具，专治分布式场景下各种不服。

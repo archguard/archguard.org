@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "webrick" # for local
+
 gem "just-the-docs"
 gem "kramdown-parser-gfm"
 
