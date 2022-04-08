@@ -14,7 +14,10 @@ permalink: /development
 
 ## Local setup
 
-requirements: JDK 12+
+requirements: 
+
+- JDK 12+
+- InfluxDB 1.8.x
 
 ### database setup
 
