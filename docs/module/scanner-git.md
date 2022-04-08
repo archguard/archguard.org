@@ -3,6 +3,7 @@ layout: default
 parent: Modules
 title:  "Git 与语言分析"
 permalink: /modules/scanner/git
+nav_order: 1
 ---
 
 Scan Git 的主要功能：

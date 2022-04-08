@@ -1,8 +1,9 @@
 ---
 layout: default
 parent: Modules
-title:  "数据库依赖"
+title:  "源码分析：数据库依赖"
 permalink: /modules/scanner/sourcecode-database
+nav_order: 4
 ---
 
 主要处理逻辑：

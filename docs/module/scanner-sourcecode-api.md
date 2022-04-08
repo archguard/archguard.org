@@ -1,8 +1,9 @@
 ---
 layout: default
 parent: Modules
-title:  "服务地图"
+title:  "源码分析：服务地图"
 permalink: /modules/scanner/sourcecode-api
+nav_order: 3
 ---
 
 ## API 分析
