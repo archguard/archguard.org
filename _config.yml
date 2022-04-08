@@ -2,7 +2,7 @@
 remote_theme: pmarsceill/just-the-docs
 
 title: ArchGuard
-description: 国内首个开源架构治理平台工具，专治分布式场景下各种不服。
+description: 一个开源的架构治理平台工具，专治分布式场景下的微服务架构。
 
 heading_anchors: true
 
