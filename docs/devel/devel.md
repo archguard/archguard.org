@@ -51,6 +51,8 @@ run
 
 ### Frontend setup
 
+**important!**: start backend before frontend.
+
 ```bash
 git clone https://github.com/archguard/archguard-frontend
 ```
