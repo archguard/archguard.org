@@ -8,12 +8,13 @@ permalink: /modules/scanner/sourcecode-database
 主要处理逻辑：
 
 1. 从代码中解析出 SQL 代码
-2. 对 SQL 代码进行处理和解析，得到数据库表。（jsqlparser）
-3. 构建映射关系
+2. 对 SQL 代码进行处理
+3. 通过 jsqlparser 得到数据库表
+4. 构建映射关系
 
 代码见：[MysqlAnalyser.kt](https://github.com/archguard/scanner/blob/master/scan_sourcecode/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
 
-## 过滤出代码中的 SQL 说一句
+## 解析过滤出代码中的 SQL 语句
 
 当前 ArchGuard 支持：
 
@@ -85,7 +86,7 @@ function.FunctionCalls.forEach {
 }
 ```
 
-## Spring DATA JPA
+### Spring DATA JPA
 
 对于使用注解的 JPA 代码来说，也相当的简单：
 
