@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "ArchGuard Docker 部署"
 categories:
 - Blog

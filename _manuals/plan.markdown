@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: 功能规划
 header:
   overlay_filter: "rgba(99, 183, 175, 0.7)"

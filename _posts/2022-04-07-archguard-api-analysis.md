@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "ArchGuard API 分析"
 categories:
 - Blog

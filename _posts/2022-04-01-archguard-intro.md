@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "ArchGuard 介绍"
 categories:
 - Blog

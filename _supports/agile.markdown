@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: 能力支撑 ｜ Agile敏捷能力
 header:
   overlay_filter: "rgba(99, 183, 175, 0.6)"

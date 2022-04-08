@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "ArchGuard Scan Git 模块介绍"
 categories:
 - Blog

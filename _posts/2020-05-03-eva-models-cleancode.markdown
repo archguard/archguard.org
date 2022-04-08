@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "评估·改造·守护 ｜ 整洁代码"
 categories:
 - Blog

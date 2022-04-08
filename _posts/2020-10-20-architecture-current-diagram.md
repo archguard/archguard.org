@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "rchGuard current Diagram (Old, 2020.10)"
 categories:
 - Blog

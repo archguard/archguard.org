@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "回到单体架构：一个开源项目的重构"
 categories:
 - Blog

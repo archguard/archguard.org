@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: 操作手册｜安装下载
 header:
   overlay_filter: "rgba(99, 183, 175, 0.7)"

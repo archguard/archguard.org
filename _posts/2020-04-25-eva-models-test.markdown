@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title:  "评估·改造·守护 ｜  测试保护"
 categories:
 - Blog

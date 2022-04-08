@@ -1,153 +1,71 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+remote_theme: pmarsceill/just-the-docs
 
-title: ""
-subtitle: 守护架构，放权代码
-email:
-logo: "/assets/images/Logo-Shield.png"
-og_image: /assets/images/Logo-Shield.png
-description: 守护架构，放权代码
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://archguard.org/" # the base hostname & protocol for your site, e.g. http://example.com
+title: ArchGuard - 守护架构，放权代码
+description: 国内首个开源架构治理平台工具，专治分布式场景下各种不服。
 
-author:
-  name: ArchGuard Team
-  url: https://www.archguard.org/
+heading_anchors: true
 
-repository: "archguard/archguard.org"
+footer_content: "Copyright &copy; ArchGuard.org 2020~2022.This code is distributed under the MIT License. See `LICENSE` in this directory."
 
-# Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-# theme: minimal-mistakes-jekyll
-# minimal_mistakes_skin: dirt
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/archguard/archguard" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+
+search:
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  heading_level: 4
+  # Maximum amount of previews per search result
+  # Default: 3
+  previews: 3
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  preview_words_before: 5
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  preview_words_after: 10
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: false
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+#ga_tracking: G-JR0EZ3NLE1
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+
+url: "https://archguard.org" # the base hostname & protocol for your site
+
+# Aux links for the upper right navigation
+aux_links:
+  "View in on GitHub":
+    - "//github.com/archguard/archguard"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
 plugins:
-  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
-include:
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
-  - .asset-cache
-  - .bundle
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
-  - node_modules
-  - package.json
-  - Rakefile
-  - README
-  - tmp
-  - .idea
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-
-# Build settings
-markdown: kramdown
-permalink: /:categories/:title/
-# Outputting
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-# Collections
-collections:
-  #  map to defaults.scope.type
-  models:
-    output: true
-    permalink: /:collection/:path/
-  manuals:
-    output: true
-    permalink: /:collection/:path/
-  supports:
-    output: true
-    permalink: /:collection/:path/
-
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      read_time: true
-      related: true
-  - scope:
-      path: ""
-      type: supports
-    values:
-      layout: single
-  - scope:
-      path: ""
-      type: manuals
-    values:
-      layout: single
-  - scope:
-      path: ""
-      type: models
-    values:
-      layout: single
-  - scope:
-      path: ""
-      type: supports
-    values:
-      layout: single
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
