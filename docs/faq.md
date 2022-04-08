@@ -36,6 +36,10 @@ java "-Ddburl=jdbc:mysql://localhost:3306/archguard?user=root&password=&useSSL=f
 
 ## Git
 
+### Fail to clone source with exitCode 128
+
+无法 CLONE 代码，需要检查一下用户名和密码，或者网络权限。
+
 ### Git 源码配置
 
 error: cannot run ssh: No such file or directory
@@ -44,4 +48,24 @@ fatal: unable to fork
 ArchGuard 直接调用 `git clone` 去 clone 源码
 
 如果配置了用户名和秘密，则会执行 `repo.replace("//", "//${urlEncode(systemInfo.username)}:${urlEncode(systemInfo.getDeCryptPassword())}@")`，以生成一个带用户名和密码的 URL。
+
+### Windows
+
+java.io.IOException: Cannot run program "git" (in directory "d:/xxx"): d:/xxx/scm_git_hot_file.txt (No such file or directory)
+
+Docker Compose 下访问不了 Local 类型的项目，建议下载。
+
+## Docker Compose
+
+### specify container image platform requires api version 1.41
+
+需要更新一下 Docker Compose 的版本到  1.41
+
+### Alpine ERROR: unable to select packages:
+
+尝试：
+
+```
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+```
 

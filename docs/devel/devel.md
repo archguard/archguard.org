@@ -31,3 +31,27 @@ requirements:
 ### run
 
 `./gradlew bootrun`
+
+## 独立启动其它组件
+
+InfluxDB
+
+```
+docker run -d -p 8186:8086 --name influxdb \
+      -v ~/ArchGuard/data/influxdb:/var/lib/influxdb \
+      -e INFLUXDB_INIT_USERNAME=admin \
+      -e INFLUXDB_INIT_PASSWORD=admin \
+      -e INFLUXDB_DB=db0 \
+      influxdb:1.8
+```
+
+MySQL
+
+```
+docker run -d -p 13308:3306 --name archguard-mysql \
+      -v ~/ArchGuard/data/mysql:/var/lib/mysql:rw \
+      -e MYSQL_ROOT_PASSWORD=prisma \
+      -e MYSQL_DATABASE=archguard \
+      -e TZ=Asia/Shanghai \
+      mysql --default-authentication-plugin=mysql_native_password
+```
