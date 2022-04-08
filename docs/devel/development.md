@@ -26,6 +26,8 @@ Components：
 - [x] [ArchGuard frontend](https://github.com/archguard/archguard-frontend) - visualization results & dashboard
 - [x] [Chapi](https://github.com/modernizing/chapi) - Chapi is A common language meta information convertor, convert different languages to same meta-data model.
 
+## Setup
+
 ### Database setup
 
 1. Local mysql, or docker created
@@ -49,6 +51,8 @@ run
 ./gradlew bootrun
 ```
 
+Spring default port：8080
+
 ### Frontend setup
 
 **important!**: start backend before frontend.
@@ -64,6 +68,8 @@ cd archguard
 yarn install
 yarn start
 ```
+
+After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
 ## 独立启动其它组件（可选，用于替换本地环境）
 
