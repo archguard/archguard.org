@@ -26,7 +26,7 @@ requirements:
 - JDK 12+
 - InfluxDB 1.8.x
 
-### database setup
+### Database setup
 
 1. Local mysql, or docker created
 - `docker pull mysql:8`
@@ -35,9 +35,33 @@ requirements:
 - `create database archguard default character set utf8mb4 collate utf8mb4_unicode_ci;`
 - `./gradlew -Dflyway.configFiles=flyway.conf flywayMigrate` (probably not needed)
 
-### run
+### Backend setup
 
-`./gradlew bootrun`
+clone:
+
+```bash
+git clone https://github.com/archguard/archguard
+```
+
+run
+
+```
+./gradlew bootrun
+```
+
+### Frontend setup
+
+```bash
+git clone https://github.com/archguard/archguard-frontend
+```
+
+run 
+
+```bash
+cd archguard
+yarn install
+yarn start
+```
 
 ## 独立启动其它组件
 
