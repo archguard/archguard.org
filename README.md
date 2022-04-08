@@ -8,6 +8,8 @@ setup:
 bundle install
 ```
 
+change `_config.yml` theme to: `theme: just-the-docs` for local 
+
 run:
 
 ```
@@ -20,3 +22,4 @@ with Rubyenv
 rbenv install 3.1.0
 gem install bundle
 ```
+

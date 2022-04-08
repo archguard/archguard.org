@@ -25,6 +25,23 @@ git clone https://github.com/archguard/archguard
 docker-compose up
 ```
 
+## 新建项目
+
+Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:11080/)，就可以新建项目
+
+1. 添加：[https://github.com/archguard/archguard](https://github.com/archguard/archguard)，名称 Backend，选择 Kotlin 语言，再选择扫描
+2. 添加：[https://github.com/archguard/archguard-frontend](https://github.com/archguard/archguard-frontend)，名称 Frontend，选择 TypeScript 语言，**配置源码路径** `archguard`（如果项目的 src 不是在其它目录，就不需要此选项），再选择扫描
+
+等待扫描完成，进入 Backend 就可以看到如下的页面：
+
+![Backend Overview](/assets/screenshots/archguard-20-overview.png)
+
+在服务地图可以看到类似于下面的页面：
+
+![Services Map](/assets/screenshots/archguard-20-servicesmap.png)
+
+如果没有的话，请根据 [FAQ](/docs/faq) 进行调整，或者提交新的 [issue](https://github.com/archguard/archguard)。 
+
 ## Why ArchGuard
 
 ### vs APM
