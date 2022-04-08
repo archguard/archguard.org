@@ -65,7 +65,7 @@ yarn install
 yarn start
 ```
 
-## 独立启动其它组件
+## 独立启动其它组件（可选，用于替换本地环境）
 
 InfluxDB
 
