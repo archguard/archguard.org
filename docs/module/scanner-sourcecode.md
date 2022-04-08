@@ -2,9 +2,7 @@
 layout: default
 parent: Modules
 title:  "SourceCode Scanner"
-categories:
-- Blog
-- ArchGuard
+permalink: /modules/scanner/sourcecode
 ---
 
 ## 源码分析

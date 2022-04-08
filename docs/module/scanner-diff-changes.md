@@ -2,7 +2,7 @@
 layout: default
 parent: Modules
 title:  "Git Scanner"
-permalink: /modules/scanner/git
+permalink: /modules/scanner/diff-changes
 ---
 
 Scan Git 的主要功能：
