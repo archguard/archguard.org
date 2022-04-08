@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Modules
-title:  "Git Scanner"
+title:  "Git 与语言分析"
 permalink: /modules/scanner/git
 ---
 

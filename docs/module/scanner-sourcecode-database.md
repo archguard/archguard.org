@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Modules
-title:  "Database Map"
+title:  "数据库依赖"
 permalink: /modules/scanner/sourcecode-database
 ---
 
