@@ -1,17 +1,9 @@
 ---
 layout: default
 parent: Modules
-title:  "SourceCode Scanner"
-permalink: /modules/scanner/sourcecode
+title:  "SourceCode Scanner API"
+permalink: /modules/scanner/sourcecode-api
 ---
-
-## 源码分析
-
-TBC
-
-## MySQL 分析
-
-TBC
 
 ## API 分析
 
