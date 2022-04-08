@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: Posts
-title:  "ArchGuard Scan Git 模块介绍"
+parent: Modules
+title:  "Git Scanner"
 categories:
 - Blog
 - ArchGuard
@@ -16,6 +16,5 @@ Scan Git 的主要功能：
 - 方法、类的行数计算（原先的功能，待删除）。通过对 Java、Kotlin 进行语法解析，来生成行数数据。 
 
 待完善功能：
-
 
 - 基于 SCC 的认知复杂度。未来可以通过 SCC 的相关功能，替换掉这部分功能。
