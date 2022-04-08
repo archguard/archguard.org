@@ -1,6 +1,6 @@
 ---
 layout: default
 parent: Modules
-title:  "Git Scanner"
+title:  "Diff Changes"
 permalink: /modules/scanner/diff-changes
 ---
