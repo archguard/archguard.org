@@ -12,6 +12,13 @@ permalink: /development
 - build tool：Gradle
 - data storage：MySQL, InfluxDB
 
+系统组成：
+
+- [x] [ArchGuard backend](https://github.com/archguard/archguard-backend) - connect scanner and show data.
+- [x] [ArchGuard scanner](https://github.com/archguard/scanner/)  - scan source code, binary date and othes, and feed to database.
+- [x] [ArchGuard frontend](https://github.com/archguard/archguard-frontend) - visualization results & dashboard
+- [x] [Chapi Code analysis](https://github.com/modernizing/chapi) - Chapi is A common language meta information convertor, convert different languages to same meta-data model.
+
 ## Local setup
 
 requirements: 

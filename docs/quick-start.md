@@ -42,10 +42,68 @@ Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:1
 
 如果没有的话，请根据 [FAQ](/docs/faq) 进行调整，或者提交新的 [issue](https://github.com/archguard/archguard)。 
 
-## Why ArchGuard
+成功日志示例：
 
-### vs APM
-
-APM is awesome for developer. APM is build in runtime, ArchGuard is focus on development and rules. In archguard, not follow rule will not show data, better for governance.
-
-APM 是在运行态发现架构问题的，ArchGuard 是运行在开发态。两者之间存在一些 gap，ArchGuard 专注于代码，更适用于通过规范来治理架构 —— 没有规范，没有数据。
+```
+2022-04-08 16:51:14.826  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:51:14.826  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis :  Finished level 1 scanners
+2022-04-08 16:51:14.826  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:51:29.106  INFO 90471 --- [nio-8080-exec-4] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:51:29.107  INFO 90471 --- [pool-1-thread-1] c.t.a.s.i.client.AnalysisModuleClient    : Auto-define request to module-analysis for system 1
+2022-04-08 16:51:29.108  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:51:29.108  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis :  Finished logic module auto define
+2022-04-08 16:51:29.108  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:51:29.111  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : **************************************************************************
+2022-04-08 16:51:29.111  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       :  Begin calculate and persist Level 2 Metric in systemId 1
+2022-04-08 16:51:29.111  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : **************************************************************************
+2022-04-08 16:51:29.248  INFO 90471 --- [-1 @coroutine#3] c.t.a.s.a.MetricPersistApplService       : Finished calculate methodMetric in systemId 1
+2022-04-08 16:51:29.252  INFO 90471 --- [-1 @coroutine#3] c.t.a.s.i.m.MethodMetricRepositoryImpl   : Delete system method metric old data with id: 1
+2022-04-08 16:51:29.252  WARN 90471 --- [-1 @coroutine#3] c.t.a.s.i.m.MethodMetricRepositoryImpl   : Insert system method metric new data with id is empty!: 1
+2022-04-08 16:51:29.252  INFO 90471 --- [-1 @coroutine#3] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:29.252  INFO 90471 --- [-1 @coroutine#3] c.t.a.s.a.MetricPersistApplService       : Finished persist method Metric to mysql for in systemId 1
+2022-04-08 16:51:29.252  INFO 90471 --- [-1 @coroutine#3] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:31.569  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.a.MetricPersistApplService       : Finished calculate packageMetric in systemId 1
+2022-04-08 16:51:31.573  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.i.m.ModuleMetricRepositoryImpl   : Delete system package metric old data with id: 1
+2022-04-08 16:51:31.595  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.i.m.ModuleMetricRepositoryImpl   : Insert system package metric new data with id: 1
+2022-04-08 16:51:31.595  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:31.595  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.a.MetricPersistApplService       : Finished persist package Metric to mysql for systemId 1
+2022-04-08 16:51:31.595  INFO 90471 --- [-1 @coroutine#4] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:33.911  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.a.MetricPersistApplService       : Finished calculate moduleMetric in systemId 1
+2022-04-08 16:51:33.914  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.i.m.ModuleMetricRepositoryImpl   : Delete system module metric old data with id: 1
+2022-04-08 16:51:33.919  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.i.m.ModuleMetricRepositoryImpl   : Insert system module metric new data with id: 1
+2022-04-08 16:51:33.919  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:33.919  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.a.MetricPersistApplService       : Finished persist module Metric to mysql for systemId 1
+2022-04-08 16:51:33.919  INFO 90471 --- [-1 @coroutine#5] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:51:56.265  INFO 90471 --- [-1 @coroutine#6] c.t.a.s.domain.service.DitService        : Finish calculate all DIT, count: 6600
+2022-04-08 16:52:21.301  INFO 90471 --- [-1 @coroutine#7] c.t.a.s.domain.service.NocService        : Finish calculate all noc, count: 6600
+2022-04-08 16:52:38.335  INFO 90471 --- [-1 @coroutine#8] c.t.a.s.domain.service.LCOM4Service      : Finish calculate all lcom4, count: 6600
+2022-04-08 16:52:38.733  INFO 90471 --- [-1 @coroutine#2] c.t.a.s.i.m.ClassMetricRepositoryImpl    : Delete system class metric old data with id: 1
+2022-04-08 16:52:39.958  INFO 90471 --- [-1 @coroutine#2] c.t.a.s.i.m.ClassMetricRepositoryImpl    : Insert system class metric new data with id: 1
+2022-04-08 16:52:39.958  INFO 90471 --- [-1 @coroutine#2] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:52:39.958  INFO 90471 --- [-1 @coroutine#2] c.t.a.s.a.MetricPersistApplService       : Finished persist class Metric to mysql for systemId 1
+2022-04-08 16:52:39.958  INFO 90471 --- [-1 @coroutine#2] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:52:42.313  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist moduleCircularDependency in systemId 1
+2022-04-08 16:52:44.676  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist packageCircularDependency in systemId 1
+2022-04-08 16:52:52.451  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist classCircularDependency in systemId 1
+2022-04-08 16:52:52.461  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist methodCircularDependency in systemId 1
+2022-04-08 16:52:52.461  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:52:52.461  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist circularDependenciesCount for systemId 1
+2022-04-08 16:52:52.461  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:53:12.301  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:53:12.301  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : Finished persist data class Metric for systemId 1
+2022-04-08 16:53:12.301  INFO 90471 --- [pool-1-thread-1] c.t.a.s.a.MetricPersistApplService       : -----------------------------------------------------------------------
+2022-04-08 16:53:37.145  INFO 90471 --- [pool-1-thread-1] c.t.a.s.i.client.Scanner2Client          : send metrics analysis request to module service
+2022-04-08 16:53:37.145  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:53:37.145  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis :  Finished level 2 analysis metrics
+2022-04-08 16:53:37.145  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:53:37.665  INFO 90471 --- [nio-8080-exec-6] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:53:37.765  INFO 90471 --- [nio-8080-exec-6] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:53:37.815  INFO 90471 --- [nio-8080-exec-6] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:53:37.835  INFO 90471 --- [nio-8080-exec-6] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:53:37.915  INFO 90471 --- [nio-8080-exec-6] c.t.a.m.i.influx.InfluxDBClient          : save metrics to InfluxDB
+2022-04-08 16:53:37.917  INFO 90471 --- [pool-1-thread-1] c.t.a.s.i.client.AnalysisModuleClient    : BadSmellDashboard saved for system 1
+2022-04-08 16:53:37.917  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:53:37.917  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis :  Finished bad smell dashboard
+2022-04-08 16:53:37.917  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : ************************************
+2022-04-08 16:53:37.917  INFO 90471 --- [pool-1-thread-1] t.a.s.d.a.ArchitectureDependencyAnalysis : SET SYSTEM INFO 1 SCAN FLAG TO :SCANNED
+```
