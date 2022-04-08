@@ -25,7 +25,11 @@ git clone https://github.com/archguard/archguard
 docker-compose up
 ```
 
-## 新建项目
+## Local setup
+
+[Development](/development)
+
+# 新建项目
 
 Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:11080/)，就可以新建项目
 
