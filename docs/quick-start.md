@@ -34,7 +34,9 @@ docker-compose up
 Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:11080/)，就可以新建项目
 
 1. 添加：[https://github.com/archguard/archguard](https://github.com/archguard/archguard)，名称 Backend，选择 Kotlin 语言，再选择扫描
-2. 添加：[https://github.com/archguard/archguard-frontend](https://github.com/archguard/archguard-frontend)，名称 Frontend，选择 TypeScript 语言，**配置源码路径** `archguard`（如果项目的 src 不是在其它目录，就不需要此选项），再选择扫描
+2. 添加：[https://github.com/archguard/archguard-frontend](https://github.com/archguard/archguard-frontend)，名称 Frontend，选择 TypeScript 语言，再选择扫描
+
+对于 Archguard 前端来说，因为源码是在 `archguard/src` 目录下，所以需要额外的**配置源码路径**
 
 等待扫描完成，进入 Backend 就可以看到如下的页面：
 
