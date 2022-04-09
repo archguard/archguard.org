@@ -4,7 +4,7 @@ title: Architecture
 parent: Development
 nav_order: 8
 has_children: true
-permalink: /development
+permalink: /development/architecture
 ---
 
 Workflow:
