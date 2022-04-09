@@ -27,7 +27,7 @@ docker-compose up
 
 ## Local setup
 
-[Development](/development)
+see in [Development](/development)
 
 # 新建项目
 
