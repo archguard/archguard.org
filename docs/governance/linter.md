@@ -1,10 +1,14 @@
 ---
 layout: default
-title: 架构治理
-parent: governance
+title: Linter
+parent: 架构治理
 nav_order: 8
 has_children: true
-permalink: /governance
+permalink: /governance/linter
 ---
 
-Linter
+Linter 工具：
+
+- API Linter: [https://github.com/stoplightio/spectral](https://github.com/stoplightio/spectral)
+- Database Linter: [https://github.com/sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff)
+
