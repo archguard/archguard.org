@@ -14,6 +14,8 @@ nav_order: 99
 
 ## Scanner 没有数据
 
+下载最新的 [Scanner](https://github.com/archguard/scanner/releases)
+
 ```
 java "-Ddburl=jdbc:mysql://localhost:3306/archguard?user=root&password=&useSSL=false" -jar scan_sourcecode.jar --system-id=6 --language=java --path=.
 ```
