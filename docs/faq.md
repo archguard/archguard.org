@@ -12,7 +12,7 @@ nav_order: 99
 
 建议使用 Java、Kotlin 进行扫描。
 
-## Scanner 没有数据
+## Scanner
 
 下载最新的 [Scanner](https://github.com/archguard/scanner/releases)
 
@@ -57,7 +57,7 @@ java.io.IOException: Cannot run program "git" (in directory "d:/xxx"): d:/xxx/sc
 
 Docker Compose 下访问不了 Local 类型的项目，建议下载。
 
-## Docker Compose
+## Docker
 
 ### specify container image platform requires api version 1.41
 
