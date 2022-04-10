@@ -94,3 +94,134 @@ docker run -d -p 13308:3306 --name archguard-mysql \
       -e TZ=Asia/Shanghai \
       mysql --default-authentication-plugin=mysql_native_password
 ```
+
+## 其他
+
+### Mac(M1)中如何运行
+
+1. 使用docker启动mysql，并手动创建数据库
+
+   ```
+   docker run -it -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_ROOT_HOST=% -d mysql/mysql-server
+   ```
+
+   ```
+   create database archguard default character set utf8mb4 collate utf8mb4_unicode_ci;
+   ```
+
+   
+
+2. 下载ArchGuard相关文件
+
+   git仓库：https://github.com/archguard/archguard
+
+   下载方式(两种方式均可)：
+
+   1. git clone https://github.com/archguard/archguard.git
+   2. https://github.com/archguard/archguard/archive/refs/heads/master.zip
+
+3. 本地启动后端（ArchGuard backend）
+
+   进入上面下载文件中的主目录
+
+   ```
+   ./gradlew bootrun
+   ```
+
+   启动成功标识：
+
+  <img width="1439" alt="image-20220410121806261" src="https://user-images.githubusercontent.com/41335230/162601532-e99a965d-9cc0-4975-965f-1f10173e52ff.png">
+
+4. 修改docker-compose文件
+
+   ```
+   version: '3.8'
+   services:
+     archguard-frontend:
+       image: "archguard/archguard-frontend:latest"
+       container_name: archguard-frontend
+       depends_on:
+         - archguard-backend
+       ports:
+         - "11080:80"
+       networks:
+         - dependence_network
+   
+     archguard-backend:
+       image: "archguard/archguard-backend:latest"
+       container_name: archguard-backend
+       environment:
+         app_env: debug
+       volumes:
+         - "~/.m2:/root/.m2"
+         - "~/.gradle:/root/.gradle"
+       healthcheck:
+         test: curl -f http://localhost:8080/api/actuator/health || exit 1
+         timeout: 10s
+         retries: 5
+       networks:
+         - dependence_network
+       restart: on-failure:10
+   
+     archguard_influxdb:
+       image: "influxdb:1.8"
+       container_name: archguard_influxdb
+       ports:
+         - '8086:8086'
+       networks:
+         - dependence_network
+       healthcheck:
+         test: curl -f http://localhost:8086/ping || exit 1
+         timeout: 10s
+         retries: 5
+       volumes:
+         - ./archguard_influxdb:/var/lib/influxdb
+       environment:
+         - INFLUXDB_DB=db0
+         - INFLUXDB_ADMIN_USER=admin
+         - INFLUXDB_ADMIN_PASSWORD=admin
+   
+   networks:
+     dependence_network:
+   
+   ```
+
+5. 启动docker-compose
+
+   ```
+   docker-compose up
+   ```
+
+6. 进入archguard-frontend运行容器中，修改nginx的配置
+
+   - 进入容器，其中<CONTAINER ID>，为archguard-frontend运行时的容器ID，可通过docker ps查看到
+
+   ```
+   docker exec -it <CONTAINER ID>
+   ```
+
+   - 修改nginx配置
+
+   ```shell
+   vi /etc/nginx/conf.d/default.conf
+   ```
+
+   这里的ip调整为宿主机的ip
+
+<img width="585" alt="image-20220410122533914" src="https://user-images.githubusercontent.com/41335230/162601549-830cc155-a7bb-4a8a-b048-97775f0af0db.png">
+
+   - 重新nginx配置
+
+     ```
+     /usr/sbin/nginx -s reload
+     ```
+
+7. 最后即可在浏览器中正常访问
+
+   ```
+   http://127.0.0.1:11080/home
+   ```
+![image](https://user-images.githubusercontent.com/41335230/162601557-b7f678f9-6032-4f41-8a90-d656d3d66f2e.png)
+
+   
+ 
