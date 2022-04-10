@@ -73,7 +73,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
 ## 独立启动其它组件（可选，用于替换本地环境）
 
-InfluxDB
+InfluxDB（端口 8086）
 
 ```
 docker run -d -p 8186:8086 --name influxdb \
