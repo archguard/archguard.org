@@ -31,7 +31,24 @@ docker-compose up
 
 see in [Development](/development)
 
-# 新建项目
+## Docker 日志示例
+
+```
+➜  archguard-backend git:(master) ✗ docker-compose -p ArchGuard -f ./docker-compose.yml up -d
+[+] Running 4/4
+ ⠿ Container archguard_mysql     Healthy                                                                                                                                                                                                        0.5s
+ ⠿ Container archguard_influxdb  Running                                                                                                                                                                                                        0.0s
+ ⠿ Container archguard-backend   Running                                                                                                                                                                                                        0.0s
+ ⠿ Container archguard-frontend  Started                                                                                                                                                                                                        1.3s
+➜  archguard-backend git:(master) ✗ docker ps
+CONTAINER ID   IMAGE                                 COMMAND                  CREATED          STATUS                             PORTS                                                    NAMES
+9fa8ee495069   archguard/archguard-frontend:latest   "/docker-entrypoint.…"   10 minutes ago   Up 2 seconds                       0.0.0.0:11080->80/tcp, :::11080->80/tcp                  archguard-frontend
+0c6064c84d4f   archguard/archguard-backend:latest    "java -jar /app.jar …"   10 minutes ago   Up 47 seconds (health: starting)                                                            archguard-backend
+2450124197f2   mysql:8                               "docker-entrypoint.s…"   10 minutes ago   Up 35 seconds (healthy)            33060/tcp, 0.0.0.0:13306->3306/tcp, :::13306->3306/tcp   archguard_mysql
+752459f7ccca   influxdb:1.8                          "/entrypoint.sh infl…"   10 minutes ago   Up 35 seconds (healthy)            0.0.0.0:8086->8086/tcp, :::8086->8086/tcp                archguard_influxdb
+```
+
+## 新建项目
 
 Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:11080/)，就可以新建项目
 
