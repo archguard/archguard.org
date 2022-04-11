@@ -71,3 +71,12 @@ Docker Compose 下访问不了 Local 类型的项目，建议下载。
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
 ```
 
+### 日志
+
+查看：
+
+```
+docker-compose logs -f
+```
+
+
