@@ -47,7 +47,7 @@ git clone https://github.com/archguard/archguard
 
 run
 
-```
+```bash
 ./gradlew bootrun
 ```
 
@@ -75,7 +75,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
 InfluxDB（端口 8086）
 
-```
+```bash
 docker run -d -p 8186:8086 --name influxdb \
       -v ~/ArchGuard/data/influxdb:/var/lib/influxdb \
       -e INFLUXDB_INIT_USERNAME=admin \
@@ -86,7 +86,7 @@ docker run -d -p 8186:8086 --name influxdb \
 
 MySQL
 
-```
+```bash
 docker run -d -p 13308:3306 --name archguard-mysql \
       -v ~/ArchGuard/data/mysql:/var/lib/mysql:rw \
       -e MYSQL_ROOT_PASSWORD=prisma \
