@@ -13,6 +13,138 @@ permalink: /modules
 
 所有的 Scanner 都以 Jar 包 + CLI 的方式来提供服务，使用的框架是：clikt，语言是：Kotlin。
 
+## Scanner 执行过程
+
+主要过程上：
+
+1. Backend 根据不同上下文，调用不同的 xxxScannerTool。
+2. xxxScannerTool 下载 jar，再将 jar 复制到目标目录
+3. 执行对应的 scanner.jar，生成 SQL 数据，并注入到数据库中。
+
+### 1. Backend 调用 Scanner
+
+在 ArchGuard Backend 中是通过调用 Jar 包的方式，来调用相关的 Scanner。
+
+Backend 是通过 `ScannerManager` 来寻找系统中的所有 Scanner：
+
+```kotlin
+@Component
+class ScannerManager(@Autowired private val scanners: List<Scanner>) {
+    fun execute(context: ScanContext) {
+        val WORKER_THREAD_POOL = Executors.newFixedThreadPool(4)
+        val callables: List<Callable<Unit>> = scanners.map { s ->
+            Callable {
+                try {
+                    if (s.canScan(context)) {
+                        s.scan(context)
+                    }
+                } catch (e: Exception) {
+                    log.error("failed to scan {}", s.javaClass.simpleName, e)
+                }
+            }
+        }
+
+        WORKER_THREAD_POOL.invokeAll(callables)
+    }
+}
+```
+
+随后，通过构建的 `ScanContext` 来分析什么情况下使用哪些 Scanner。如 `SourceCodeScanner` 的条件是：
+
+```kotlin
+@Service
+class SourceCodeScanner: Scanner {
+    override fun getScannerName(): String {
+        return "SourceCodeScanner"
+    }
+
+    override fun canScan(context: ScanContext): Boolean {
+        return context.language.lowercase() != "jvm"
+    }
+
+    override fun scan(context: ScanContext) {
+        SourceCodeTool(context.workspace, context.systemId, context.language, context.dbUrl, context.codePath, context.logStream).also { it.analyse() }
+    }
+}
+```
+
+随后，直接调用对应的 ScannerTool。
+
+### 2. ScannerTool 调用 Jar
+
+Scanner 调用 scanner.jar 时，一般是分为三步的：
+
+```
+fun analyse() {
+  prepareTool()
+
+  val cmd = mutableListOf(
+      "java",
+      "-jar",
+      "-Ddburl=$dbUrl?useSSL=false",
+      "diff_changes.jar",
+      "--path=.",
+      "--branch=$branch",
+      "--system-id=$systemId",
+      "--language=${language.lowercase()}"
+  )
+
+  cmd.addAll(this.additionArguments)
+
+  scan(cmd)
+}
+
+private fun prepareTool() {
+  val jarExist = checkIfExistInLocal()
+  if (jarExist) {
+      copyIntoSystemRoot()
+  } else {
+      download()
+  }
+}
+```
+
+PS：其中的 `$dbUrl` 是从 Spring 的 properties 中读取对应的数据库 URL、用户名和密码生成的，传递给目标 scanner，以向这个数据库表注入数据。
+
+即：
+
+1. 准备工具。先检查本地是否有对应的工具，有的话直接复制到目标目录，没有的话 GitHub 下载。
+2. 生成 Command 命令。
+3. 执行对应的 Command 命令。
+
+### 3. Scanner 过程：Sourcecode 示例
+
+如下所示，每个 [Scanner](https://github.com/archguard/scanner) 都使用 `clikt` 框架编写，都以 `Runner.kts` 作为入口。
+
+执行 Scanner 时，一般会分为这几步：
+
+1. 执行对应的分析 Task，分成一个目标数据。
+2. 构建一个 Repository，如 `ContainerRepository` 用于将目标数据结构，转换为 SQL 字符串，即调用：SqlGenerator 来生成。
+3. 随后清理数据，并将数据存入数据库中。
+
+存储过程中下所述：
+
+```kotlin
+ private fun storeDatabase(tables: Array<String>, systemId: String) {
+     store.disableForeignCheck()
+     store.initConnectionPool()
+     logger.info("========================================================")
+     val phaser = Phaser(1)
+     deleteByTables(tables, phaser, systemId)
+     phaser.arriveAndAwaitAdvance()
+     logger.info("============ system {} clean db is done ==============", systemId)
+     saveByTables(tables, phaser)
+     phaser.arriveAndAwaitAdvance()
+     logger.info("============ system {} insert db is done ==============", systemId)
+     updateByTables(tables, phaser)
+     phaser.arriveAndAwaitAdvance()
+     logger.info("============ system {} update db is done ==============", systemId)
+     logger.info("========================================================")
+     store.enableForeignCheck()
+ }
+```
+
+
 ## Scanner Download
 
 Scanner 下载过程：

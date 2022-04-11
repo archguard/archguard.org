@@ -6,11 +6,7 @@ permalink: /modules/scanner/sourcecode-api
 nav_order: 3
 ---
 
-## API 分析
-
-规范化是建立这个 API 分析的基础。
-
-在 ArchGuard 中是根据消费者-生产者这一基本的模式，来对 API 进行建模的。生产者在代码者以 resource 命名，消费者则是 Demand。对于一个前端应用来说，它是一个 demand，包含了一系列 API 调用。对于一个后端应用来说，它可能即是 resource，又或者是 demand，即它即会提供 API，又要消费 API。
+在 ArchGuard 中是根据消费者-生产者这一基本的模式，来对 API 进行建模的。 生产者在代码者以 resource 命名，消费者则是 Demand。对于一个前端应用来说，它是一个 demand，包含了一系列 API 调用。对于一个后端应用来说，它可能即是 resource，又或者是 demand，即它即会提供 API，又要消费 API。
 
 API 分析主要是在 Scanner（<https://github.com/archguard/scanner>）的 `scan_sourcecode` 模块中，主要代码文件：
 
@@ -103,12 +99,10 @@ export function querySystemInfo() {
 
 同样的，也是解析 URL，还有对应的 method，进而生成一个消费端的内容
 
-## 拉线：匹配消费者-生产者
+### 拉线：匹配消费者-生产者
 
 对于匹配 URL 来说，充满了各种不确定性，或者说是不准确性。每个 URL 都是千差万别的，需要通过一些规则来进行特殊处理，即将参数转换为 `@uri@` 的形式，方便我们进行匹配。
 
 诸如于：`$baseUrl/api/quality-gate-profile/$qualityGateName` -> `@uri@/api/quality-gate-profile/@uri@`
 
 如此一来，才能将生产者与消费者进行匹配。
-
-
