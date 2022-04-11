@@ -19,7 +19,7 @@ categories:
 
 ## 聚焦痛点“如何减缓腐化”
 
-! [如何减缓腐化](/assets/images/demising.png)
+![如何减缓腐化](/assets/images/demising.png)
 
 
 ## 整体策略
