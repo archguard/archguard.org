@@ -38,7 +38,16 @@ class MethodController(val methodService: MethodService) {
 }
 ```
 
-Spring 采用的是注解的方式来声明 API 的，所以只需要分析注解，我们就能分析出他们的 API。只需要将 `RequestMapping` 和 `GetMapping` 的值拼到一起，就是一个 resource。
+Spring 采用的是注解的方式来声明 API 的，所以只需要分析注解，我们就能分析出他们的 API。只需要将 `RequestMapping` 和 `GetMapping` 的值拼到一起，就是一个 resource。如下代码所示：
+
+```kotlin
+fun analysisByNode(node: CodeDataStruct, _workspace: String) {
+    val routeAnnotation = node.filterAnnotations("RestController", "RequestMapping")
+    if (routeAnnotation.isNotEmpty()) {
+
+    }
+} 
+```
 
 从使用上来说，Resource  的分析并没有什么难度，随便找个工具都是能使用的。
 
