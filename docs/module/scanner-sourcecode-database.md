@@ -161,3 +161,13 @@ fun should_handle_variable_in_sql() {
 
 最后，再调用 JSQLParser 来分析 SQL 中包含了哪些表。 
 
+相关代码库：
+
+- Golang: [https://github.com/actiontech/mybatis-mapper-2-sql](https://github.com/actiontech/mybatis-mapper-2-sql)
+- Python: [https://github.com/hhyo/mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
+
+相关资源文档：
+
+[AST实现代码审计工具之SQL注入](https://xz.aliyun.com/t/10312)
+
+
