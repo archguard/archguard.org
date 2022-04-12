@@ -144,7 +144,6 @@ PS：其中的 `$dbUrl` 是从 Spring 的 properties 中读取对应的数据库
  }
 ```
 
-
 ## Scanner Download
 
 Scanner 下载过程：
@@ -154,9 +153,31 @@ Scanner 下载过程：
    - 在镜像内，则与 /home/spring/app.jar 同级
 2. 将 Scanner 从应用目录，拷贝到代码仓库的临时目录
 
-## Scanner **本地调试**
+## Scanner **调试**
 
-将 jar 包复制到将要构建的项目目录，按不同类型的应用和参数执行。其中 DBUrl 和 systemId 为必填 。
+Scanner 的调试即可以与 backend 一起，也可以到目标项目的目录中：
+
+1. 与 backend 一起。将 jar 包复制到代码中，与 `build.gradle.kts` 同级，并修改为与 `xxxScannerTool` 相同的版本，即可运行扫描工具进行扫描。
+2. 目标项目。将 jar 包复制到将要构建的项目（workdir，即从 system_info 表中查询）目录，按不同类型的应用和参数执行。其中 DBUrl 和 systemId 为必填 。
+
+与 backend 放置时示例如下：
+
+```
+├── CHANGELOG.md
+├── DesigniteJava.jar
+├── LICENSE
+├── README.md
+├── build.gradle.kts
+├── diff_changes-1.4.5-all.jar
+├── docker-compose.yml
+├── docs
+├── install.sh
+├── scan_git-1.4.3-all.jar
+├── scan_sourcecode-1.4.3-all.jar
+├── scan_sourcecode-1.4.5-all.jar
+├── settings.gradle.kts
+└── src
+```
 
 ### Scanner Git
 
