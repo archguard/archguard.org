@@ -12,7 +12,7 @@ nav_order: 5
 
 1. 构建**基线版本**（基于 since）的 AST 调用模型
 2. 获取提交（since ~ until）之间的所有变更文件，将这些文件更新到 AST 调用模型。
-   1. 在 `patchToDataStructs` 中，对比新旧的 AST，获取变更的文件、函数等。
+   1. 在 `compareWithBaseline` 中，对比新旧的 AST，获取变更的文件、函数等。
 3. 生成函数、函数调用关系的映射，计算变化影响的调用。
 4. （未实现）更新到最新的文件路径，以实现增量的计算 
 
@@ -46,7 +46,7 @@ fun countBetween(sinceRev: String, untilRev: String): List<ChangedCall> {
 }
 ```
 
-核心的代码在 `patchToDataStructs` 方法中：
+核心的代码在 `compareWithBaseline` 方法中：
 
 ```kotlin
 newDataStructs = diffFileFromBlob(repository, blobId, filePath, JavaAnalyserApp())
