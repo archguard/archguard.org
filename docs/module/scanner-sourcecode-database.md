@@ -29,9 +29,9 @@ nav_order: 4
 
 对应的处理流程：
 
-1. 准备 CRUD（select|insert|update|delete）所需要的环境。
+1. 准备 CRUD `（select|insert|update|delete）` 所需要的环境。
     - 处理 `<sql>` 语句，构建映射
-2. 获取 CRUD（"select|insert|update|delete"）相关的节点，并进行处理。
+2. 获取 CRUD `（"select|insert|update|delete"）` 相关的节点，并进行处理。
     - 使用 MyBatis 的 `XMLIncludeTransformer` 来处理 `<include>` 语句
     - 处理 `<selectKey>` 语句，然后将这些语句从节点中删除。
     - 调用 `parseDynamicTags` 来解析动态的 tag，生成 rootNode。
