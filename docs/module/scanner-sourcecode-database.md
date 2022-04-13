@@ -6,6 +6,8 @@ permalink: /modules/scanner/sourcecode-database
 nav_order: 4
 ---
 
+## JDBI JPA
+
 主要处理逻辑：
 
 1. 从代码中解析出 SQL 代码
@@ -14,13 +16,6 @@ nav_order: 4
 4. 构建映射关系
 
 代码见：[MysqlAnalyser.kt](https://github.com/archguard/scanner/blob/master/scan_sourcecode/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
-
-## 解析过滤出代码中的 SQL 语句
-
-当前 ArchGuard 支持：
-
-- JDBI
-- JPA
 
 ### JDBI 注解方式
 
