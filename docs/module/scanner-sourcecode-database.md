@@ -6,7 +6,6 @@ permalink: /modules/scanner/sourcecode-database
 nav_order: 4
 ---
 
-## JDBI JPA
 
 主要处理逻辑：
 
@@ -15,9 +14,67 @@ nav_order: 4
 3. 通过 jsqlparser 得到数据库表
 4. 构建映射关系
 
+## parse SQL 
+
+### MyBatis(XML)
+
+常见的处理方式是，直接解析 XML，如下的两个代码库：
+
+- Golang: [https://github.com/actiontech/mybatis-mapper-2-sql](https://github.com/actiontech/mybatis-mapper-2-sql)
+- Python: [https://github.com/hhyo/mybatis-mapper2sql](https://github.com/hhyo/mybatis-mapper2sql)
+
+在 ArchGuard 中采用的是另外一种方式，采用的是 mock 的方式，，即如何正确处理 `#{item.orderId}`。解析 MyBatis 的流程中，最麻烦的部分是：生成相对 "正确" 的 mock 参数。
+
+不过，在不包含 Runtime 类的情况下，MyBatis XML 的 SQL 代码生成比较复杂。MyBatis XML 由两部分组成，即 MyBatis 的 XML，如（<insert>）等，另外一个部分是基于 Ognl 的参数部分，即：`#{item.orderId}`。
+
+对应的处理流程：
+
+1. 准备 CRUD（select|insert|update|delete）所需要的环境。
+    - 处理 `<sql>` 语句，构建映射
+2. 获取 CRUD（"select|insert|update|delete"）相关的节点，并进行处理。
+    - 使用 MyBatis 的 `XMLIncludeTransformer` 来处理 `<include>` 语句
+    - 处理 `<selectKey>` 语句，然后将这些语句从节点中删除。
+    - 调用 `parseDynamicTags` 来解析动态的 tag，生成 rootNode。
+    - 转换为对应的 SQL 语句。
+
+对应的参数处理流程：
+
+1. 针对于 `foreach` 语句，获取 `collection` 和 `item` 属性，并添加到参数列表中。
+2. 针对于 `if` 语句，通过 `Ognl.parseExpression` 去解析 `test` 属性，并简单处理表达式，以构建出应对的参数。
+
+解析 If 语句的代码如下所示：
+
+```kotlin
+val condition = child.getStringAttribute("test")
+val parseExpression = Ognl.parseExpression(condition)
+val items = mutableListOf(Any())
+
+when (parseExpression.javaClass.simpleName) {
+    "ASTEq", "ASTGreater", "ASTGreaterEq", "ASTLess", "ASTLessEq", "ASTNotEq" -> {
+        val ast = parseExpression as ComparisonExpression
+        for (i in 0 until ast.jjtGetNumChildren()) {
+            val jjtGetChild = ast.jjtGetChild(i).toString()
+            if (jjtGetChild != "null") {
+                if (jjtGetChild.contains(".")) {
+                    // todo: check need to support for multiple parents if exists
+                    val split = jjtGetChild.split(".")
+                    val parent = split[0]
+                    params[parent] = mutableListOf(mutableMapOf<String, Any>())
+                }
+
+                params[jjtGetChild] = items
+            }
+        }
+    }
+}
+```
+
+
+### JDBI JPA
+
 代码见：[MysqlAnalyser.kt](https://github.com/archguard/scanner/blob/master/scan_sourcecode/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
 
-### JDBI 注解方式
+#### JDBI 注解方式
 
 JDBI 示例代码：
 
@@ -44,7 +101,7 @@ function.Annotations.forEach {
 }
 ```
 
-### JDBI 代码方式
+#### JDBI 代码方式
 
 JDBI，可以直接在代码中创建 Query，如下所示：
 
@@ -82,7 +139,7 @@ function.FunctionCalls.forEach {
 }
 ```
 
-### Spring DATA JPA
+#### Spring DATA JPA
 
 对于使用注解的 JPA 代码来说，也相当的简单：
 
