@@ -61,7 +61,9 @@ Docker Compose 下访问不了 Local 类型的项目，建议下载。
 
 ### docker mysql exited 137 memory
 
-The default VM created by Colima has 2 CPUs, 2GiB memory and 60GiB storage.  When run scanner in large projects, the default config will make MySQL exited, can to set more memory for ArchGuard:
+需要增大 Docker 虚拟机内存。
+
+The default VM created by Coloma has 2 CPUs, 2GiB memory and 60GiB storage.  When run scanner in large projects, the default config will make MySQL exited, can to set more memory for ArchGuard:
 
 ```
 colima start --cpu 4 --memory 8
