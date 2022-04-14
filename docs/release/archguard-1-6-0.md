@@ -18,7 +18,7 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
   - 支持 JDBI 注解
   - 支持 MyBatis（XML 方式） [#9](https://github.com/archguard/archguard/issues/9)
 - 影响变更分析。允许根据 commit id，选择某一区间内的代码变更的影响范围。
-  - 支持 Java 语言。 
+  - 支持 Java 语言
 
 其它更新：
 
@@ -27,10 +27,10 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
 
 ## 问题修复
 
-- 服务地图。支持 `@Controller` 注解，以及 `Request Mapping 为空的情况等。
-- 修复 TypeScript 依赖分析下，React 组件的命名问题。
+- 服务地图。支持 `@Controller` 注解，以及 `Request Mapping 为空的情况等
+- 修复 TypeScript 依赖分析下，React 组件的命名问题
 - 修复 Windows 下，TypeScript 依赖分析的路径问题
-- 等等。
+- 等等
 
 ## 安装部署
 安装部署操作详情参见 [https://archguard.org/development](https://archguard.org/development)
@@ -39,4 +39,4 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
 感谢所有参与本次版本更新的社区贡献者们（注：以下名单按照首字母排序，不分先后）：
 
 dawsongzhao，LogosFu，impactCn，phodal，wizardbyron，Yunzhi-Liu，sixline，impactCn，zjjay，nbedk，wertycn，JohnnyChen1986 ，xuexiansen123 
-以及参与讨论和其他各项事务的小伙伴们
+以及参与讨论和其他各项事务的小伙伴们。
