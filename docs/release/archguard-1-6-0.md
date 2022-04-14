@@ -39,3 +39,4 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
 感谢所有参与本次版本更新的社区贡献者们（注：以下名单按照首字母排序，不分先后）：
 
 dawsongzhao，LogosFu，impactCn，phodal，wizardbyron，Yunzhi-Liu，sixline，impactCn，zjjay，nbedk，wertycn，JohnnyChen1986 ，xuexiansen123 
+以及参与讨论和其他各项事务的小伙伴们
