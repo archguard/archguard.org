@@ -31,3 +31,11 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
 - 修复 TypeScript 依赖分析下，React 组件的命名问题。
 - 修复 Windows 下，TypeScript 依赖分析的路径问题
 - 等等。
+
+## 安装部署
+安装部署操作详情参见 [https://archguard.org/development](https://archguard.org/development)
+
+## 社区贡献者
+感谢所有参与本次版本更新的社区贡献者们（注：以下名单按照首字母排序，不分先后）：
+
+isixline，impactCn，phodal，wizardbyron，YunzhiLiu，zjjay
