@@ -10,6 +10,44 @@ permalink: /
 
 ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工具。它可以在开发过程中，帮助架构师、开发人员分析系统间的远程服务依赖情况、数据库依赖、API 依赖等。并根据一些架构治理模型，对现有系统提出改进建议。
 
+特性（Features）：
+
+- 容器级别依赖分析（当前支持 HTTP API）。API 生产者支持语言：Java、Kotlin、C#，API 消费者支持语言：TypeScript/JavaScript、Kotlin、Java 等。
+    - HTTP API 使用清单、调用清单
+    - HTTP API 依赖可视化分析
+- 五大维度架构质量评估以及对应的指标分析。
+    - 体量维度。过大的包、类、方法、模块
+    - 耦合维度。枢纽模块、包、类、方法，数据泥团、过深继承、循环依赖
+    - 内聚维度。霰弹式修改、数据类
+    - 冗余维度。冗余元素、过度泛化
+    - 质量维度（Java）。包含休眠的测试、被忽略的测试、缺乏校验的测试、包含繁杂判断的测试、包含冗余打印的测试、静态方法
+- 代码坏味道分析。常见的那些。
+- 还有其它相关的总览
+    - 代码间依赖分析。支持级别模块、包、类、方法四个级别。
+    - 代码行数分析。
+    - 系统不稳定性模块分析。
+- 数据库地图
+- 精准测试/变化分析
+
+Features：
+
+- Container-level dependency analysis (currently supports HTTP API). API Producer Support Language: Java, Kotlin, C#, API Consumer Support Language: TypeScript/JavaScript
+    - HTTP API usage list, call list
+    - HTTP API visual analysis
+- Quality assessment and indicator analysis of various dimensions.
+    - Mass dimension. Oversized packages, classes, modules
+    - Coupling method. Method modules, packages, classes, mud balls, deep inheritance, data circular dependencies
+    - Cohesive dimensions. Shotgun Modifications, Data Classes
+    - Premium. overgeneralization
+    - Quality dimension (Java). Tests Included, Tests Included, Tests Included, Tests Included
+- Code bad smell. Common.
+- other related overviews
+    - Code dependency analysis. Class, package, class, method classes are supported.
+    - Lines of code analysis.
+    - System instability module analysis.
+- Database map
+- Precise testing/variation analysis
+
 Online Demo: coming soon
 
 # Quick Start
