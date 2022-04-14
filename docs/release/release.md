@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modules
+title: Release
 nav_order: 8
 has_children: true
 permalink: /release
