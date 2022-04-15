@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Version
+title: Version Mapping
 nav_order: 98
-permalink: version
+permalink: /release/version-mapping
 ---
 
 
