@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Release
+parent: What's new in ArchGuard
 title: ArchGuard 1.6.0 正式发布
 permalink: /release/archguard-1-6-0
 ---

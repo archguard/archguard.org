@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Release
+title: What's new in ArchGuard
 nav_order: 98
 permalink: /release/version-mapping
 ---
