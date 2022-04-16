@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Overview
-title: 组件/模块分析
+title: Component Overview
 permalink: /overview/module-analysis
 nav_order: 1
 ---

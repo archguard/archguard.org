@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Overview
-title: 组件/模块分析
+title: 变更影响分析
 permalink: /overview/change-detect
 nav_order: 5
 ---

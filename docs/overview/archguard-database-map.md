@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Overview
-title: Database map
+title: Database Map
 permalink: /overview/database-map
 nav_order: 3
 ---
