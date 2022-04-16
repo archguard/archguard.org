@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Version Mapping
+title: Release
 nav_order: 98
 permalink: /release/version-mapping
 ---
