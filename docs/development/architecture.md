@@ -7,7 +7,7 @@ has_children: true
 permalink: /development/architecture
 ---
 
-Workflow:
+Full Workflow:
 
 ![](/assets/diagrams/ArchGuard.drawio.svg)
 
@@ -34,3 +34,21 @@ Workflow:
 5. create database from code to sql
     - "data_code_database_relation" for MySQL
 
+## Data Flow
+
+![Data Flow](/assets/diagrams/archguard-process.svg)
+
+ArchGuard 可视化工作流
+
+1. 对源码进行 AST 分析，得到 Chapi 的类 AST 模型
+2. 对 AST 中的框架等信息进行识别
+3. 结合 SCM (版本控制管理) 工具分析变更上下文
+4. 将数据放入 ArchGuard 后端数据库
+
+ArchGuard 守护工具流
+
+1. 对源码进行 AST 分析，得到 Chapi 的类 AST 模型
+2. 对 AST 中的框架等信息进行识别
+3. 结合 SCM (版本控制管理) 工具分析变更上下文
+4. 配置守护规则
+5. 在持续集成中,运行守护
