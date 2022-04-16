@@ -1,7 +1,7 @@
 ---
 layout: default
 title: C4 Model
-parent: 架构治理
+parent: Governance
 nav_order: 8
 has_children: true
 permalink: /governance/c4-model

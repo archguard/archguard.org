@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 架构治理
+title: Governance
 nav_order: 8
 has_children: true
 permalink: /governance
