@@ -30,14 +30,15 @@ Components：
 
 ### Database setup
 
-1. Local mysql, or docker created
-- `docker pull mysql:8`
-- `docker run --name=mysql -it -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql`
-2. Create archguard database
-- `create database archguard default character set utf8mb4 collate utf8mb4_unicode_ci;`
-- `./gradlew -Dflyway.configFiles=flyway.conf flywayMigrate` (probably not needed)
+```bash
+docker-compose -f docker-compose.local.yml up
+```
+
+如果需要修改端口，请同步更新 docker配置`docker-compose.local.yml` 和 后端配置`application-local.properties`
 
 ### Backend setup
+
+**important!**: start database before backend.
 
 clone:
 
@@ -61,7 +62,7 @@ Spring default port：8080
 git clone https://github.com/archguard/archguard-frontend
 ```
 
-run 
+run
 
 ```bash
 cd archguard
@@ -71,54 +72,24 @@ yarn start
 
 After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
-## 独立启动其它组件（可选，用于替换本地环境）
-
-InfluxDB（端口 8086）
-
-```bash
-docker run -d -p 8186:8086 --name influxdb \
-      -v ~/ArchGuard/data/influxdb:/var/lib/influxdb \
-      -e INFLUXDB_INIT_USERNAME=admin \
-      -e INFLUXDB_INIT_PASSWORD=admin \
-      -e INFLUXDB_DB=db0 \
-      influxdb:1.8
-```
-
-MySQL
-
-```bash
-docker run -d -p 13308:3306 --name archguard-mysql \
-      -v ~/ArchGuard/data/mysql:/var/lib/mysql:rw \
-      -e MYSQL_ROOT_PASSWORD=prisma \
-      -e MYSQL_DATABASE=archguard \
-      -e TZ=Asia/Shanghai \
-      mysql --default-authentication-plugin=mysql_native_password
-```
-
 ## 其他
 
 ### Mac(M1)中如何运行
 
-1. 使用docker启动mysql，并手动创建数据库
-
-   ```
-   docker run -it -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_ROOT_HOST=% -d mysql/mysql-server
-   ```
-
-   ```
-   create database archguard default character set utf8mb4 collate utf8mb4_unicode_ci;
-   ```
-
-   
+1. 使用docker启动mysql和influxdb
+  
+  ```bash
+  docker-compose -f docker-compose.local.yml up
+  ```
 
 2. 下载ArchGuard相关文件
 
-   git仓库：https://github.com/archguard/archguard
+   git仓库：<https://github.com/archguard/archguard>
 
    下载方式(两种方式均可)：
 
-   1. git clone https://github.com/archguard/archguard.git
-   2. https://github.com/archguard/archguard/archive/refs/heads/master.zip
+   1. git clone <https://github.com/archguard/archguard.git>
+   2. <https://github.com/archguard/archguard/archive/refs/heads/master.zip>
 
 3. 本地启动后端（ArchGuard backend）
 
@@ -210,7 +181,7 @@ docker run -d -p 13308:3306 --name archguard-mysql \
 
 <img width="585" alt="image-20220410122533914" src="https://user-images.githubusercontent.com/41335230/162601549-830cc155-a7bb-4a8a-b048-97775f0af0db.png">
 
-   - 重新nginx配置
+- 重新nginx配置
 
      ```
      /usr/sbin/nginx -s reload
@@ -221,7 +192,5 @@ docker run -d -p 13308:3306 --name archguard-mysql \
    ```
    http://127.0.0.1:11080/home
    ```
-![image](https://user-images.githubusercontent.com/41335230/162601557-b7f678f9-6032-4f41-8a90-d656d3d66f2e.png)
 
-   
- 
+![image](https://user-images.githubusercontent.com/41335230/162601557-b7f678f9-6032-4f41-8a90-d656d3d66f2e.png)
