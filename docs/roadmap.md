@@ -48,6 +48,8 @@ this version is InnerSource only
         - [x] Lint Rule Model
         - [ ] Test Bad Smell
         - [ ] Scanner Refactor to Plugins
+- [ ] APM ? maybe in 3.0
+   - [ ] skywalking  
 
 ## ArchGuard 3.0 Distributed Linter
 
@@ -59,4 +61,3 @@ this version is InnerSource only
 - [ ] Custom rule engine
     - [ ] Rule DSL
     - [ ] online DSL editor
-
