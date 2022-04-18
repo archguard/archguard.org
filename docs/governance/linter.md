@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Linter
-parent: 架构治理
+parent: Governance
 nav_order: 8
 has_children: true
 permalink: /governance/linter
