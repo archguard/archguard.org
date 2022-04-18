@@ -32,6 +32,8 @@ this version is InnerSource only
     - [x] JavaScript/Typescript
         - [x] demand: Axios
         - [x] demand: Umi-Request
+- [ ] RPC dependencies analysis
+    - [ ] Dubbo 
 - [x] Database analysis
     - [x] Java/Kotlin
         - [x] JDBI
