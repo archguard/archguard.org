@@ -1,8 +1,8 @@
 ---
 layout: default
-title: FAQ
+title: Roadmap
 nav_order: 98
-permalink: faq
+permalink: roadmap
 ---
 
 see also in: [https://github.com/archguard/archguard/discussions/5](https://github.com/archguard/archguard/discussions/5)
