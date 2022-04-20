@@ -40,7 +40,7 @@ git clone https://github.com/archguard/archguard
 run
 
 ```bash
-./gradlew bootrun
+cd archguard && ./gradlew bootrun
 ```
 
 - Spring default port：8080
@@ -60,7 +60,7 @@ git clone https://github.com/archguard/archguard-frontend
 run
 
 ```bash
-cd archguard
+cd archguard-frontend && cd archguard
 yarn install
 yarn start
 ```
