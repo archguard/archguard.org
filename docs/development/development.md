@@ -34,6 +34,8 @@ Components：
 clone:
 
 ```bash
+git clone https://github.com/archguard/archguard
+or
 git clone git@github.com:archguard/archguard.git
 ```
 
@@ -54,6 +56,8 @@ cd archguard && ./gradlew bootrun
 **important!**: start backend before frontend.
 
 ```bash
+git clone https://github.com/archguard/archguard-frontend
+or
 git clone git@github.com:archguard/archguard-frontend.git
 ```
 
@@ -76,7 +80,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
    下载方式(两种方式均可)：
 
-   1. git clone git@github.com:archguard/archguard.git
+   1. git clone <https://github.com/archguard/archguard.git> or git clone git@github.com:archguard/archguard.git
    2. <https://github.com/archguard/archguard/archive/refs/heads/master.zip>
 
 2. 本地启动后端（ArchGuard backend）
