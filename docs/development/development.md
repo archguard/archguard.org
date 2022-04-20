@@ -35,12 +35,14 @@ clone:
 
 ```bash
 git clone https://github.com/archguard/archguard
+or
+git clone git@github.com:archguard/archguard.git
 ```
 
 run
 
 ```bash
-./gradlew bootrun
+cd archguard && ./gradlew bootrun
 ```
 
 - Spring default port：8080
@@ -55,12 +57,14 @@ run
 
 ```bash
 git clone https://github.com/archguard/archguard-frontend
+or
+git clone git@github.com:archguard/archguard-frontend.git
 ```
 
 run
 
 ```bash
-cd archguard
+cd archguard-frontend && cd archguard
 yarn install
 yarn start
 ```
@@ -76,7 +80,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
    下载方式(两种方式均可)：
 
-   1. git clone <https://github.com/archguard/archguard.git>
+   1. git clone <https://github.com/archguard/archguard.git> or git clone git@github.com:archguard/archguard.git
    2. <https://github.com/archguard/archguard/archive/refs/heads/master.zip>
 
 2. 本地启动后端（ArchGuard backend）
