@@ -9,7 +9,8 @@ permalink: /development
 requirements:
 
 - JDK 12+
-- InfluxDB 1.8.x
+- docker engine
+- docker compose V1
 
 Others:
 
@@ -28,17 +29,7 @@ Components：
 
 ## Setup
 
-### Database setup
-
-```bash
-docker-compose -f docker-compose.local.yml up
-```
-
-如果需要修改端口，请同步更新 docker配置`docker-compose.local.yml` 和 后端配置`application-local.properties`
-
 ### Backend setup
-
-**important!**: start database before backend.
 
 clone:
 
@@ -52,7 +43,11 @@ run
 ./gradlew bootrun
 ```
 
-Spring default port：8080
+- Spring default port：8080
+- MySQL default port: 3306
+- InfluxBD default port: 8086
+
+如果需要修改端口，请同步更新docker compose配置`config/infrastructure/docker-compose.local.yml` 和 后端配置`application-local.properties`
 
 ### Frontend setup
 
@@ -76,14 +71,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
 ### Mac(M1)中如何运行
 
-1. 使用docker启动mysql和influxdb
-  
-  ```bash
-  docker-compose -f docker-compose.local.yml up
-  ```
-
-2. 下载ArchGuard相关文件
-
+1. 下载ArchGuard相关文件
    git仓库：<https://github.com/archguard/archguard>
 
    下载方式(两种方式均可)：
@@ -91,7 +79,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
    1. git clone <https://github.com/archguard/archguard.git>
    2. <https://github.com/archguard/archguard/archive/refs/heads/master.zip>
 
-3. 本地启动后端（ArchGuard backend）
+2. 本地启动后端（ArchGuard backend）
 
    进入上面下载文件中的主目录
 
@@ -103,7 +91,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
 
   <img width="1439" alt="image-20220410121806261" src="https://user-images.githubusercontent.com/41335230/162601532-e99a965d-9cc0-4975-965f-1f10173e52ff.png">
 
-4. 修改docker-compose文件
+3. 修改docker-compose文件
 
    ```
    version: '3.8'
@@ -157,13 +145,13 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
    
    ```
 
-5. 启动docker-compose
+4. 启动docker-compose
 
    ```
    docker-compose up
    ```
 
-6. 进入archguard-frontend运行容器中，修改nginx的配置
+5. 进入archguard-frontend运行容器中，修改nginx的配置
 
    - 进入容器，其中<CONTAINER ID>，为archguard-frontend运行时的容器ID，可通过docker ps查看到
 
@@ -187,7 +175,7 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
      /usr/sbin/nginx -s reload
      ```
 
-7. 最后即可在浏览器中正常访问
+6. 最后即可在浏览器中正常访问
 
    ```
    http://127.0.0.1:11080/home
