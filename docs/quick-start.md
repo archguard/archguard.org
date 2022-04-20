@@ -50,6 +50,8 @@ Features：
 
 Online Demo: coming soon
 
+微信公众号： [Wechat](/wechat.jpg)
+
 # Quick Start
 
 ## Docker Compose
