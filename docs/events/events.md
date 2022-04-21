@@ -3,7 +3,7 @@ layout: default
 title: Events
 nav_order: 10
 has_children: true
-permalink: /release
+permalink: /events
 ---
 
 Meetup videos:

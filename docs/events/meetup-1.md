@@ -4,7 +4,7 @@ title: ArchGuard 1st Meetup
 parent: Events
 nav_order: 1
 has_children: true
-permalink: /meetps/1
+permalink: /events/1
 ---
 
 Videos: [开源架构治理平台 ArchGuard —— Meetup 第一期](https://www.bilibili.com/video/BV1oF411g79d?spm_id_from=333.999.0.0)
