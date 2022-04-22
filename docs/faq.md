@@ -196,9 +196,8 @@ archguard-backend   | 2022-04-12 14:34:56.506  INFO 1 --- [pool-1-thread-3] t.a.
 
 该问题是由于`archguard-backend`容器访问`github`下载`Scanner`超时，解决方法：
 
-1. 手动下载最新[`Scanner`jar包](https://github.com/archguard/scanner/releases)
+1. 手动下载[`Scanner`jar包](https://github.com/archguard/scanner/releases)，下载所需版本请参见[版本映射表](https://archguard.org/release/version-mapping)
 2. 上传到docker宿主机，并且拷贝到`archguard-backend`容器的`/home/spring`目录
-3. 修改版本号为`1.4.3`
 
 ```
 # 登录容器
