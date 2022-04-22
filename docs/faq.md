@@ -52,6 +52,16 @@ ArchGuard 直接调用 `git clone` 去 clone 源码
 
 如果配置了用户名和秘密，则会执行 `repo.replace("//", "//${urlEncode(systemInfo.username)}:${urlEncode(systemInfo.getDeCryptPassword())}@")`，以生成一个带用户名和密码的 URL。
 
+### SSL certificate problem: unable to get local issuer certificate
+
+原因：内部 Git 服务器的 SSL 证书有问题
+
+建议：尝试到 Docker 窗口中配置一下不验证 SSL
+
+```
+git config --global http.sslVerify false
+```
+
 ### Windows
 
 java.io.IOException: Cannot run program "git" (in directory "d:/xxx"): d:/xxx/scm_git_hot_file.txt (No such file or directory)
