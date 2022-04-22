@@ -6,7 +6,7 @@ permalink: /contribute-code
 nav_order: 8
 ---
 
-Archguard 正在慢慢形成自己的社区，我们非常欢迎任何感兴趣的人能够贡献自己的代码。Archguard 社区使用 [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) 的流程进行开发。
+Archguard 正在慢慢形成自己的社区，我们非常欢迎任何感兴趣的人能够贡献自己的代码。Archguard 社区使用 [pull request](https://docs.github.com/cn/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) 的流程进行开发。
 
 ## 在开始之前
 
@@ -21,3 +21,19 @@ Archguard 正在慢慢形成自己的社区，我们非常欢迎任何感兴趣�
 5. 在开发的过程中请遵循 [github workflow](https://docs.github.com/cn/get-started/quickstart/github-flow) 的规范，先在自己的 repo 中开发，之后发起 pull request 等待社区的 review。在未来我们会逐步完善我们的 CI/CD，请确保你的代码修改能够通过所有的 pipeline；
 6. 在 review 的过程中社区可能会留下一些修改建议和讨论，在修改这些建议的过程中还请确保你的 pull request 持续 rebase 以保持代码的更新；
 7. 当你的 pull request 被 approve 后代码将被自动合入 repo;
+
+## 关联 issue 与 pull request
+
+Archguard 社区要求所有的 pull request 都应该关联对应的 issue。
+
+基于此，在 pull request 的描述中应该有一行 [通过关键词关联对应的 issue](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+
+比如如果你想在在自己的 pull request 合并后自动关闭关联的 issue，那么你可以在 pull request 的描述中加入这样的一行描述：
+
+`Issue Number: close #123`
+
+而如果你仅仅是想要关联某一个 issue，但还不能解决这个问题，仅仅是想做关联，那么你可以这样写：
+
+`Issue Number: ref #456`
+
+更多关键词和用法可以查阅 [github 官方文档](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
