@@ -37,3 +37,11 @@ Archguard 社区要求所有的 pull request 都应该关联对应的 issue。
 `Issue Number: ref #456`
 
 更多关键词和用法可以查阅 [github 官方文档](https://docs.github.com/cn/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
+
+## Commit 规范
+
+这虽然不是必须的，但是请确保你的每一个 commit 都是在做同一件小事。例如：
+
+- 假设你正在解决某一个 bug，那么这个 commit 中就不应该包含新功能的添加；
+- 假设你正在重构某一个功能，那么就不应该同时包含 bug 的修复
+- 也尽量不要同时在一个 commit 中实现多个功能/修复多个bug
