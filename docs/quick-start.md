@@ -69,7 +69,7 @@ docker-compose up
 
 ## Local setup
 
-see in [Development](/development)
+see in [Setup](/setup)
 
 ## Docker 日志示例
 

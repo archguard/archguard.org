@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Development
+title: Setup
 nav_order: 8
 has_children: true
-permalink: /development
+permalink: /setup
 ---
 
 requirements:

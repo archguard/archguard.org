@@ -33,7 +33,7 @@ ArchGuard 是一个针对于微服务（分布式场景）下的架构治理工�
 - 等等
 
 ## 安装部署
-安装部署操作详情参见 [https://archguard.org/development](https://archguard.org/development)
+安装部署操作详情参见 [https://archguard.org/setup](https://archguard.org/setup)
 
 ## 社区贡献者
 感谢所有参与本次版本更新的社区贡献者们（注：以下名单按照首字母排序，不分先后）：

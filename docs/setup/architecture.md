@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Architecture
-parent: Development
+parent: Setup
 nav_order: 8
 has_children: true
-permalink: /development/architecture
+permalink: /setup/architecture
 ---
 
 Full Workflow:
