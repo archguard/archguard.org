@@ -9,7 +9,8 @@ permalink: /release/version-mapping
 
 Version mapping：
 
-| Backend | Scanner | Chapi |
-|---------|---------|-------|
-| 1.6.0   | 1.5.0   | 1.5.6 |
+| ArchGuard (Docker) | Scanner | Chapi |
+|--------------------|---------|-------|
+| 1.6.0              | 1.5.0   | 1.5.6 |
+| 1.6.2              | 1.6.2   | 1.5.6 |
 
