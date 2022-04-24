@@ -34,3 +34,9 @@ URL 不应该以 CURD 开头
 单个单词的长度应该受限制，默认：20
 
 错误示例： `/api/getbookauthornameandtitle`
+
+## NoHttpMethodInUrl
+
+URL 中不应该包含 HTTP 方法。
+
+错误示例：  `/api/book/delete/{bookId}`
