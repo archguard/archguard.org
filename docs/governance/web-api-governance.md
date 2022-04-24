@@ -40,3 +40,14 @@ URL 不应该以 CURD 开头
 URL 中不应该包含 HTTP 方法。
 
 错误示例：  `/api/book/delete/{bookId}`
+
+## MinFeatureApiRule
+
+> 让每个程序只做好一件事。要完成一项工作，构造全新的比在复杂的旧程序里添加新特性更好。 —— McIlroy, Pinson 和 Tague。
+
+—— 《Google 系统架构解密：构建安全可靠的系统》
+
+## MultipleParametersRule
+
+URL 中包含了多个参数（默认值 3）
+
