@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linter
+title: Web API 规则
 parent: Governance
 nav_order: 2
 has_children: true
