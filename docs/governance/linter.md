@@ -2,7 +2,7 @@
 layout: default
 title: Linter
 parent: Governance
-nav_order: 8
+nav_order: 99
 has_children: true
 permalink: /governance/linter
 ---

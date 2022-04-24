@@ -2,7 +2,7 @@
 layout: default
 title: C4 Model
 parent: Governance
-nav_order: 8
+nav_order: 1
 has_children: true
 permalink: /governance/c4-model
 ---
