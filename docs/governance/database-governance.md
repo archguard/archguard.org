@@ -3,7 +3,6 @@ layout: default
 title: SQL 治理
 parent: Governance
 nav_order: 3
-has_children: true
 permalink: /governance/sql
 ---
 
