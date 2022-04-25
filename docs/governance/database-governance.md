@@ -39,3 +39,11 @@ INSERT INTO user (`username`,`age`) VALUES ('alicfeng',23);
 
 多个单词以下划线分隔。
 
+## AtLeastOnePrimaryKeyRule
+
+至少有一个 Primary key
+
+## LimitColumnSizeRule
+
+限制 Column 的数量，默认 20
+
