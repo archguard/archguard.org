@@ -3,7 +3,6 @@ layout: default
 title: ArchGuard 1st Meetup
 parent: Events
 nav_order: 1
-has_children: true
 permalink: /events/1
 ---
 
