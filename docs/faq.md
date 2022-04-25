@@ -219,4 +219,16 @@ diff_changes-1.4.3-all.jar        scan_sourcecode-1.4.3-all.jar
 docker-compose logs -f
 ```
 
+### 通过docker部署：进入系统后提示错误：『Request failed with status code 502』
+
+原因：目前 [`dockerhub`](https://hub.docker.com/r/archguard/archguard-backend/tags) 供下载的镜像只支持`amd64`的CPU，而您宿主机可能为`arm`的CPU。
+
+方案：可换机器尝试，或在宿主机build镜像部署。
+
+
+### 通过docker部署：`添加系统`并点击`扫描`完成后，发现没有分析结果数据
+
+原因：docker容器中下载的jar包权限不足。
+
+方案：以`root`身份进入容器，修改`/home/spring`目录下的jar包权限。
 
