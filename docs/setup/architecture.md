@@ -2,7 +2,7 @@
 layout: default
 title: Architecture
 parent: Setup
-nav_order: 8
+nav_order: 9
 has_children: true
 permalink: /setup/architecture
 ---
