@@ -8,15 +8,10 @@ permalink: /governance
 
 {:toc}
 
-## Linter 工具
 
-- API Linter: [https://github.com/stoplightio/spectral](https://github.com/stoplightio/spectral)
-- Database Linter: [https://github.com/sqlfluff/sqlfluff](https://github.com/sqlfluff/sqlfluff)
+- 开发方法。瀑布 or 敏捷。
+- 开发流程。feature branch、based-branch
+- 架构风格。分层架构（ArchGuard）
+  - pipes and filter。数据流，Kafka
+- 框架 => 总结点（Frozen Spot）或者热点（hot spot）。识别 Interface 和变更等。
 
-## 规则模块化
-
-模块的基本原则：
-
-1. 强封装性。
-2. 定义良好的接口。
-3. 显式依赖。
