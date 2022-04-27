@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Booklit
+title: Book list
 nav_order: 8
-has_children: true
+parent: Setup
 permalink: /book-list
 ---
 
