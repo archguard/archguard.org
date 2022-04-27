@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Book list
-nav_order: 8
+nav_order: 99
 parent: Setup
 permalink: /book-list
 ---
