@@ -30,6 +30,10 @@ ArchGuard 1.x 主要是编译器前端，即对于代码的静态分析。其相
 - 《[RESTful Web Services Cookbook](https://book.douban.com/subject/6837645/)》（书比较老，如果有的话，可以作为一种参考）。
 - 《[高性能 MySQL](https://book.douban.com/subject/23008813/)》（针对于代码中的 API，做出一些规范选择）
 
+### 插件化
+
+- 《[Java 9 模块化开发：核心原则与实践](https://book.douban.com/subject/30297395/)》 模块化的参考方案之一，OSGi 可以是另外一种。
+
 ## 2.0
 
 ### 架构模式
