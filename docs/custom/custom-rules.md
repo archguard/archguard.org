@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Custom Rules
-parent: Setup
+parent: Custom
 nav_order: 11
-permalink: /setup/custom-rules
+permalink: /custom/custom-rules
 ---

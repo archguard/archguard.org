@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Custom Feature
-parent: Setup
+parent: Custom
 nav_order: 12
-permalink: /setup/custom-feature
+permalink: /custom/custom-feature
 ---

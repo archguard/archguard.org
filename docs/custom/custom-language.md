@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Custom Language
-parent: Setup
+parent: Custom
 nav_order: 10
-permalink: /setup/custom-language
+permalink: /custom/language
 ---
