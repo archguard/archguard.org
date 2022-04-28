@@ -19,7 +19,9 @@ permalink: /concepts
 
 **视图**呈现软件架构的某个方面，展示软件系统的某些具体特征。
 
-SNH 95 [^snh] 表示方式：
+视图的例子包括组件的状态视图以及组件间通信视图和数据传输视图。
+
+视图一 SNH 95 [^snh] 结构化分类：
 
 - 概念架构（组件、关系等）（conceptual architecture）
 - 模块关系（子系统、模块、导出和导入等）（module interconnection architecture）
@@ -28,7 +30,14 @@ SNH 95 [^snh] 表示方式：
 
 [^snh]: "Software Architecture in Industrial Applications"
 
-Kru 95 表示方式：逻辑视图、流程视图、物理视图、开发视图（静态组件结构）。
+视图二： KRU95 4 + 1 视图表示方式：
+
+- 逻辑视图（logical view）。设计方案的对象模型或通信模型，如实体关系图。
+- 流程视图（process view）。并发性和同步方面。
+- 物理视图（physical view）。软件和硬件的对应关系以及分布性方面。
+- 开发视图（development vie）。软件在开发环境中的静态组织结构。
+
+[^kru95]: Architectural Blueprints—The “4+1” View Model of Software Architecture
 
 **功能特征**描述了系统功能的特定方面，通常与特定的功能需求相关。功能特征可能表现为应用程序用户能够看到的特定功能，也可能描述了实现的特定方面，
 如用于实现功能的算法。
