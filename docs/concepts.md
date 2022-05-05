@@ -71,6 +71,8 @@ permalink: /concepts
 
 详细解释《实用体系软件结构》
 
+![ArchView](/assets/diagrams/arch-view.svg)
+
 不同的**关注点**
 
 概念视图：
