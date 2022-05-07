@@ -8,10 +8,10 @@ permalink: /governance
 
 {:toc}
 
+## Linter
 
-- 开发方法。瀑布 or 敏捷。
-- 开发流程。feature branch、based-branch
-- 架构风格。分层架构（ArchGuard）
-  - pipes and filter。数据流，Kafka
-- 框架 => 总结点（Frozen Spot）或者热点（hot spot）。识别 Interface 和变更等。
+- SQL Linter 基于 [jsqlparser](https://github.com/JSQLParser/JSqlParser) 可以支持多种 SQL 方言，如 Oracle, SqlServer, MySQL, PostgreSQL ...
+- Test Code 用于检测代码中的坏味道 
+- Web API 分析 Web API 的规范
+- Layer （待实现）分析代码中的分层实现
 
