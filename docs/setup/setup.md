@@ -6,11 +6,13 @@ has_children: true
 permalink: /setup
 ---
 
-requirements:
+Requirements:
 
-- JDK 12+
-- docker engine
-- docker compose V1
+| Name | Value  | 
+|------|--------|
+| Java |  12+   |
+| Docker Engine |    |
+| Docker Compose v1 |     |
 
 Others:
 
