@@ -188,3 +188,16 @@ After start, visit：[http://localhost:8081/](http://localhost:8081/)
    ```
 
 ![image](https://user-images.githubusercontent.com/41335230/162601557-b7f678f9-6032-4f41-8a90-d656d3d66f2e.png)
+
+7. 如果想使用docker运行，则需要先去
+
+   ```
+   https://hub.docker.com/_/openjdk?tab=tags&page=1
+   ```
+
+   自行寻找一个镜像，镜像必须要支持ARM64，否则在m1下会报错
+
+![img.png](../../assets/images/docker-arm.png)
+
+然后更改dockerfile，把的来源更改掉，换成所选择掉镜像。
+因为所有的alpine镜像都不支持ARM，所以 apk 命令也无法使用，自行百度设置一下容器内部时间，然后执行dockerfile即可
