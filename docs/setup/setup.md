@@ -43,7 +43,7 @@ git clone git@github.com:archguard/archguard.git
 run
 
 ```bash
-cd archguard && ./gradlew bootrun
+cd archguard/server && ./gradlew bootrun
 ```
 
 - Spring default port：8080
