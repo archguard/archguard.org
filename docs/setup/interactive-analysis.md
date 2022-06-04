@@ -6,31 +6,6 @@ nav_order: 2
 permalink: /setup/interactive-analysis
 ---
 
-## 原型参考与设计：可交互环境与文档体验
-
-什么是文档？什么是代码？两者没有一个明确的界限，文档是可执行的，代码也是可执行的。不过，从最终的形态上来说，它们都是知识。所以，重点依旧在于如何将这些知识显式化。所以从原型参考上，我们关注于：可交互环境与文档体验设计。
-
-### 可交互环境：Jupyter & Zeppelin &  Nteract
-
-作为交互性编程的业内代表，Jupyter 成为了我们研究的第一个对象。不过，从实现上，我们并没有从它本身的源码上汲取到太多的内容（ “代码”）。反而是，围绕于它的生态及竞争对手上，我们看到了一些更有意思的亮点，诸如于 Kotlin Jupyter、Zeppelin、Nteract 等。
-
-* Nteract 提供了一系列的组件、SDK 来，用来构建交互式应用，诸如于消息通信等等。然而 Nteract ，在设计的时候主要是在 Electron 环境下使用，所以有一些库是无法使用的，如 ZeroMQ —— 设计时是只针对于 Node 环境的。
-* Zeppelin 构建了一个更简单的执行环境（Interpreter），与 Jupyter 的 Kernel API 相比，它可以提供一些更有意思的实现层面的抽象。
-* Kotlin Jupyter 则成了我们现在实现的一个基石。因为它还处于早期试验阶段，我们在构建的过程中，遇到过一系列的依赖包丢失的情况。
-
-回过头来看，我们应该需要再回去看看 Jupyter 的抽象接口，或许能再提供更多的思路。
-
-### 文档阅读体验与文档工程体验
-
-对于文档体验来说，我一直主张应该关注于两个部分：
-
-* 文档阅读体验。即向读者提供的文档体验。
-* 文档工程体验。即向工程提供的文档编写体验。（这一部分往往容易被忽视）
-
-对于文档体验来说，除了用于说明性编程的各类架构图，还需要提供各类的定义化能力。其参考来源来源主要是：我们日常的开发中的编程语言的文档编写，详细可以参考《[API 库的文档体系支持：主流编程语言的文档设计](https://www.phodal.com/blog/api-ducumentation-design-dsl-base/)》与《[文档工程体验设计：重塑开发者体验](https://www.phodal.com/blog/documentation-enginnering-experience-design/)》。
-
-而诸如于 Mermaid、Graphviz 这一类的图即代码（diagram as code），它们在两者提供了一个很好的平衡（只针对于程序员）。
-
 ## 技术评估：DSL、REPL 与编辑器
 
 再回到实现上来，在进行架构工作台的技术评估时，我们关注于架构师编写的 DSL（领域特定语言）语法、REPL（read–eval–print loop） 运行环境以及用于交互的编辑器。其核心关注点是：如何构建更好的[开发者体验](https://github.com/phodal/dx)，一个老生常谈的、难话题。
@@ -85,7 +60,6 @@ routing {
 ## 落地：构建数据通讯与结果呈现
 
 为了验证整个 PoC （Proof of Concept，概念证明）是可行的，接下来就是让数据作为胶水把一切串联起来，构建这样一个完整的端到端示例：
-
 
 1. 前端 → REPL。在前端编写 DSL，执行运行，交数据发送给 REPL。
 2. REPL → 前端。REPL 解析数据，将后续的 Action，返回给前端。
@@ -173,30 +147,7 @@ switch (result.action.actionType) {
 
 而为了更好的呈现**技术相关的图形细节**，我们在 ArchGuard 中引入了第**五个图形库**（由于几个图形库的存在，构建变成了一件痛苦的事，大概是最大的技术债了）：Mermaid。先前的 Echart.js 可以为我们提供低成本的图形编写，D3.js 则是提供了更灵活的定制能力。
 
-## 最后，尝试一下部署吧
-
-在我们写完 PoC ，并自信满满地打了 tag 之后，发现自动构建出来的 Docker 镜像是不 work 的，这大半夜的。最后，总结下来，原因有两：
-
-
-1. 未配置 Nginx 的 WebSocket 。
-2. Kotlin REPL 依赖于 unpack 环境。
-
-好在，只要再快速修复（quickfix）、打个 tag 就能解决了。事实证明，但凡是想 quickfix，都没法 quickfix。
-
-### 配置 WebSocket
-
-首先，根据网上的文档，配置好对应的 WebSocket：
-
-```javascript
-location /ascode {
-  proxy_pass http://archguard-backend:8080;
-  proxy_http_version 1.1;
-  proxy_set_header Upgrade $http_upgrade;
-  proxy_set_header Connection $connection_upgrade;
-}
-```
-
-于是，重构构建镜像之后，发现后端又出问题了，运行的 REPL 环境出错。
+## 部署时环境
 
 ### 配置 Kotlin REPL classpath
 
@@ -236,10 +187,7 @@ embeddedClasspath = File(tempdir).walk(FileWalkDirection.BOTTOM_UP).sortedBy { i
 
 最后，生成的 classpath 值如下所示：
 
-```bash
-ikotlin - Classpath used in script: [/tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-script-runtime-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-kernel-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/dsl-2.0.0-alpha.12.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-compiler-embeddable-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-api-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-lib-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-shared-compiler-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-common-dependencies-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-script-util-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f]
-```
+  ikotlin - Classpath used in script: [/tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-script-runtime-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-kernel-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/dsl-2.0.0-alpha.12.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-compiler-embeddable-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-api-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-lib-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-shared-compiler-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-jupyter-common-dependencies-0.11.0-89-1.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f/kotlin-script-util-1.6.21.jar, /tmp/app.jar-spring-boot-libs-5edaa25c-496e-4eb0-b7d6-1118a8cc280f]
 
-如此一来，它总算能正确启动了，然后再打一个新的 tag：`v2.0.0-alpha.12` 。
 
 
