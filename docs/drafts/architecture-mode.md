@@ -85,51 +85,30 @@ class ArchLinter {
 	String name
 }
 
+class LayeredArchitecture {
+	List~ArchLayer~ archLayers
+}
+
+class MicroserviceArchitecture {
+	List~ArchService~ archServices
+}
+
+
 ArchSystem <-- Architecture
 Architecture <-- ArchComponent
 Architecture <-- ArchComponentConnection
 Architecture <-- ArchLinter
+Architecture <|-- LayeredArchitecture
+Architecture <|-- MicroserviceArchitecture
 
 ```
-
 
 
 #### 运行态
 运行态是体现在 APM、Docker、k8S 等等上的执行时架构。执行架构是对实现架构的补充，进一步验证当前架构的实际运行情况。但是，当我们观测到执行架构时，代码实现已经完成，这时再回过头来改动，成本巨大。所以，这一阶段的架构，更多的充当的是一个监控验证的作用。
 
-```mermaid
-classDiagram
-
-class ExecutionArchitecture {
- 
-}
-
-class Connection {
-	ConnectionType connectionType
-	ConnectorStyle connectorStyle
-	List~Component~ components
-}
-
-class ConnectorStyle {
-	<<enumeration>>
-	HTTP
-	RPC
-	DependencyInjection
-	SQLLink
-	Protocol
-}
-
-class ConnectionType {
-	 <<enumeration>>
-	 INBOUND
-	 OUTBOULD
-}
-
-ExecutionArchitecture "1" *-- "N" Connection : Composition
-```
-
 #### 贯穿三态，聚焦治理
-
+在整个三态过程中，架构治理的成本逐步增加。在设计态，架构师有足够自由的方式来制定目标架构，在运行态，是对现实情况的反馈监控。因此，ArchGuard 对于架构治理的重点放在了开发态，在可治理的初期就进行介入，守护架构开发的整个流程。
  
  
  
