@@ -55,54 +55,7 @@ Architecture = Structure of Components + Relationships + Principles & Guidelines
 #### 开发态
 开发态对应的实现架构。对于实现架构而言，是对系统现状的展示，从现有系统中分析出当前架构。通过对目标架构和实现架构的对比分析，可以对目标架构的落地进展进行追踪，并且通过对目标架构和实现架构减小偏差，真正实现架构守护。
 
-```mermaid
-classDiagram
-class ArchSystem {
-	String id
-	String name
-	Architecture architecture
-	List~ArchSystem~ subSystems
-}
-
-class Architecture {
-	List~ArchComponent~ components
-	List~ArchConnection~ connections
-	ArchLinter: linter
-}
-
-class ArchComponent {
-	String name
-	ArchComponentType type
-	List~ArchComponent~ components
-}
-
-class ArchComponentConnection {
-	String source
-	String target
-}
-
-class ArchLinter {
-	String name
-}
-
-class LayeredArchitecture {
-	List~ArchLayer~ archLayers
-}
-
-class MicroserviceArchitecture {
-	List~ArchService~ archServices
-}
-
-
-ArchSystem <-- Architecture
-Architecture <-- ArchComponent
-Architecture <-- ArchComponentConnection
-Architecture <-- ArchLinter
-Architecture <|-- LayeredArchitecture
-Architecture <|-- MicroserviceArchitecture
-
-```
-
+ ![](../../assets/images/architecture-model.png)
 
 #### 运行态
 运行态是体现在 APM、Docker、k8S 等等上的执行时架构。执行架构是对实现架构的补充，进一步验证当前架构的实际运行情况。但是，当我们观测到执行架构时，代码实现已经完成，这时再回过头来改动，成本巨大。所以，这一阶段的架构，更多的充当的是一个监控验证的作用。
