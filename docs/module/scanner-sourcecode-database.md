@@ -27,7 +27,7 @@ nav_order: 4
 
 不过，在不包含 Runtime 类的情况下，MyBatis XML 的 SQL 代码生成比较复杂。MyBatis XML 由两部分组成，即 MyBatis 的 XML，如（<insert>）等，另外一个部分是基于 Ognl 的参数部分，即：`#{item.orderId}`。
     
-解析部分代码：[MyBatisHandler](https://github.com/archguard/scanner/blob/master/scan_sourcecode/src/main/kotlin/org/archguard/scanner/sourcecode/xml/mybatis/MyBatisHandler.kt)
+解析部分代码：[MyBatisHandler](https://github.com/archguard/archguard/blob/master/analyser_sourcecode/feat_datamap/src/main/kotlin/org/archguard/scanner/analyser/xml/mybatis/MyBatisHandler.kt)
 
 对应的处理流程：
 
@@ -74,7 +74,7 @@ when (parseExpression.javaClass.simpleName) {
 
 ### JDBI JPA
 
-代码见：[MysqlAnalyser.kt](https://github.com/archguard/scanner/blob/master/scan_sourcecode/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
+代码见：[MysqlAnalyser.kt](https://github.com/archguard/archguard/blob/master/analyser_sourcecode/feat_datamap/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
 
 #### JDBI 注解方式
 

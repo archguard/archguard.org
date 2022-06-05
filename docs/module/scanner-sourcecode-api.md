@@ -8,7 +8,7 @@ nav_order: 3
 
 在 ArchGuard 中是根据消费者-生产者这一基本的模式，来对 API 进行建模的。 生产者在代码者以 resource 命名，消费者则是 Demand。对于一个前端应用来说，它是一个 demand，包含了一系列 API 调用。对于一个后端应用来说，它可能即是 resource，又或者是 demand，即它即会提供 API，又要消费 API。
 
-API 分析主要是在 Scanner（<https://github.com/archguard/scanner>）的 `scan_sourcecode` 模块中，主要代码文件：
+API 分析主要是在 Scanner（<https://github.com/archguard/archguard>）的 `scan_sourcecode` 模块中，主要代码文件：
 
 * CSharpApiAnalyser
 * JavaApiAnalyser。支持 Java/Kotlin

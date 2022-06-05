@@ -25,7 +25,7 @@ Scan Git 的主要功能：
 
 ## 语言识别
 
-语言的识别基于：[https://github.com/boyter/scc](https://github.com/boyter/scc)，从中剥离出 [languages.json](https://github.com/archguard/scanner/blob/master/scan_git/src/main/resources/languages.json) 文件。
+语言的识别基于：[https://github.com/boyter/scc](https://github.com/boyter/scc)，从中剥离出 [languages.json](https://github.com/archguard/archguard/blob/master/scan_git/src/main/resources/languages.json) 文件。
 
 在 SCC 的设计中，主要是根据后缀名来识别：
 

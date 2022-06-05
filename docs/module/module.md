@@ -114,7 +114,7 @@ PS：其中的 `$dbUrl` 是从 Spring 的 properties 中读取对应的数据库
 
 ### 3. Scanner 过程：Sourcecode 示例
 
-如下所示，每个 [Scanner](https://github.com/archguard/scanner) 都使用 `clikt` 框架编写，都以 `Runner.kts` 作为入口。
+如下所示，每个 [Scanner](https://github.com/archguard/archguard) 都使用 `clikt` 框架编写，都以 `Runner.kts` 作为入口。
 
 执行 Scanner 时，一般会分为这几步：
 
