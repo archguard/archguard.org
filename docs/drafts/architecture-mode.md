@@ -110,5 +110,7 @@ Architecture <|-- MicroserviceArchitecture
 #### 贯穿三态，聚焦治理
 在整个三态过程中，架构治理的成本逐步增加。在设计态，架构师有足够自由的方式来制定目标架构，在运行态，是对现实情况的反馈监控。因此，ArchGuard 对于架构治理的重点放在了开发态，在可治理的初期就进行介入，守护架构开发的整个流程。
  
+ ![](../../assets/images/ArchModel-Flow.png)
+
  
  
