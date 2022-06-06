@@ -10,6 +10,15 @@ Full Workflow:
 
 ![](/assets/diagrams/ArchGuard.drawio.svg)
 
+API Process:
+
+1. frontend call from: `/api/scanner/systems/{systemId}/dependency-analyses` in AnalysisController
+2. execute scanner by `HubExecutorService.kt` with `ScanContext.kt`
+    - SystemOperator.cloneAndBuildAllRepo()
+    - StranglerScannerExecutor.execute
+      - SourceCodeScanner, ScaScanner, DiffChangesScanner, GitSourceScanner 
+3. after `SourceCodeScanner` done will call: `/api/scanner/systems/{systemId}/dependency-analyses/post-analyse`
+
 ## Relations
 
 1. analysis code
