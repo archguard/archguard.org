@@ -12,7 +12,16 @@ Architecture Governance model
 
 ![ArchGuard](/assets/diagrams/archguard-model.svg)
 
-## Linter
+## 架构可视化
+
+
+## 架构分析
+
+## 架构治理
+
+### 模型与演进
+
+### 架构守护
 
 - SQL Linter 基于 [jsqlparser](https://github.com/JSQLParser/JSqlParser) 可以支持多种 SQL 方言，如 Oracle, SqlServer, MySQL, PostgreSQL ...
 - Test Code 用于检测代码中的坏味道 
