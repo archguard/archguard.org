@@ -8,6 +8,10 @@ permalink: /governance
 
 {:toc}
 
+Architecture Governance model
+
+![ArchGuard](/assets/diagrams/archguard-model.svg)
+
 ## Linter
 
 - SQL Linter 基于 [jsqlparser](https://github.com/JSQLParser/JSqlParser) 可以支持多种 SQL 方言，如 Oracle, SqlServer, MySQL, PostgreSQL ...
