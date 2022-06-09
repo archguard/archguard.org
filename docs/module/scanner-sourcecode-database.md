@@ -1,8 +1,8 @@
 ---
 layout: default
 parent: Modules
-title:  "源码分析：数据库依赖"
-permalink: /modules/scanner/sourcecode-database
+title:  "数据库地图（feat_datamap）"
+permalink: /modules/scanner/sourcecode-datamap
 nav_order: 4
 ---
 
