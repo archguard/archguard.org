@@ -8,11 +8,12 @@ permalink: /setup
 
 Requirements:
 
-| Name | Value  | 
-|------|--------|
-| Java |  12+   |
-| Docker Engine |    |
-| Docker Compose v1 |     |
+| Name              | Value  | 
+|-------------------|--------|
+| Java              | 12+    |
+| InfluxDB          | 1.x    | 
+| Docker Engine     |        |
+| Docker Compose v1 |        |
 
 Others:
 
