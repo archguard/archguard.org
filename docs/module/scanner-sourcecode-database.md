@@ -71,7 +71,6 @@ when (parseExpression.javaClass.simpleName) {
 }
 ```
 
-
 ### JDBI JPA
 
 代码见：[MysqlAnalyser.kt](https://github.com/archguard/archguard/blob/master/analyser_sourcecode/feat_datamap/src/main/kotlin/org/archguard/scanner/sourcecode/database/MysqlAnalyser.kt)
