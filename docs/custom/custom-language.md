@@ -23,7 +23,9 @@ ArchGuard 的语言 AST 解析是在 [Chapi](https://github.com/modernizing/chap
 在 ArchGuard 中的 [analyser_sourcecode](https://github.com/archguard/archguard/tree/master/analyser_sourcecode) 模块中，添加对应的 features 支持。
 
 - apicalls，参考文档：[/modules/scanner/sourcecode-api](/modules/scanner/sourcecode-api)
+  - 在 ApiCallAnalyser 添加语言的入口，再根据不同的语言/框架，添加新的 xxApiAnalyser，。 
 - datamap，参考文档：[/modules/scanner/sourcecode-database](/modules/scanner/sourcecode-database)
+  - 在 DataMapAnalyser 添加语言的入口，再根据不同的语言/框架，添加新的 xxSqlAnalyser，。
 
 **4. 添加构建脚本（可选）**
 
