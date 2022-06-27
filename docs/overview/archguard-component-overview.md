@@ -3,7 +3,7 @@ layout: default
 parent: Overview
 title: Component Overview
 permalink: /overview/module-analysis
-nav_order: 1
+nav_order: 11
 ---
 
 在组件视图内，我们可以看到单个项目的总体情况，根据对应的代码提交历史，不稳定代码模块：

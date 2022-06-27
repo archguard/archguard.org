@@ -3,7 +3,7 @@ layout: default
 parent: Overview
 title: Database Map
 permalink: /overview/database-map
-nav_order: 3
+nav_order: 13
 ---
 
 过去的 10 年间，软件的架构发生了巨大的变化，从早先流行的单体 MVC 架构，变成了所谓的 5：5 开，即分布式 vs 单体。只是呢，有大量的软件开发人员，无法看到系统的全貌，又或者是从单体的思维转变过来。于是，哪怕是在使用了微服务的情况下，但是实现的却又是一个一个的单体，只是它们变成了“分布式的单体”。
