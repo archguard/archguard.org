@@ -10,6 +10,8 @@ nav_order: 2
 
 洞见提供的是一种架构自治服务。 它是一种面向架构分析领域的数据自助服务。它提供了一种集成一体的数据分析方案，让开发人员、架构师、管理者等可以根据不同任务，自由搭配、组合出适用于自身洞察需求的任务/函数。
 
+Insight 查询的表示形式：
+
 ```
 field:dep_name == /.*dubbo/
 |      |       |         |
@@ -36,10 +38,26 @@ field:dep_name == /.*dubbo/
 
 ## 查询示例
 
-**sca**，支持 `dep_name` 和 `dep_version` 的查询：
+**sca**
+
+- 说明：项目依赖（Gradle/Maven、NPM 等）
+- 数据库表：`project_composition_dependencies`
+
+支持 `dep_name` 和 `dep_version` 的查询：
 
 - dep_name：查询某个模块的所有版本。
 - dep_version：查询某个版本号，并可进行比较。
+
+**issue**
+
+- 说明：基于 Rule 的 issue 分析（rule-sql、rule-test、rule-webapi 等）
+- 数据库表：`governance_issue`
+
+支持 `name`、`severity`、`rule_type` 的查询：
+
+- name：查询某个 issue 的所有版本。
+- severity：查询某个级别 severity 的所有版本，如：`HINT, WARN, INFO, BLOCKER` 等
+- rule_type：查询某个类型 rule 的所有版本，如：`TEST_CODE_SMELL`、`HTTP_API_SMELL`、`SQL_SMELL` 等
 
 ## 如何实现？
 
