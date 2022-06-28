@@ -24,17 +24,17 @@ field:dep_name == /.*dubbo/
 - 字段。对应于数据库中的表。
 - 比较符。即：`==`、`>`、`<`、`>=`、`<=`、`!=`。
 - 值。以 `'`、`"` 在始尾表示字符串，`/` 在始尾表示为正则，`%` 在始尾表示为模糊匹配。
-   - 字符串。`'xxx'`、`"xxx"` 的形式，即视为字符串。
-   - 正则（不推荐）。`/xxx/` 的形式，即视为正则。
-   - 模糊匹配（**建议**）。`%xxx%` 的形式，即视为模糊匹配。
+   - 字符串（FilterType.NORMAL）。`'xxx'`、`"xxx"` 的形式，即视为字符串。
+   - 正则（不推荐，FilterType.REGEX）。`/xxx/` 的形式，即视为正则。
+   - 模糊匹配（**建议**，FilterType.LIKE）。`%xxx%` 的形式，即视为模糊匹配。
       - 如果字符串以 `%` 开始或结束，也视为模糊匹配，示例：'xxx%'、'%xxx'。
 
 重点：出于性能原因，不建议采用正则表达式，建议采用**模糊匹配**的方式。模糊匹配采用的是数据库自带的 `LIKE` 方式进行的，而正则表达式则是在查询后过滤的。
 
 主要的两种模式：
 
-- 查询后过滤（filter after query, PostFilter）
 - 查询中过滤（filter in query, PreFilter）
+- 查询后过滤（filter after query, PostFilter）
 
 ## 查询示例
 
@@ -61,8 +61,6 @@ field:dep_name == /.*dubbo/
 
 ## 如何实现？
 
-### 表达式转换
-
 **解析字符串成模型**（详细见：FieldFilter.kt)
 
 1. 通过 `field:` 作为分隔符，将字段名和字段值分隔开，取出其中的字段值和表达式，如：`dep_name == /.*dubbo/`，`dep_version > 1.12.3`。
@@ -71,9 +69,17 @@ field:dep_name == /.*dubbo/
    2. 比较（comparison）。比较的类型为 `==`、`>`、`<`、`>=`、`<=`、`!=`。
    3. 过滤（filter）条件。过滤的值类型为 `string`、`like`、`regex`。
 
-**生成查询 SQL**（filter in query）
+**执行查询中过滤**（filter in query）
+
+1. 将模型转换成 SQL 语句。
+   - 如果 FieldFilter 的 type 为如下的类型，，则认为可以直接生成 SQL 语句。
+     - `FilterType.NORMAL`
+     - `FilterType.LIKE`
+   - 示例：如果模型中有 `dep_name` 和 `dep_version`，则转换成 SQL 语句，如：`SELECT * FROM project_composition_dependencies WHERE dep_name = 'dubbo' AND dep_version = '1.12.3'`。
+2. 执行 SQL 语句，并返回结果。
 
 **执行查询后过滤**（filter after query）
 
-### 判断
+执行查询中过滤后，剩下的过滤条件，如 `FilterType.REGEX`
+
 
