@@ -31,8 +31,8 @@ field:dep_name == /.*dubbo/
 
 主要的两种模式：
 
-- 查询后过滤（filter after query）
-- 查询中过滤（filter in query）
+- 查询后过滤（filter after query, PostFilter）
+- 查询中过滤（filter in query, PreFilter）
 
 ## 查询示例
 
@@ -45,7 +45,7 @@ field:dep_name == /.*dubbo/
 
 ### 表达式转换
 
-**解析字符串成模型**（详细见：InsightModel.kt)
+**解析字符串成模型**（详细见：FieldFilter.kt)
 
 1. 通过 `field:` 作为分隔符，将字段名和字段值分隔开，取出其中的字段值和表达式，如：`dep_name == /.*dubbo/`，`dep_version > 1.12.3`。
 2. 解析字符串，并转换表达为三部分：
