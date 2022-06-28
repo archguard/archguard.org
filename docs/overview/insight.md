@@ -27,28 +27,35 @@ field:dep_name == /.*dubbo/
    - 模糊匹配（**建议**）。`%xxx%` 的形式，即视为模糊匹配。
       - 如果字符串以 `%` 开始或结束，也视为模糊匹配，示例：'xxx%'、'%xxx'。
 
-
 重点：出于性能原因，不建议采用正则表达式，建议采用**模糊匹配**的方式。模糊匹配采用的是数据库自带的 `LIKE` 方式进行的，而正则表达式则是在查询后过滤的。
 
-## 使用
+主要的两种模式：
+
+- 查询后过滤（filter after query）
+- 查询中过滤（filter in query）
+
+## 查询示例
 
 **sca**，支持 `dep_name` 和 `dep_version` 的查询：
 
 - dep_name：查询某个模块的所有版本。
 - dep_version：查询某个版本号，并可进行比较。
 
-## 实现
+## 如何实现？
 
 ### 表达式转换
 
-处理逻辑（详细见：InsightModel.kt)：
+**解析字符串成模型**（详细见：InsightModel.kt)
 
 1. 通过 `field:` 作为分隔符，将字段名和字段值分隔开，取出其中的字段值和表达式，如：`dep_name == /.*dubbo/`，`dep_version > 1.12.3`。
 2. 解析字符串，并转换表达为三部分：
    1. 字段（filed）。为了方便设计，这里的 `dep_name` 对应于数据库中的字段。
    2. 比较（comparison）。比较的类型为 `==`、`>`、`<`、`>=`、`<=`、`!=`。
    3. 过滤（filter）条件。过滤的值类型为 `string`、`like`、`regex`。
-3. 
+
+**生成查询 SQL**（filter in query）
+
+**执行查询后过滤**（filter after query）
 
 ### 判断
 
