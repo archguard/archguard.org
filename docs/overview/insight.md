@@ -81,7 +81,7 @@ dep_name == /.*dubbo/
    1. 遇到 AND 或 OR token，则向列表内插入`Either.Right(QueryCombinator(...))`对象
    2. 遇到 Identifier token，则记录相关信息
    3. 遇到 Comparison token，同样记录相关信息
-   4. 碰到 String，Like, Regex，首先检查有没有 Identifier 和 Comparison 相关信息，没有则抛异常，有则向列表内插入`Either.Left (QueryExpression(...))`对象
+   4. 碰到 String, Like 和 Regex，首先检查有没有 Identifier 和 Comparison 相关信息，没有则抛异常，有则向列表内插入`Either.Left (QueryExpression(...))`对象
    5. 重复步骤一，直到遍历结束
 
 **执行查询中过滤**（filter in query）
