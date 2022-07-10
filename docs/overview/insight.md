@@ -27,21 +27,19 @@ nav_order: 2
 架构洞见（Insight）查询的表示形式：
 
 ```
-field:dep_name == /.*dubbo/
-|      |       |         |
-|      |       |         |
-|      |       |         |
-└─分割符└─字段   └─ 比较符  └─ 值 
+dep_name == /.*dubbo/
+|        |         |
+|        |         |
+|        |         |
+└─字段    └─ 比较符  └─ 值
 ```
 
-- 分隔符。即 `field:` 作为分隔符，方便于解析和后期扩展。
 - 字段。对应于数据库中的表。
 - 比较符。即：`==`、`>`、`<`、`>=`、`<=`、`!=`。
-- 值。以 `'`、`"` 在始尾表示字符串，`/` 在始尾表示为正则，`%` 在始尾表示为模糊匹配。
-   - 字符串（FilterType.NORMAL）。`'xxx'`、`"xxx"` 的形式，即视为字符串。
-   - 正则（不推荐，FilterType.REGEX）。`/xxx/` 的形式，即视为正则。
-   - 模糊匹配（**建议**，FilterType.LIKE）。`%xxx%` 的形式，即视为模糊匹配。
-      - 如果字符串以 `%` 开始或结束，也视为模糊匹配，示例：'xxx%'、'%xxx'。
+- 值。以 `'`、`"` <pre>`</pre> 在始尾表示字符串，`/` 在始尾表示为正则，`@` 在始尾表示为模糊匹配。
+  - 字符串（QueryMode.StrictMode）。`'xxx'`、`"xxx"` 的形式，即视为字符串。
+  - 正则（不推荐，QueryMode.RegexMode）。`/xxx/` 的形式，即视为正则。
+  - 模糊匹配（**建议**，QueryMode.LikeMode）。`@xxx@` 的形式，即视为模糊匹配。
 
 重点：出于性能原因，不建议采用正则表达式，建议采用**模糊匹配**的方式。模糊匹配采用的是数据库自带的 `LIKE` 方式进行的，而正则表达式则是在查询后过滤的。
 
@@ -75,25 +73,28 @@ field:dep_name == /.*dubbo/
 
 ## 如何实现？
 
-**解析字符串成模型**（详细见：FieldFilter.kt)
+**解析字符串成模型**（详细见：InsightsParser.kt)
 
-1. 通过 `field:` 作为分隔符，将字段名和字段值分隔开，取出其中的字段值和表达式，如：`dep_name == /.*dubbo/`，`dep_version > 1.12.3`。
-2. 解析字符串，并转换表达为三部分：
-   1. 字段（filed）。为了方便设计，这里的 `dep_name` 对应于数据库中的字段。
-   2. 比较（comparison）。比较的类型为 `==`、`>`、`<`、`>=`、`<=`、`!=`。
-   3. 过滤（filter）条件。过滤的值类型为 `string`、`like`、`regex`。
+1. 原始字符串先通过 tokenizer 生成对应的 token 列表，这一步空格和\t 制表符将会被丢弃
+2. 通过第一步得到的 token 列表生成 Query 对象，其含有一个解析过程中生成的`Either<QueryExpression, QueryCombinator>`列表以供后续使用，大致步骤如下：
+   #### 遍历 token 列表
+   1. 遇到 AND 或 OR token，则向列表内插入`Either.Right(QueryCombinator(...))`对象
+   2. 遇到 Identifier token，则记录相关信息
+   3. 遇到 Comparison token，同样记录相关信息
+   4. 碰到 String，Like, Regex，首先检查有没有 Identifier 和 Comparison 相关信息，没有则抛异常，有则向列表内插入`Either.Left (QueryExpression(...))`对象
+   5. 重复步骤一，知道遍历结束
 
 **执行查询中过滤**（filter in query）
 
 1. 将模型转换成 SQL 语句。
-   - 如果 FieldFilter 的 type 为如下的类型，，则认为可以直接生成 SQL 语句。
-     - `FilterType.NORMAL`
-     - `FilterType.LIKE`
+   - 如果 Query 对象中的 的 QueryExpression 的 QueryMode 为如下的类型，，则认为可以直接生成 SQL 语句。
+     - `QueryMode.StrictMode`
+     - `QueryMode.LikeMode`
    - 示例：如果模型中有 `dep_name` 和 `dep_version`，则转换成 SQL 语句，如：`SELECT * FROM project_composition_dependencies WHERE dep_name = 'dubbo' AND dep_version = '1.12.3'`。
 2. 执行 SQL 语句，并返回结果。
 
 **执行查询后过滤**（filter after query）
 
-执行查询中过滤后，剩下的过滤条件，如 `FilterType.REGEX`
+执行查询中过滤后，剩下的过滤条件，如 `QueryMode.RegexMode`
 
 查询后过滤，将查询结果中的每一条记录，与查询中过滤的结果进行比较，如果符合条件，则保留，否则删除。
