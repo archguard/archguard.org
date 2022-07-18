@@ -43,10 +43,20 @@ dep_name == /.*dubbo/
 
 重点：出于性能原因，不建议采用正则表达式，建议采用**模糊匹配**的方式。模糊匹配采用的是数据库自带的 `LIKE` 方式进行的，而正则表达式则是在查询后过滤的。
 
+查询结构为 普通查询 then 后置查询，其中：
+
+- 后置查询仅支持**正则匹配**及**版本号匹配**
+- 普通查询仅支持**其他**查询
+
 主要的两种模式：
 
-- 查询中过滤（filter in query, PreFilter）
-- 查询后过滤（filter after query, PostFilter）
+- 普通查询（filter in query, regular query)
+- 后置查询（filter after query, post query)
+
+如果查询中没有出现 `then` 关键字：
+
+- 整条语句中的每条表达式都为**正则**模式, 则为仅后置查询（postquery only), 此模式下先从数据库中取出所有数据，然后执行后置查询并返回最终结果
+- 整条语句由**其他**模式构成，则为普通查询（regular query only), 此模式下执行完普通查询后直接作为最终结果返回
 
 ## 查询示例
 
@@ -84,10 +94,10 @@ dep_name == /.*dubbo/
    4. 碰到 String, Like 和 Regex，首先检查有没有 Identifier 和 Comparison 相关信息，没有则抛异常，有则向列表内插入`Either.Left (QueryExpression(...))`对象
    5. 重复步骤一，直到遍历结束
 
-**执行查询中过滤**（filter in query）
+**执行普通查询**（filter in query）
 
 1. 将模型转换成 SQL 语句。
-   - 如果 Query 对象中的 的 QueryExpression 的 QueryMode 为如下的类型，，则认为可以直接生成 SQL 语句。
+   - 如果 Query 对象中的 query 列表 中的 QueryExpression 的 QueryMode 为如下的类型，，则认为可以直接生成 SQL 语句。
      - `QueryMode.StrictMode`
      - `QueryMode.LikeMode`
    - 示例：如果模型中有 `dep_name` 和 `dep_version`，则转换成 SQL 语句，如：`SELECT * FROM project_composition_dependencies WHERE dep_name = 'dubbo' AND dep_version = '1.12.3'`。
@@ -95,6 +105,6 @@ dep_name == /.*dubbo/
 
 **执行查询后过滤**（filter after query）
 
-执行查询中过滤后，剩下的过滤条件，如 `QueryMode.RegexMode`
+执行后置查询，仅支持`QueryMode.RegexMode`
 
-查询后过滤，将查询结果中的每一条记录，与查询中过滤的结果进行比较，如果符合条件，则保留，否则删除。
+以普通查询的结果为输入进行后置查询，然后返回最终结果
