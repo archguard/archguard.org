@@ -1,8 +1,8 @@
 #theme: just-the-docs
 remote_theme: pmarsceill/just-the-docs
 
-title: ArchGuard
-description: 一个开源的架构治理平台工具，专治分布式场景下的微服务架构。
+title: ArchGuard 架构治理
+description: ArchGuard 是一个针对于微服务（分布式场景）下的架构工作台/治理工具。它可以帮助架构师、开发人员进行架构自助，自定义架构的洞察、分析系统间的远程服务依赖情况、数据库依赖、API 依赖等。并根据一些架构治理模型，对现有系统提出改进建议。
 
 heading_anchors: true
 
