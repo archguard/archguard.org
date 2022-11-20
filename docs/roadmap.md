@@ -32,8 +32,6 @@ this version is InnerSource only
     - [x] JavaScript/Typescript
         - [x] demand: Axios
         - [x] demand: Umi-Request
-- [ ] RPC dependencies analysis
-    - [ ] Dubbo 
 - [x] Database analysis
     - [x] Java/Kotlin
         - [x] JDBI
@@ -43,13 +41,11 @@ this version is InnerSource only
     - [x] Git analysis
 - [x] Debug log
     - [x] show log in frontend
-- [ ] Refactor
-    - [ ] Scanner
+- [x] Refactor
+    - [x] Scanner
         - [x] Lint Rule Model
-        - [ ] Test Bad Smell
-        - [ ] Scanner Refactor to Plugins
-- [ ] APM ? maybe in 3.0
-   - [ ] skywalking  
+        - [x] Test Bad Smell
+        - [x] Scanner Refactor to Plugins
 
 ## ArchGuard 3.0 Distributed Linter
 
@@ -61,3 +57,11 @@ this version is InnerSource only
 - [ ] Custom rule engine
     - [ ] Rule DSL
     - [ ] online DSL editor
+- [ ] APM ? maybe in 3.0
+    - [ ] skywalking
+- [ ] RPC dependencies analysis
+    - [ ] Dubbo
+
+## ArchGuard CodeDB (experiment)
+
+
