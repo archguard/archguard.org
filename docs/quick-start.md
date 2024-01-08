@@ -22,8 +22,8 @@ ArchGuard 是一个由 Thoughtworks 发起的面向微服务（分布式场景�
 
 特性（Features）：
 
-- **设计态**（DOING）
-	- 架构设计、分析与治理 DSL
+- **设计态**
+	- 架构设计、分析与治理 DSL -> 参考：[Fklang](https://github.com/feakin/fklang)
 - **开发态**
 	- 架构扫描
 		- 扫描配置
@@ -44,14 +44,14 @@ ArchGuard 是一个由 Thoughtworks 发起的面向微服务（分布式场景�
 		- 冗余维度：冗余元素，过度泛化
 		- 质量维度：测试保护
 	- 持续集成
-- **运行态**
-	- APM（TODO）
-- **架构工作台**（DOING）
+- **架构工作台**
+	- 查询整个组织的依赖信息
+	- REPL 实时分析
 
 Features：
 
-- **Design State** (DOING)
-  - Architecture Design, Analysis and Governance DSL
+- **Design State**
+  - Architecture Design, Analysis and Governance DSL -> [Fklang](https://github.com/feakin/fklang)
 - **Development state**
   - Schema scan
     - Scan configuration
@@ -72,11 +72,9 @@ Features：
       - Redundant dimensions: redundant elements, overgeneralization
       - Quality dimension: test protection
       - Continuous Integration
-- **Running state**
-  - APM (TODO)
-- **Architecture Workbench** (DOING)
+- **Architecture Workbench**
 
-Online Demo: coming soon
+Online Demo: [https://archguard.dts.plus/](https://archguard.dts.plus/)
 
 微信公众号： ![Wechat](/wechat.jpg)
 
