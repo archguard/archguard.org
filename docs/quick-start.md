@@ -20,6 +20,10 @@ ArchGuard 是一个由 Thoughtworks 发起的面向微服务（分布式场景�
 
 ![双环守护](assets/images/double-circle.png)
 
+架构图：
+
+![Architecture](architecture.svg)
+
 特性（Features）：
 
 - **设计态**

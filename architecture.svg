@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="804px" height="480px" viewBox="0 0 804 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>archguard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="archguard" transform="translate(0.834650, 0.393700)">
+            <g id="analyser" transform="translate(0.165350, 161.606300)">
+                <polygon id="Path" fill="#EDF1F3" points="0 0 802.3307 0 802.3307 239.1181 1.42108547e-14 239.1181"></polygon>
+                <g id="sourecode-analyser" transform="translate(19.451440, 121.465880)">
+                    <polygon id="Path" fill="#6B9E78" points="0 0 414.01575 0 414.01575 107.3071 5.68434189e-14 107.3071"></polygon>
+                    <g id="Group-6" transform="translate(22.349080, 9.496070)">
+                        <polygon id="Path" fill="#003D4F" points="0 -2.84217094e-14 340.063 -2.84217094e-14 340.063 60.125977 1.42108547e-14 60.125977"></polygon>
+                        <g id="Group-4" transform="translate(80.150900, 14.346460)">
+                            <polygon id="Path" fill="#F2617A" points="0 -2.84217094e-14 106.70865 -2.84217094e-14 106.70865 31.433075 2.84217094e-14 31.433075"></polygon>
+                            <text id="database" font-family="Monaco" font-size="14" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                                <tspan x="19.04858" y="20.69159">database</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-5" transform="translate(195.896330, 14.346460)">
+                            <polygon id="Path" fill="#F2617A" points="5.68434189e-14 -2.84217094e-14 106.70865 -2.84217094e-14 106.70865 31.433075 0 31.433075"></polygon>
+                            <text id="Web-API" font-family="Monaco" font-size="14" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                                <tspan x="23.30315" y="19.69159">Web API</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+                <polygon id="Path" fill="#6B9E78" points="463.98951 108.06431 589.690316 108.06431 589.690316 156.22181 463.98951 156.22181"></polygon>
+                <polygon id="Path" fill="#6B9E78" points="463.98951 165.66271 589.690316 165.66271 589.690316 213.82021 463.98951 213.82021"></polygon>
+                <polygon id="Path" fill="#6B9E78" points="463.98951 50.46588 589.690316 50.46588 589.690316 98.62335 463.98951 98.62335"></polygon>
+                <polygon id="Path" fill="#6B9E78" points="608.40945 165.66271 776.81893 165.66271 776.81893 213.82021 608.40945 213.82021"></polygon>
+                <polygon id="Path" fill="#6B9E78" points="608.40945 108.06299 776.81893 108.06299 776.81893 156.22049 608.40945 156.22049"></polygon>
+                <polygon id="Path" fill="#FFFFFF" points="608.40945 52.23491 776.81893 52.23491 776.81893 97.02231 608.40945 97.02231"></polygon>
+                <path d="M608.40945,52.23491 L776.81893,52.23491 L776.81893,97.02231 L608.40945,97.02231 L608.40945,52.23491 Z" id="Path" stroke="#000000" stroke-linejoin="round" stroke-dasharray="4,3"></path>
+                <g id="rule-lineter" transform="translate(19.451440, 11.539370)">
+                    <polygon id="Path" fill-opacity="0" fill="#000000" points="0 1.42108547e-14 414.01575 1.42108547e-14 414.01575 100.8504 5.68434189e-14 100.8504"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="64.80577 15.35959 171.51445 15.35959 171.51445 46.79265 64.80577 46.79265"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="64.80577 54.06038 171.51445 54.06038 171.51445 85.49344 64.80577 85.49344"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="178.49397 15.35959 285.20265 15.35959 285.20265 46.79265 178.49397 46.79265"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="178.49397 54.06038 285.20265 54.06038 285.20265 85.49344 178.49397 85.49344"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="292.18239 15.35959 398.89107 15.35959 398.89107 46.79265 292.18239 46.79265"></polygon>
+                    <polygon id="Path" fill="#F2617A" points="292.18239 54.06038 398.89107 54.06038 398.89107 85.49344 292.18239 85.49344"></polygon>
+                    <text id="Rule-Linter" font-family="Monaco" font-size="12" font-weight="normal" fill="#000000" fill-opacity="0.85">
+                        <tspan x="9.54856" y="49.46063">Rule</tspan>
+                        <tspan x="9.54856" y="64.46063">Linter</tspan>
+                    </text>
+                    <text id="code-smell" font-family="Monaco" font-size="14" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="75.54856" y="36.46063">code smell</tspan>
+                    </text>
+                    <text id="test-code-smell" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="105.646216" y="66.46063">test</tspan>
+                        <tspan x="84.0427006" y="81.46063">code smell</tspan>
+                    </text>
+                    <text id="SQL" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="221.746802" y="34.46063">SQL</tspan>
+                    </text>
+                    <text id="HTTP-API" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="199.743872" y="73.46063">HTTP API</tspan>
+                    </text>
+                    <text id="Comment" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="319.844458" y="35.46063">Comment</tspan>
+                    </text>
+                    <text id=".-.-." font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                        <tspan x="327.04563" y="73.46063">. . .</tspan>
+                    </text>
+                </g>
+                <path d="M19.45144,11.53937 L433.46719,11.53937 L433.46719,112.38977 L19.45144,112.38977 L19.45144,11.53937 Z" id="Path" stroke="#000000" stroke-linejoin="round" stroke-dasharray="4,3"></path>
+                <text id="Analyser" font-family="Monaco" font-size="20" font-weight="normal" fill="#010000">
+                    <tspan x="703.492188" y="31">Analyser</tspan>
+                </text>
+                <text id="Archictecture" font-family="Monaco" font-size="16" font-weight="normal" fill="#000000" fill-opacity="0.85">
+                    <tspan x="633.089844" y="80">Archictecture</tspan>
+                </text>
+                <text id="SourceCode-Analyser" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="129" y="215">SourceCode Analyser</tspan>
+                </text>
+                <text id="feats" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="51" y="166">feats</tspan>
+                </text>
+                <text id="Estimate" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="488.59375" y="80">Estimate</tspan>
+                </text>
+                <text id="SCA" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="513.097656" y="138">SCA</tspan>
+                </text>
+                <text id="Git" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="513.097656" y="195">Git</tspan>
+                </text>
+                <text id="OpenAPI" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="659.394531" y="195">OpenAPI</tspan>
+                </text>
+                <text id="Diff-Changes" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF" fill-opacity="0.85">
+                    <tspan x="638.390625" y="138">Diff Changes</tspan>
+                </text>
+            </g>
+            <g id="chapi" transform="translate(19.624660, 409.161410)">
+                <g>
+                    <polygon id="Path" fill="#003D4F" points="2.84217094e-14 0 414.01575 0 414.01575 69.480316 0 69.480316"></polygon>
+                    <g id="java" transform="translate(58.816270, 35.629920)">
+                        <polygon id="Path" fill="#000000" points="0 0 77.921265 0 77.921265 25.259857 0 25.259857"></polygon>
+                        <text id="Java" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF">
+                            <tspan x="24.8220762" y="15.81497">Java</tspan>
+                        </text>
+                    </g>
+                    <polygon id="Path" fill="#000000" points="144.54069 35.44489 222.461955 35.44489 222.461955 60.704747 144.54069 60.704747"></polygon>
+                    <text id="Kotlin" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="161.937174" y="52.44489">Kotlin</tspan>
+                    </text>
+                    <polygon id="Path" fill="#000000" points="232.54069 35.44489 310.461955 35.44489 310.461955 60.704747 232.54069 60.704747"></polygon>
+                    <text id="TS/JS" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="253.53776" y="52.44489">TS/JS</tspan>
+                    </text>
+                    <polygon id="Path" fill="#000000" points="320.95219 35.62992 398.873455 35.62992 398.873455 60.889777 320.95219 60.889777"></polygon>
+                    <text id=".-.-." font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="350.79269" y="52.44489">. . .</tspan>
+                    </text>
+                </g>
+                <polygon id="Path" fill="#888888" points="58.81627 6.9344 398.87927 6.9344 398.87927 27.375348 58.81627 27.375348"></polygon>
+                <text id="CHAPI" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="7.03678375" y="40.44489">CHAPI</tspan>
+                </text>
+                <text id="Common-Hierarchical" font-family="Monaco" font-size="12" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="160.227213" y="21.44489">Common Hierarchical API</tspan>
+                </text>
+            </g>
+            <g id="server">
+                <polygon id="Path" fill="#EDF1F3" points="0 0 802.3307 0 802.3307 74.551186 1.42108547e-14 74.551186"></polygon>
+                <g id="metric-core" transform="translate(248.165350, 13.606300)">
+                    <polygon id="Path" fill="#6B9E78" points="0 0 226 0 226 47 0 47"></polygon>
+                    <text id="Metric-Core" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="60.6914062" y="29">Metric Core</tspan>
+                    </text>
+                </g>
+                <text id="Server" font-family="Monaco" font-size="20" font-weight="normal" fill="#010000">
+                    <tspan x="721.659491" y="49.6063">Server</tspan>
+                </text>
+            </g>
+            <g id="scanner" transform="translate(0.165350, 78.606300)">
+                <polygon id="Path" fill="#EDF1F3" points="0 0 802.3307 0 802.3307 74.551186 1.42108547e-14 74.551186"></polygon>
+                <g id="others" transform="translate(484.000000, 13.000000)">
+                    <polygon id="Path" fill="#666666" points="0 0 227 0 227 48 0 48"></polygon>
+                    <text id=".-.-." font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="100.996094" y="29">. . .</tspan>
+                    </text>
+                </g>
+                <g id="scanner-cli" transform="translate(10.000000, 13.002624)">
+                    <polygon id="Path" fill="#666666" points="0 -0.002624 227 -0.002624 227 47.997376 1.24327727e-14 47.997376"></polygon>
+                    <text id="Scanner-CLI" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="67.1914062" y="29.997376">Scanner CLI</tspan>
+                    </text>
+                </g>
+                <g id="gradle" transform="translate(247.000000, 13.002624)">
+                    <polygon id="Path" fill="#666666" points="4.9731085e-14 -0.002624 227 -0.002624 227 47.997376 0 47.997376"></polygon>
+                    <text id="ArchGuard-Gradle-Plu" font-family="Monaco" font-size="16" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="38.1875" y="19.997376">ArchGuard Gradle </tspan>
+                        <tspan x="86.1953125" y="39.997376">Plugin</tspan>
+                    </text>
+                </g>
+                <text id="Scanner" font-family="Monaco" font-size="20" font-weight="normal" fill="#010000">
+                    <tspan x="715.493164" y="45">Scanner</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
