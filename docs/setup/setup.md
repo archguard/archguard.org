@@ -49,7 +49,7 @@ cd archguard/server && ./gradlew bootrun
 
 - Spring default port：8080
 - MySQL default port: 3306
-- InfluxBD default port: 8086
+- InfluxDB default port: 8086
 
 如果需要修改端口，请同步更新docker compose配置`config/infrastructure/docker-compose.local.yml` 和 后端配置`application-local.properties`
 
