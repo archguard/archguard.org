@@ -8,74 +8,84 @@ permalink: /
 
 ![Logo](/assets/images/logo.png)
 
-ArchGuard 是一个由 Thoughtworks 发起的面向微服务（分布式场景）下的开源架构治理平台。它可以在设计、开发过程中，帮助架构师、开发人员分析系统间的远程服务依赖情况、数据库依赖、API 依赖等。并根据一些架构治理模型，对现有系统提出改进建议。
+ArchGuard 是一个由 Thoughtworks 发起的面向微服务（分布式场景）下的开源架构治理平台。它可以在设计、开发过程中，帮助架构师、开发人员分析系统间的远程服务依赖情况、数据库依赖、API
+依赖等。并根据一些架构治理模型，对现有系统提出改进建议。
+
+Architecture:
+
+![Architecture](https://archguard.org/architecture.svg)
+
+Use ArchGuard:
+
+- [ArchGuard Library in Maven Central](https://search.maven.org/search?q=org.archguard) to integrate with your backend.
+- [ArchGuard Scanner CLI](https://github.com/archguard/archguard/tree/master/scanner_cli) to scan your codebase, upload to your backend or ArchGuard backend.
+- [ArchGuard Gradle Plugin](https://github.com/archguard/archguard-gradle-plugin) to scan your codebase in CI/CD.
+- [ArchGuard Web](https://github.com/archguard/archguard/tree/master/server) is the backend of ArchGuard, it provides a RESTful API for frontend.
 
 核心理念：三态模型 + 双环守护
 
 - 设计态：目标架构。通过 DSL（领域特定语言） + 架构工作台来构建 。
-- 开发态：实现架构。关注于：可视化 + 自定义分析  + 架构治理。
-- 运行态：运行架构。结合  APM 工具，构建完整的分析链。
+- 开发态：实现架构。关注于：可视化 + 自定义分析 + 架构治理。
+- 运行态：运行架构。结合 APM 工具，构建完整的分析链。
 
 双环守护：
 
 ![双环守护](assets/images/double-circle.png)
 
-架构图：
-
-![Architecture](architecture.svg)
-
 特性（Features）：
 
 - **设计态**
-	- 架构设计、分析与治理 DSL -> 参考：[Fklang](https://github.com/feakin/fklang)
+    - 架构设计、分析与治理 DSL -> 参考：[Fklang](https://github.com/feakin/fklang)
 - **开发态**
-	- 架构扫描
-		- 扫描配置
-		- 插件化规则定制
-	- 架构可视化
-		- 基于 C4 模型的可视化分析
-			- 上下文：API 服务地图（API 生产者支持语言：Java、Kotlin、C#，API 消费者支持语言：TypeScript/JavaScript、Kotlin、Java 等）
-			- 容器分析。数据库地图（支持 MyBatis、JDBI、JPA）
-			- 组件分析
-			- 代码分析：支持级别模块、包、类、方法四个级别。
-		- 高级分析 + 可视化
-			- 系统不稳定性模块分析。
-			- 容器间：精准测试/变化分析
-	- 架构指标（单体DONE，分布式DOING）
-		- 体量维度：过大的组件
-		- 耦合维度：枢纽组件，过深调用，循环依赖
-		- 内聚维度：霰弹式修改
-		- 冗余维度：冗余元素，过度泛化
-		- 质量维度：测试保护
-	- 持续集成
+    - 架构扫描
+        - 扫描配置
+        - 插件化规则定制
+    - 架构可视化
+        - 基于 C4 模型的可视化分析
+            - 上下文：API 服务地图（API 生产者支持语言：Java、Kotlin、C#，API 消费者支持语言：TypeScript/JavaScript、Kotlin、Java
+              等）
+            - 容器分析。数据库地图（支持 MyBatis、JDBI、JPA）
+            - 组件分析
+            - 代码分析：支持级别模块、包、类、方法四个级别。
+        - 高级分析 + 可视化
+            - 系统不稳定性模块分析。
+            - 容器间：精准测试/变化分析
+    - 架构指标（单体DONE，分布式DOING）
+        - 体量维度：过大的组件
+        - 耦合维度：枢纽组件，过深调用，循环依赖
+        - 内聚维度：霰弹式修改
+        - 冗余维度：冗余元素，过度泛化
+        - 质量维度：测试保护
+    - 持续集成
 - **架构工作台**
-	- 查询整个组织的依赖信息
-	- REPL 实时分析
+    - 查询整个组织的依赖信息
+    - REPL 实时分析
 
 Features：
 
 - **Design State**
-  - Architecture Design, Analysis and Governance DSL -> [Fklang](https://github.com/feakin/fklang)
+    - Architecture Design, Analysis and Governance DSL -> [Fklang](https://github.com/feakin/fklang)
 - **Development state**
-  - Schema scan
-    - Scan configuration
-    - Plug-in rule customization
-  - Architecture visualization
-    - Visual analysis based on C4 model
-      - Context: API service map (API producer supported languages: Java, Kotlin, C#, API consumer supported languages: TypeScript/JavaScript, Kotlin, Java, etc.)
-      - Container analysis. Database map (support MyBatis, JDBI, JPA)
-      - Component analysis
-      - Code analysis: supports four levels of modules, packages, classes, and methods.
-    - Advanced Analysis + Visualization
-      - System instability module analysis.
-      - Between containers: precise testing/variation analysis
-  - Architecture metrics (single DONE, distributed DOING)
-      - Volume dimension: oversized components
-      - Coupling dimension: hub components, too deep calls, circular dependencies
-      - Cohesive Dimension: Shotgun Modification
-      - Redundant dimensions: redundant elements, overgeneralization
-      - Quality dimension: test protection
-      - Continuous Integration
+    - Schema scan
+        - Scan configuration
+        - Plug-in rule customization
+    - Architecture visualization
+        - Visual analysis based on C4 model
+            - Context: API service map (API producer supported languages: Java, Kotlin, C#, API consumer supported
+              languages: TypeScript/JavaScript, Kotlin, Java, etc.)
+            - Container analysis. Database map (support MyBatis, JDBI, JPA)
+            - Component analysis
+            - Code analysis: supports four levels of modules, packages, classes, and methods.
+        - Advanced Analysis + Visualization
+            - System instability module analysis.
+            - Between containers: precise testing/variation analysis
+    - Architecture metrics (single DONE, distributed DOING)
+        - Volume dimension: oversized components
+        - Coupling dimension: hub components, too deep calls, circular dependencies
+        - Cohesive Dimension: Shotgun Modification
+        - Redundant dimensions: redundant elements, overgeneralization
+        - Quality dimension: test protection
+        - Continuous Integration
 - **Architecture Workbench**
 
 Online Demo: [https://archguard.dts.plus/](https://archguard.dts.plus/)
@@ -122,8 +132,10 @@ CONTAINER ID   IMAGE                                 COMMAND                  CR
 
 Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:11080/)，就可以新建项目
 
-1. 添加：[https://github.com/archguard/archguard](https://github.com/archguard/archguard)，名称 Backend，选择 Kotlin 语言，再选择扫描
-2. 添加：[https://github.com/archguard/archguard-frontend](https://github.com/archguard/archguard-frontend)，名称 Frontend，选择 TypeScript 语言，再选择扫描
+1. 添加：[https://github.com/archguard/archguard](https://github.com/archguard/archguard)，名称 Backend，选择 Kotlin
+   语言，再选择扫描
+2. 添加：[https://github.com/archguard/archguard-frontend](https://github.com/archguard/archguard-frontend)，名称
+   Frontend，选择 TypeScript 语言，再选择扫描
 
 对于 Archguard 前端来说，因为源码是在 `archguard/src` 目录下，所以需要额外的**配置源码路径**
 
@@ -135,7 +147,7 @@ Docker Compose 启动后，访问：[http://localhost:11080/](http://localhost:1
 
 ![Services Map](/assets/screenshots/archguard-20-servicesmap.png)
 
-如果没有的话，请根据 [FAQ](/docs/faq) 进行调整，或者提交新的 [issue](https://github.com/archguard/archguard)。 
+如果没有的话，请根据 [FAQ](/docs/faq) 进行调整，或者提交新的 [issue](https://github.com/archguard/archguard)。
 
 成功日志示例：
 
