@@ -33,7 +33,7 @@ TL;DR：[https://github.com/archguard/archguard](https://github.com/archguard/ar
 
 这样一来，我们就可以让结合类名、方法名、字段名等信息，来生成出对应的领域知识。如下结合是 ArchGuard 分析器的输出：
 
-![](assets/images/genai-domain-description.png)
+![](/assets/images/genai-domain-description.png)
 
 ```markdown
 上报播放数据，包括应用、客户端、版本、渠道、位置、查询ID、设备ID、会话ID、总时长、播放时长、数据类型、页面和模块。
@@ -46,7 +46,7 @@ TL;DR：[https://github.com/archguard/archguard](https://github.com/archguard/ar
 过去，在 ArchGuard 中，我们运行通常 `feat-datamap` 模块来生成数据库地图。它只能帮我们做一些可视化，由人来判断，潜在的、可能的业务逻辑。
 而当我们由 ArchGuard 分析完后，就可以让 AI 生成出对应的业务逻辑。
 
-![](assets/images/genai-database-call.png)
+![](/assets/images/genai-database-call.png)
 
 如下是 ArchGuard 分析器的输出：
 
@@ -81,7 +81,7 @@ ArchGuard 架构分析器的本质是对原有的知识进行再提炼，以将�
 
 详细见，我们在 GitHub 的文档：https://archguard.org/concepts 。如下是 IDEA 可视化出来的架构模型：
 
-![](assets/images/arch-view-model.png)
+![](/assets/images/arch-view-model.png)
 
 当然，这个模型还有待进一步优化，比如我们添加的 `outboundService`、`architectureStyle`，在当前尚还属于一个不太适合的位置。
 
@@ -89,7 +89,7 @@ ArchGuard 架构分析器的本质是对原有的知识进行再提炼，以将�
 
 在热门的 Code Review 领域，除了结合 Sonarlint 之外，我们可以基于物理架构来设计多种 review 策略。诸如于：
 
-![](assets/images/core-model.png)
+![](/assets/images/core-model.png)
 
 - 基于变更频率与行数，来决定 review 的上下文；
 - 基于代码复杂度，来决定 review 的优先级；
