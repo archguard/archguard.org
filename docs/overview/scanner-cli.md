@@ -22,12 +22,14 @@ Usage: runner [OPTIONS]
   scanner cli
 
 Options:
-  --type [SOURCE_CODE|GIT|DIFF_CHANGES|SCA|RULE|ARCHITECTURE]
-  --system-id TEXT                 system id
-  --server-url TEXT                the base url of the archguard api server
+  --type [SOURCE_CODE|GIT|DIFF_CHANGES|SCA|RULE|ARCHITECTURE|ESTIMATE|OPENAPI|DOCUMENT]
+  --system-id TEXT                 system id for use ArchGuard backend
+  --server-url TEXT                the server for receive data, for example
+                                   ArchGuard backend
   --workspace TEXT                 the workspace directory
   --path TEXT                      the path of target project
   --output TEXT                    http, csv, json, console
+  --output-dir TEXT                output directory
   --analyser-spec TEXT             Override the analysers via json.
   --slot-spec TEXT                 Override the slot via json.
   --language TEXT                  language: Java, Kotlin, TypeScript, CSharp,
@@ -43,6 +45,10 @@ Options:
   --until TEXT                     COMMIT ID, the specific revision of the
                                    target
   --depth INT                      INTEGER, the max loop depth
+  --with-function-code             BOOLEAN, whether to include the function
+                                   code
+  --with-structure-cache           BOOLEAN, whether to enable structure cache
+  --debug                          BOOLEAN, whether to enable debug mode
   -h, --help                       Show this message and exit
 ```
 
