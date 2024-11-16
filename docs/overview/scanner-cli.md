@@ -6,6 +6,14 @@ permalink: /overview/scanner-cli
 nav_order: 99
 ---
 
+## Download
+
+```bash
+curl -fsSL archguard.org/install-cli.sh | bash
+```
+
+## Usage
+
 Scanner CLI usage:
 
 ```

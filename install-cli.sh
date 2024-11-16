@@ -35,20 +35,27 @@ download_cli() {
     local install_dir="$HOME/.archguard"
     local output_file="$install_dir/${CLI_NAME}.jar"
 
+    echo "Download URL: $download_url"
+    echo "Installation directory: $install_dir"
+    echo "CLI jar location: $output_file"
+
     # Create installation directory
     mkdir -p "$install_dir"
 
-    echo "Downloading ArchGuard CLI v$version..."
+    echo -e "\nDownloading ArchGuard CLI v$version..."
     if curl -L -o "$output_file" "$download_url"; then
-        echo "Successfully downloaded to: $output_file"
+        echo "Download completed successfully!"
 
         # Create executable script
-        cat > "$install_dir/archguard" << EOL
+        local wrapper_script="$install_dir/archguard"
+        echo "Creating wrapper script: $wrapper_script"
+
+        cat > "$wrapper_script" << EOL
 #!/bin/bash
 java -jar $output_file "\$@"
 EOL
 
-        chmod +x "$install_dir/archguard"
+        chmod +x "$wrapper_script"
 
         # Add to PATH if not already added
         SHELL_RC="$HOME/.$(basename $SHELL)rc"
@@ -58,6 +65,12 @@ EOL
             echo "Please restart your terminal or run: source $SHELL_RC"
         fi
 
+        echo -e "\nInstallation Summary:"
+        echo "======================"
+        echo "JAR Location: $output_file"
+        echo "Wrapper Script: $wrapper_script"
+        echo "Shell Configuration: $SHELL_RC"
+        echo "Version: $version"
         echo ""
         echo "Installation completed! 🎉"
         echo "Run 'archguard --help' to get started"
