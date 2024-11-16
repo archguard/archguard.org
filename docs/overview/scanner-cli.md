@@ -52,10 +52,10 @@ Options:
   -h, --help                       Show this message and exit
 ```
 
-### samples: CLI standalone
+## samples: CLI standalone
 
 ```
-java -jar scanner_cli.jar --language=Kotlin --features=apicalls --output=http --output=json --path=. --server-url=http://localhost:8080
+java -jar scanner_cli.jar --language=Kotlin --features=apicalls --features=datamap --output=http --output=json --path=. --server-url=http://localhost:8080
 ```
 
 ### samples: CLI with custom slot
