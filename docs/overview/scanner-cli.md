@@ -6,15 +6,19 @@ permalink: /overview/scanner-cli
 nav_order: 99
 ---
 
-## Download
+## 方式 1： Use CLI
 
 ```bash
 curl -fsSL archguard.org/install-cli.sh | bash
 ```
 
-## Usage
+执行：
 
-Scanner CLI usage:
+```nash
+archguard --help
+```
+
+返回结果：
 
 ```
 Usage: runner [OPTIONS]
@@ -52,13 +56,23 @@ Options:
   -h, --help                       Show this message and exit
 ```
 
-## samples: CLI standalone
+### 执行示例：
+
+```bash
+archguard --language=Kotlin --features=apicalls --features=datamap --output=http --output=json --path=. --server-url=http://localhost:8080
+```
+
+## 方式 2: 下载 cli.jar
+
+下载地址 ArchGuard Release: [https://github.com/archguard/archguard/releases] ，如 `scanner_cli-2.2.8-all.jar`
+
+执行：
 
 ```
 java -jar scanner_cli.jar --language=Kotlin --features=apicalls --features=datamap --output=http --output=json --path=. --server-url=http://localhost:8080
 ```
 
-### samples: CLI with custom slot
+### 示例 2：CLI with custom slot
 
 ```
 java -jar scanner_cli.jar --language=Kotlin --features=apicalls --output=json --path=server --slot-spec='{"identifier": "rule", "host": "https://github.com/archguard/archguard/releases/download/v2.0.0-alpha.17", "version": "2.0.0-alpha.17", "jar": "rule-webapi-2.0.0-alpha.17-all.jar", "className": "org.archguard.linter.rule.webapi.WebApiRuleSlot", "slotType": "rule"}' 
