@@ -58,13 +58,13 @@ Options:
 
 ### 执行示例：
 
-```bash
+```
 archguard --language=Kotlin --features=apicalls --features=datamap --output=http --output=json --path=. --server-url=http://localhost:8080
 ```
 
 ## 方式 2: 下载 cli.jar
 
-下载地址 ArchGuard Release: [https://github.com/archguard/archguard/releases] ，如 `scanner_cli-2.2.8-all.jar`
+下载地址 ArchGuard Release: [https://github.com/archguard/archguard/releases](https://github.com/archguard/archguard/releases) ，如 `scanner_cli-2.2.8-all.jar`
 
 执行：
 
